@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>솔루션 설명 자료 · Microsoft Korea Solution Hub</title>
+  <meta name="description" content="Microsoft Korea Solution Hub 솔루션 설명 자료" />
+  <meta name="theme-color" content="#0067b8" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260702" />
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Microsoft Korea Solution Hub 홈">
+        <span class="logo" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="brand-text">
+          <span class="t1">Microsoft Korea</span>
+          <span class="t2">Solution Hub</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="주 메뉴">
+        <a href="index.html#solutions">솔루션</a>
+        <a href="index.html#workshops">워크샵</a>
+        <a href="index.html#features">신규 기능</a>
+        <a class="nav-cta" href="index.html#contact">문의하기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="doc-main">
+    <div class="container doc-container">
+      <nav class="breadcrumb" aria-label="위치">
+        <a href="index.html">홈</a>
+        <span aria-hidden="true">›</span>
+        <a href="index.html#solutions">솔루션 설명 자료</a>
+        <span aria-hidden="true">›</span>
+        <span id="crumbTitle" class="current">문서</span>
+      </nav>
+
+      <article id="doc" class="doc-content" data-base="solutions">
+        <div class="workshop-loading">솔루션 문서를 불러오는 중입니다…</div>
+      </article>
+
+      <div class="doc-back">
+        <a class="btn-more" href="index.html#solutions">← 솔루션 목록으로 돌아가기</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;">
+        <span>© <span id="year"></span> Microsoft Corporation. All rights reserved.</span>
+        <span><a href="index.html">Solution Hub 홈</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Markdown 렌더링 (신뢰된 저장소 콘텐츠) + DOMPurify 로 XSS 방지 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="assets/js/solution.js?v=20260702"></script>
+</body>
+</html>

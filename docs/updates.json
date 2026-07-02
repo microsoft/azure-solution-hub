@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-07-02T03:25:14.416Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "items": [
+    {
+      "title": "Generally Available: New Powershell module: Az.PostgreSQLFlexibleServer",
+      "titleKo": "정식 출시: 신규 PowerShell 모듈 Az.PostgreSQLFlexibleServer",
+      "summaryKo": "이름이 변경된 Az.PostgreSQLFlexibleServer PowerShell 모듈이 정식 출시되어, PowerShell로 Azure Database for PostgreSQL를 더 간결하게 관리할 수 있습니다.",
+      "status": "Launched",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=566209",
+      "date": "2026-07-01T17:19:25.000Z"
+    },
+    {
+      "title": "Public Preview: Document PII playground sample in Microsoft Foundry NextGen",
+      "titleKo": "공개 미리 보기: Microsoft Foundry NextGen의 문서 PII 플레이그라운드 샘플",
+      "summaryKo": "Azure AI Language의 문서 기반 PII 탐지 기능이 Microsoft Foundry NextGen 포털에서 플레이그라운드로 제공됩니다. 준비된 샘플 문서를 실행해 마스킹된 결과를 바로 확인할 수 있습니다.",
+      "status": "In preview",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=563331",
+      "date": "2026-07-01T17:04:40.000Z"
+    },
+    {
+      "title": "Generally Available: Document PII NextGen Playground in Azure AI Language",
+      "titleKo": "정식 출시: Azure AI Language의 문서 PII NextGen 플레이그라운드",
+      "summaryKo": "Azure AI Language가 개선된 문서 PII 플레이그라운드를 정식 출시했습니다. 준비된 샘플 입력·출력을 통해 문서 내 개인 식별 정보(PII) 탐지를 더 빠르게 평가할 수 있습니다.",
+      "status": "Launched",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=564382",
+      "date": "2026-07-01T17:01:07.000Z"
+    },
+    {
+      "title": "Public Preview: Instant Access via application consistent restore points",
+      "titleKo": "공개 미리 보기: 애플리케이션 일관성 복원 지점을 통한 즉시 액세스",
+      "summaryKo": "VM 복원 지점에 대한 즉시 액세스(Instant Access)가 도입되어, 백그라운드 데이터 복제를 기다리지 않고 복원 지점 생성 직후 디스크를 복원할 수 있습니다. 복구 시간(RTO)이 단축됩니다.",
+      "status": "In preview",
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=565758",
+      "date": "2026-07-01T16:59:39.000Z"
+    },
+    {
+      "title": "Public Preview: Azure Storage Mover now supports migration from Google Cloud Storage (GCS)",
+      "titleKo": "공개 미리 보기: Azure Storage Mover, Google Cloud Storage(GCS) 마이그레이션 지원",
+      "summaryKo": "Azure Storage Mover가 Google Cloud Storage(GCS)에서 Azure Blob Storage로의 클라우드 간 데이터 마이그레이션을 지원합니다. S3 호환 인터페이스로 멀티 클라우드 통합을 간소화할 수 있습니다.",
+      "status": "In preview",
+      "category": "Migration",
+      "link": "https://azure.microsoft.com/updates?id=566948",
+      "date": "2026-07-01T16:56:50.000Z"
+    }
+  ]
+}

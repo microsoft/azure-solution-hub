@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" font-family="Segoe UI, Malgun Gothic, sans-serif" role="img" aria-label="클라우드 마이그레이션 아키텍처 다이어그램">
+  <defs>
+    <linearGradient id="azure" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0067b8"/>
+      <stop offset="1" stop-color="#00b7c3"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#605e5c"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="920" height="380" fill="#f5f7fa" rx="12"/>
+
+  <!-- On-premises -->
+  <g>
+    <rect x="30" y="90" width="200" height="200" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="130" y="120" text-anchor="middle" font-size="16" font-weight="700" fill="#1b1a19">온프레미스</text>
+    <rect x="55" y="140" width="150" height="34" rx="6" fill="#eef1f5"/>
+    <text x="130" y="162" text-anchor="middle" font-size="13" fill="#484644">물리 서버 / VM</text>
+    <rect x="55" y="184" width="150" height="34" rx="6" fill="#eef1f5"/>
+    <text x="130" y="206" text-anchor="middle" font-size="13" fill="#484644">SQL Server</text>
+    <rect x="55" y="228" width="150" height="34" rx="6" fill="#eef1f5"/>
+    <text x="130" y="250" text-anchor="middle" font-size="13" fill="#484644">파일 / 스토리지</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <line x1="238" y1="190" x2="322" y2="190" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Azure Migrate -->
+  <g>
+    <rect x="330" y="120" width="180" height="140" rx="12" fill="url(#azure)"/>
+    <text x="420" y="165" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Azure Migrate</text>
+    <text x="420" y="192" text-anchor="middle" font-size="12" fill="#eaf6ff">검색 · 평가 · 종속성 분석</text>
+    <text x="420" y="212" text-anchor="middle" font-size="12" fill="#eaf6ff">TCO / 크기 산정</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <line x1="518" y1="190" x2="602" y2="190" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Azure -->
+  <g>
+    <rect x="610" y="60" width="280" height="260" rx="12" fill="#ffffff" stroke="#0067b8" stroke-dasharray="6 4"/>
+    <text x="750" y="90" text-anchor="middle" font-size="16" font-weight="700" fill="#0067b8">Microsoft Azure</text>
+
+    <rect x="635" y="110" width="230" height="40" rx="8" fill="#e5f1fb"/>
+    <text x="750" y="135" text-anchor="middle" font-size="13" fill="#0b3d6e">Azure Virtual Machines</text>
+
+    <rect x="635" y="160" width="230" height="40" rx="8" fill="#e5f1fb"/>
+    <text x="750" y="185" text-anchor="middle" font-size="13" fill="#0b3d6e">Azure SQL Managed Instance</text>
+
+    <rect x="635" y="210" width="230" height="40" rx="8" fill="#e5f1fb"/>
+    <text x="750" y="235" text-anchor="middle" font-size="13" fill="#0b3d6e">Azure Storage / Backup</text>
+
+    <rect x="635" y="260" width="230" height="40" rx="8" fill="#eef7ee"/>
+    <text x="750" y="285" text-anchor="middle" font-size="13" fill="#107c41">Azure Monitor · Cost Management</text>
+  </g>
+
+  <text x="460" y="345" text-anchor="middle" font-size="13" fill="#605e5c">평가(Assess) → 설계(Design) → 마이그레이션(Migrate) → 최적화(Optimize)</text>
+</svg>
