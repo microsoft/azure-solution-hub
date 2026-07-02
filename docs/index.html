@@ -140,47 +140,14 @@
           <p>Microsoft 제품과 서비스의 최신 기능 소식을 가장 빠르게 전해 드립니다.</p>
         </div>
 
-        <div class="feature-list">
-          <div class="feature-item reveal">
-            <div class="date">2026.06.28</div>
-            <div class="fi-main">
-              <span class="tag new">New</span>
-              <h3>Azure AI Foundry 에이전트 서비스 정식 출시</h3>
-              <p>멀티 에이전트 오케스트레이션과 관리형 배포를 지원하는 Foundry Agent Service가 GA 되었습니다.</p>
-            </div>
-            <div class="fi-cta"><a class="card-link" href="#">릴리스 노트 <span class="arrow">→</span></a></div>
-          </div>
-
-          <div class="feature-item reveal">
-            <div class="date">2026.06.20</div>
-            <div class="fi-main">
-              <span class="tag update">Update</span>
-              <h3>Microsoft Fabric 실시간 인텔리전스 강화</h3>
-              <p>이벤트 스트림 처리 성능이 향상되고 새로운 커넥터가 추가되었습니다.</p>
-            </div>
-            <div class="fi-cta"><a class="card-link" href="#">자세히 보기 <span class="arrow">→</span></a></div>
-          </div>
-
-          <div class="feature-item reveal">
-            <div class="date">2026.06.12</div>
-            <div class="fi-main">
-              <span class="tag new">New</span>
-              <h3>Copilot in Azure — 자연어 리소스 관리</h3>
-              <p>자연어 명령으로 Azure 리소스를 조회하고 관리할 수 있는 Copilot 기능이 공개되었습니다.</p>
-            </div>
-            <div class="fi-cta"><a class="card-link" href="#">데모 보기 <span class="arrow">→</span></a></div>
-          </div>
-
-          <div class="feature-item reveal">
-            <div class="date">2026.06.05</div>
-            <div class="fi-main">
-              <span class="tag update">Update</span>
-              <h3>Microsoft Entra 조건부 액세스 정책 확장</h3>
-              <p>더욱 세분화된 위험 기반 액세스 제어와 신규 규정 준수 템플릿이 제공됩니다.</p>
-            </div>
-            <div class="fi-cta"><a class="card-link" href="#">가이드 보기 <span class="arrow">→</span></a></div>
-          </div>
+        <!--
+          아래 목록은 GitHub Actions가 매일 Azure 서비스 업데이트 RSS를 수집·번역해
+          생성하는 updates.json 을 기반으로 자동 렌더링됩니다.
+        -->
+        <div class="feature-list" id="featureList" data-source="updates.json" aria-live="polite">
+          <div class="workshop-loading">신규 기능 소식을 불러오는 중입니다…</div>
         </div>
+        <p class="feed-note">Azure 서비스 업데이트 RSS를 매일 자동 수집해 한국어로 번역합니다. 번역은 자동 생성되므로 정확한 내용은 원문(릴리스 노트)을 확인하세요.</p>
       </div>
     </section>
 

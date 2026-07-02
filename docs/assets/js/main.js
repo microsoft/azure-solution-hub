@@ -129,6 +129,75 @@ if (yearEl) {
 })();
 
 /* ============================================================
+   Dynamic "What's New" feed
+   GitHub Actions가 매일 Azure 서비스 업데이트 RSS를 수집·번역해
+   생성하는 updates.json 을 읽어 신규 기능 카드로 렌더링합니다.
+   ============================================================ */
+(function initUpdates() {
+  const list = document.getElementById('featureList');
+  if (!list) return;
+
+  const source = list.getAttribute('data-source') || 'updates.json';
+
+  const esc = (str) =>
+    String(str || '').replace(/[&<>"']/g, (c) =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])
+    );
+
+  // RSS 상태(category) → 배지 라벨/스타일 매핑
+  const STATUS = {
+    'Launched': { label: '출시', cls: 'new' },
+    'In preview': { label: '미리보기', cls: 'update' },
+    'In development': { label: '개발 중', cls: 'update' },
+    'Retirements': { label: '지원 종료', cls: 'update' },
+  };
+
+  const fmtDate = (iso) => {
+    const d = new Date(iso);
+    if (isNaN(d)) return esc(iso);
+    const p = (n) => String(n).padStart(2, '0');
+    return `${d.getFullYear()}.${p(d.getMonth() + 1)}.${p(d.getDate())}`;
+  };
+
+  function renderItem(it) {
+    const st = STATUS[it.status] || { label: '업데이트', cls: 'update' };
+    const title = esc(it.titleKo || it.title);
+    const summary = esc(it.summaryKo || '');
+    const area = it.category ? `<span class="fi-area">${esc(it.category)}</span>` : '';
+    const link = /^https?:\/\//i.test(it.link || '') ? it.link : '#';
+    return `
+      <div class="feature-item reveal visible">
+        <div class="date">${fmtDate(it.date)}</div>
+        <div class="fi-main">
+          <div class="fi-meta">
+            <span class="tag ${st.cls}">${st.label}</span>${area}
+          </div>
+          <h3>${title}</h3>
+          <p>${summary}</p>
+        </div>
+        <div class="fi-cta"><a class="card-link" href="${esc(link)}" target="_blank" rel="noopener">릴리스 노트 <span class="arrow">→</span></a></div>
+      </div>`;
+  }
+
+  fetch(source, { cache: 'no-cache' })
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then((data) => {
+      const items = Array.isArray(data.items) ? data.items : [];
+      if (!items.length) {
+        list.innerHTML = '<div class="workshop-loading">표시할 업데이트가 없습니다.</div>';
+        return;
+      }
+      list.innerHTML = items.map(renderItem).join('');
+    })
+    .catch(() => {
+      list.innerHTML = '<div class="workshop-loading">업데이트 소식을 불러오지 못했습니다.</div>';
+    });
+})();
+
+/* ============================================================
    Dynamic workshops
    workshops.md 파일을 읽어 카테고리 > 워크샵 구조로 파싱하고,
    설명이 없는 워크샵은 GitHub API 설명으로 보완하여 렌더링합니다.
