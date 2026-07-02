@@ -43,6 +43,92 @@ if (yearEl) {
 }
 
 /* ============================================================
+   Dynamic solutions
+   solutions/solutions.md 매니페스트를 읽어 솔루션 카드를 렌더링합니다.
+   각 카드는 solution.html?slug=<slug> 상세 페이지로 연결됩니다.
+   ============================================================ */
+(function initSolutions() {
+  const grid = document.getElementById('solutionGrid');
+  if (!grid) return;
+
+  const source = grid.getAttribute('data-source') || 'solutions/solutions.md';
+
+  const esc = (str) =>
+    String(str || '').replace(/[&<>"']/g, (c) =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])
+    );
+
+  // 아이콘 키 → SVG 내부 경로 (메인 카드용)
+  const ICONS = {
+    cloud: '<path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/>',
+    ai: '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M17 7l2-2M5 19l2-2"/>',
+    security: '<path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/>',
+    data: '<path d="M4 5h16v14H4z"/><path d="M4 9h16M9 19V9"/>',
+    modernwork: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>',
+    app: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+  };
+
+  // 매니페스트 파싱: '### 제목' + slug/tag/icon + 요약 문장
+  function parse(text) {
+    const cleaned = text.replace(/<!--[\s\S]*?-->/g, '');
+    const items = [];
+    let cur = null;
+    cleaned.split(/\r?\n/).forEach((raw) => {
+      const line = raw.trim();
+      if (!line || line.startsWith('#') && !line.startsWith('###')) return;
+      if (line.startsWith('### ')) {
+        cur = { title: line.slice(4).trim(), slug: '', tag: '', icon: 'cloud', summary: '' };
+        items.push(cur);
+        return;
+      }
+      if (!cur) return;
+      const meta = line.match(/^(slug|tag|icon)\s*:\s*(.+)$/i);
+      if (meta) {
+        cur[meta[1].toLowerCase()] = meta[2].trim();
+      } else {
+        cur.summary += (cur.summary ? ' ' : '') + line;
+      }
+    });
+    return items.filter((it) => it.slug);
+  }
+
+  function renderCard(it) {
+    const slug = it.slug.replace(/[^A-Za-z0-9_-]/g, '');
+    const icon = ICONS[it.icon] || ICONS.cloud;
+    return `
+      <article class="card reveal visible">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">${icon}</svg>
+          </div>
+          <span class="tag solution">${esc(it.tag)}</span>
+          <h3>${esc(it.title)}</h3>
+          <p>${esc(it.summary)}</p>
+          <a class="card-link" href="solution.html?slug=${encodeURIComponent(slug)}">자세히 보기 <span class="arrow">→</span></a>
+        </div>
+      </article>`;
+  }
+
+  fetch(source, { cache: 'no-cache' })
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.text();
+    })
+    .then((text) => {
+      const items = parse(text);
+      if (!items.length) {
+        grid.innerHTML = '<div class="workshop-loading">등록된 솔루션이 없습니다.</div>';
+        return;
+      }
+      grid.innerHTML = items.map(renderCard).join('');
+    })
+    .catch(() => {
+      grid.innerHTML = '<div class="workshop-loading">솔루션 목록을 불러오지 못했습니다.</div>';
+    });
+})();
+
+/* ============================================================
    Dynamic workshops
    workshops.md 파일을 읽어 카테고리 > 워크샵 구조로 파싱하고,
    설명이 없는 워크샵은 GitHub API 설명으로 보완하여 렌더링합니다.
@@ -203,7 +289,9 @@ if (yearEl) {
   }
 
   function renderCategory(cat) {
-    const cards = cat.workshops
+    // 나중에 추가된 워크샵이 앞에 오도록 역순 정렬
+    const ordered = cat.workshops.slice().reverse();
+    const cards = ordered
       .map((ws, i) => renderCard(ws, i >= PREVIEW_COUNT))
       .join('');
     const hiddenCount = Math.max(0, cat.workshops.length - PREVIEW_COUNT);
