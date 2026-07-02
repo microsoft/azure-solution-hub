@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" font-family="Segoe UI, Malgun Gothic, sans-serif" role="img" aria-label="Azure 랜딩 존 Hub-Spoke 네트워크 아키텍처 다이어그램">
+  <defs>
+    <linearGradient id="azure" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0067b8"/>
+      <stop offset="1" stop-color="#00b7c3"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#605e5c"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="920" height="440" fill="#f5f7fa" rx="12"/>
+
+  <!-- On-prem -->
+  <g>
+    <rect x="24" y="180" width="130" height="90" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="89" y="212" text-anchor="middle" font-size="13" font-weight="700" fill="#1b1a19">온프레미스</text>
+    <text x="89" y="234" text-anchor="middle" font-size="11" fill="#484644">데이터센터</text>
+    <text x="89" y="252" text-anchor="middle" font-size="11" fill="#484644">지사 · 사용자</text>
+  </g>
+
+  <!-- ExpressRoute/VPN -->
+  <line x1="158" y1="225" x2="214" y2="225" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="186" y="214" text-anchor="middle" font-size="10" fill="#605e5c">ExpressRoute</text>
+  <text x="186" y="246" text-anchor="middle" font-size="10" fill="#605e5c">/ VPN</text>
+
+  <!-- Hub VNet -->
+  <g>
+    <rect x="222" y="120" width="220" height="210" rx="14" fill="#eef6fb" stroke="#0067b8"/>
+    <text x="332" y="146" text-anchor="middle" font-size="13" font-weight="700" fill="#0067b8">Hub VNet (플랫폼)</text>
+
+    <rect x="242" y="162" width="180" height="34" rx="8" fill="url(#azure)"/>
+    <text x="332" y="184" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">Azure Firewall · WAF</text>
+
+    <rect x="242" y="204" width="180" height="34" rx="8" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="332" y="226" text-anchor="middle" font-size="12" fill="#484644">VPN / ExpressRoute GW</text>
+
+    <rect x="242" y="246" width="180" height="34" rx="8" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="332" y="268" text-anchor="middle" font-size="12" fill="#484644">Azure Bastion · DNS</text>
+
+    <rect x="242" y="288" width="180" height="30" rx="8" fill="#eef1f5"/>
+    <text x="332" y="308" text-anchor="middle" font-size="11" fill="#484644">공유 ID · 모니터링</text>
+  </g>
+
+  <!-- Peering lines to spokes -->
+  <line x1="442" y1="180" x2="558" y2="120" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <line x1="442" y1="225" x2="558" y2="225" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <line x1="442" y1="270" x2="558" y2="330" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="500" y="150" text-anchor="middle" font-size="10" fill="#605e5c">VNet Peering</text>
+
+  <!-- Spoke 1 -->
+  <g>
+    <rect x="566" y="76" width="320" height="96" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="586" y="102" font-size="12" font-weight="700" fill="#0067b8">Spoke: 운영(Prod)</text>
+    <rect x="586" y="112" width="135" height="46" rx="8" fill="#e5f1fb"/>
+    <text x="653" y="140" text-anchor="middle" font-size="11" fill="#0b3d6e">Azure VM (VMSS)</text>
+    <rect x="731" y="112" width="135" height="46" rx="8" fill="#e5f1fb"/>
+    <text x="798" y="140" text-anchor="middle" font-size="11" fill="#0b3d6e">Azure SQL MI</text>
+  </g>
+
+  <!-- Spoke 2 -->
+  <g>
+    <rect x="566" y="182" width="320" height="86" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="586" y="206" font-size="12" font-weight="700" fill="#0067b8">Spoke: 개발/테스트</text>
+    <rect x="586" y="216" width="135" height="42" rx="8" fill="#eef1f5"/>
+    <text x="653" y="242" text-anchor="middle" font-size="11" fill="#484644">App Service</text>
+    <rect x="731" y="216" width="135" height="42" rx="8" fill="#eef1f5"/>
+    <text x="798" y="242" text-anchor="middle" font-size="11" fill="#484644">AKS</text>
+  </g>
+
+  <!-- Spoke 3 -->
+  <g>
+    <rect x="566" y="278" width="320" height="86" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="586" y="302" font-size="12" font-weight="700" fill="#0067b8">공유 서비스 · 데이터</text>
+    <rect x="586" y="312" width="135" height="42" rx="8" fill="#eef1f5"/>
+    <text x="653" y="338" text-anchor="middle" font-size="11" fill="#484644">Storage · Backup</text>
+    <rect x="731" y="312" width="135" height="42" rx="8" fill="#eef7ee"/>
+    <text x="798" y="338" text-anchor="middle" font-size="11" fill="#107c41">Key Vault</text>
+  </g>
+
+  <!-- Governance bar -->
+  <rect x="222" y="386" width="664" height="34" rx="8" fill="#f3eefb" stroke="#8661c5"/>
+  <text x="554" y="408" text-anchor="middle" font-size="12" fill="#5c2e91">거버넌스: Microsoft Entra ID · Azure Policy · Defender for Cloud · Azure Monitor · Cost Management</text>
+
+  <text x="120" y="360" text-anchor="middle" font-size="11" fill="#605e5c">하이브리드 연결</text>
+</svg>

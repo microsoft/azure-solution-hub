@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" font-family="Segoe UI, Malgun Gothic, sans-serif" role="img" aria-label="Microsoft 365 Copilot 아키텍처 다이어그램">
+  <defs>
+    <linearGradient id="azure" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0067b8"/>
+      <stop offset="1" stop-color="#00b7c3"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#605e5c"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="920" height="400" fill="#f5f7fa" rx="12"/>
+
+  <!-- Apps -->
+  <g>
+    <rect x="24" y="120" width="150" height="160" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="99" y="148" text-anchor="middle" font-size="13" font-weight="700" fill="#1b1a19">Microsoft 365 앱</text>
+    <text x="99" y="176" text-anchor="middle" font-size="11" fill="#484644">Teams · Outlook</text>
+    <text x="99" y="196" text-anchor="middle" font-size="11" fill="#484644">Word · Excel</text>
+    <text x="99" y="216" text-anchor="middle" font-size="11" fill="#484644">PowerPoint</text>
+    <text x="99" y="236" text-anchor="middle" font-size="11" fill="#484644">SharePoint</text>
+  </g>
+
+  <line x1="180" y1="200" x2="222" y2="200" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Copilot orchestration -->
+  <g>
+    <rect x="230" y="130" width="200" height="140" rx="12" fill="url(#azure)"/>
+    <text x="330" y="162" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Microsoft 365</text>
+    <text x="330" y="182" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Copilot</text>
+    <text x="330" y="208" text-anchor="middle" font-size="11" fill="#eaf6ff">오케스트레이션</text>
+    <text x="330" y="226" text-anchor="middle" font-size="11" fill="#eaf6ff">+ LLM(Azure OpenAI)</text>
+    <text x="330" y="248" text-anchor="middle" font-size="11" fill="#eaf6ff">책임 있는 AI</text>
+  </g>
+
+  <!-- to Graph -->
+  <line x1="436" y1="180" x2="562" y2="120" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <!-- to agents -->
+  <line x1="436" y1="220" x2="562" y2="285" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Graph -->
+  <g>
+    <rect x="570" y="70" width="320" height="110" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="730" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#1b1a19">Microsoft Graph</text>
+    <text x="730" y="124" text-anchor="middle" font-size="12" fill="#484644">메일 · 문서 · 채팅 · 일정 · 조직도</text>
+    <text x="730" y="146" text-anchor="middle" font-size="12" fill="#484644">Semantic Index (업무 컨텍스트)</text>
+    <text x="730" y="168" text-anchor="middle" font-size="11" fill="#605e5c">사용자 권한 내 데이터만 접근</text>
+  </g>
+
+  <!-- Agents / Copilot Studio -->
+  <g>
+    <rect x="570" y="250" width="320" height="90" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="730" y="280" text-anchor="middle" font-size="13" font-weight="700" fill="#1b1a19">Copilot Studio · 에이전트</text>
+    <text x="730" y="302" text-anchor="middle" font-size="12" fill="#484644">사내 시스템 · 지식 연결</text>
+    <text x="730" y="322" text-anchor="middle" font-size="12" fill="#484644">맞춤형 업무 자동화</text>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" font-family="Segoe UI, Malgun Gothic, sans-serif" role="img" aria-label="Azure OpenAI 기반 RAG 챗봇 아키텍처 다이어그램">
+  <defs>
+    <linearGradient id="azure" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0067b8"/>
+      <stop offset="1" stop-color="#00b7c3"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#605e5c"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="920" height="400" fill="#f5f7fa" rx="12"/>
+
+  <!-- User / App -->
+  <g>
+    <rect x="30" y="150" width="160" height="100" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="110" y="185" text-anchor="middle" font-size="15" font-weight="700" fill="#1b1a19">사용자 · 앱</text>
+    <text x="110" y="210" text-anchor="middle" font-size="12" fill="#484644">웹 · Teams</text>
+    <text x="110" y="228" text-anchor="middle" font-size="12" fill="#484644">Copilot</text>
+  </g>
+
+  <line x1="196" y1="200" x2="272" y2="200" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Orchestration -->
+  <g>
+    <rect x="280" y="140" width="180" height="120" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="370" y="172" text-anchor="middle" font-size="14" font-weight="700" fill="#1b1a19">오케스트레이션</text>
+    <rect x="300" y="186" width="140" height="30" rx="6" fill="#eef1f5"/>
+    <text x="370" y="206" text-anchor="middle" font-size="12" fill="#484644">Foundry Agent</text>
+    <rect x="300" y="222" width="140" height="30" rx="6" fill="#eef1f5"/>
+    <text x="370" y="242" text-anchor="middle" font-size="12" fill="#484644">App Service</text>
+  </g>
+
+  <!-- to AI Search -->
+  <line x1="466" y1="175" x2="602" y2="110" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- to OpenAI -->
+  <line x1="466" y1="225" x2="602" y2="290" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- AI Search -->
+  <g>
+    <rect x="610" y="60" width="200" height="100" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="710" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#1b1a19">Azure AI Search</text>
+    <text x="710" y="116" text-anchor="middle" font-size="12" fill="#484644">벡터 · 하이브리드 검색</text>
+    <text x="710" y="134" text-anchor="middle" font-size="12" fill="#484644">(Grounding 데이터)</text>
+  </g>
+
+  <!-- OpenAI -->
+  <g>
+    <rect x="610" y="240" width="200" height="100" rx="12" fill="url(#azure)"/>
+    <text x="710" y="278" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Azure OpenAI</text>
+    <text x="710" y="302" text-anchor="middle" font-size="12" fill="#eaf6ff">GPT-4o · 임베딩</text>
+    <text x="710" y="320" text-anchor="middle" font-size="12" fill="#eaf6ff">Content Safety</text>
+  </g>
+
+  <!-- Data sources bottom -->
+  <line x1="710" y1="162" x2="710" y2="238" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+
+  <!-- caption -->
+  <text x="460" y="378" text-anchor="middle" font-size="12" fill="#605e5c">RAG: 사용자 질문 → 관련 문서 검색(AI Search) → 컨텍스트와 함께 LLM(OpenAI) 호출 → 근거 기반 응답</text>
+</svg>
