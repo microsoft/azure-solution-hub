@@ -1,7 +1,5 @@
 # Microsoft Korea Solution Hub
 
-[![Deploy GitHub Pages](https://github.com/microsoft/azure-solution-hub/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/microsoft/azure-solution-hub/actions/workflows/deploy-pages.yml)
-
 **Microsoft Korea Solution Hub** 는 Microsoft 솔루션 설명 자료, 실습 워크샵, 신규 기능 소식을 한곳에서 제공하는 큐레이션 허브입니다.
 
 🔗 **바로가기: <https://microsoft.github.io/azure-solution-hub/>**
