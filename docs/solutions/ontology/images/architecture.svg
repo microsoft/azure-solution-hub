@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" font-family="Segoe UI, Malgun Gothic, sans-serif" role="img" aria-label="Ontology Playground 아키텍처 다이어그램">
+  <defs>
+    <linearGradient id="azure" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0067b8"/>
+      <stop offset="1" stop-color="#00b7c3"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#605e5c"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="920" height="400" fill="#f5f7fa" rx="12"/>
+
+  <!-- Sources -->
+  <g>
+    <rect x="24" y="150" width="140" height="110" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="94" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="#1b1a19">예제 카탈로그</text>
+    <text x="94" y="204" text-anchor="middle" font-size="11" fill="#484644">산업별 온톨로지</text>
+    <text x="94" y="224" text-anchor="middle" font-size="11" fill="#484644">커뮤니티 모델</text>
+  </g>
+
+  <line x1="170" y1="205" x2="212" y2="205" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Browser static web app container -->
+  <g>
+    <rect x="220" y="90" width="470" height="230" rx="14" fill="#eef6fb" stroke="#0067b8" stroke-dasharray="4 4"/>
+    <text x="455" y="116" text-anchor="middle" font-size="13" font-weight="700" fill="#0067b8">브라우저 정적 웹앱 · GitHub Pages (백엔드 없음)</text>
+
+    <rect x="240" y="140" width="130" height="150" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="305" y="168" text-anchor="middle" font-size="13" font-weight="700" fill="#1b1a19">탐색</text>
+    <text x="305" y="190" text-anchor="middle" font-size="11" fill="#484644">인터랙티브</text>
+    <text x="305" y="208" text-anchor="middle" font-size="11" fill="#484644">그래프 뷰</text>
+
+    <rect x="390" y="140" width="130" height="150" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="455" y="168" text-anchor="middle" font-size="13" font-weight="700" fill="#1b1a19">설계</text>
+    <text x="455" y="190" text-anchor="middle" font-size="11" fill="#484644">비주얼 디자이너</text>
+    <text x="455" y="208" text-anchor="middle" font-size="11" fill="#484644">엔티티·관계·속성</text>
+
+    <rect x="540" y="140" width="130" height="150" rx="12" fill="url(#azure)"/>
+    <text x="605" y="168" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">내보내기</text>
+    <text x="605" y="190" text-anchor="middle" font-size="11" fill="#eaf6ff">RDF / XML</text>
+    <text x="605" y="208" text-anchor="middle" font-size="11" fill="#eaf6ff">표준 포맷</text>
+
+    <line x1="372" y1="215" x2="388" y2="215" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="522" y1="215" x2="538" y2="215" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+
+  <line x1="692" y1="205" x2="734" y2="205" stroke="#605e5c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Consumption -->
+  <g>
+    <rect x="742" y="150" width="150" height="110" rx="12" fill="#ffffff" stroke="#c8c6c4"/>
+    <text x="817" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="#1b1a19">Fabric IQ</text>
+    <text x="817" y="204" text-anchor="middle" font-size="11" fill="#484644">지식 그래프</text>
+    <text x="817" y="224" text-anchor="middle" font-size="11" fill="#484644">활용 · 통합</text>
+  </g>
+
+  <text x="460" y="360" text-anchor="middle" font-size="12" fill="#605e5c">학습 경로 · 퀘스트로 온톨로지 설계 원칙 습득 — 전 과정이 한국어로 제공</text>
+</svg>

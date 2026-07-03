@@ -58,3 +58,9 @@ slug: app-modernization
 tag: App Innovation
 icon: app
 컨테이너, Kubernetes, GitHub를 활용한 클라우드 네이티브 애플리케이션 현대화.
+
+### Ontology Playground
+slug: ontology
+tag: Data
+icon: data
+온톨로지와 Microsoft Fabric IQ 개념을 인터랙티브 그래프·RDF 도구·실습형 학습 경로로 배우는 한국어 데모입니다.
