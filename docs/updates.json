@@ -1,12 +1,21 @@
 {
-  "generatedAt": "2026-07-02T21:23:49.251Z",
+  "generatedAt": "2026-07-05T21:21:14.577Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "items": [
     {
+      "title": "Generally available: Anthropic Claude Sonnet 5 on Azure Databricks",
+      "titleKo": "일반 제공: Azure Databricks에서 Anthropic Claude Sonnet 5 사용 가능",
+      "summaryKo": "Azure Databricks는 이제 Azure Databricks AI Model Serving을 통해 Anthropic Claude Sonnet 5를 지원합니다. Claude Sonnet 5는 Anthropic의 가장 진보된 Sonnet 모델로, Sonnet의 비용 효율성과 속도로 거의 Opus 수준의 지능을 제공합니다.",
+      "status": "Launched",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=567194",
+      "date": "2026-07-02T22:21:51.000Z"
+    },
+    {
       "title": "Generally Available: New Powershell module: Az.PostgreSQLFlexibleServer",
       "titleKo": "일반 제공: 새로운 PowerShell 모듈: Az.PostgreSQLFlexibleServer",
-      "summaryKo": "새롭게 이름이 변경된 Az.PostgreSQLFlexibleServer PowerShell 모듈을 소개하게 되어 기쁩니다. 이를 통해 PowerShell로 Azure Database for PostgreSQL을 보다 간편하게 관리할 수 있습니다.",
+      "summaryKo": "새롭게 이름이 변경된 Az.PostgreSQLFlexibleServer PowerShell 모듈을 소개하게 되어 기쁩니다. 이 모듈은 PowerShell을 통해 Azure Database for PostgreSQL을 관리하는 보다 간소화된 경험을 제공합니다.",
       "status": "Launched",
       "category": "Databases",
       "link": "https://azure.microsoft.com/updates?id=566209",
@@ -15,7 +24,7 @@
     {
       "title": "Public Preview: Document PII playground sample in Microsoft Foundry NextGen",
       "titleKo": "공식 미리보기: Microsoft Foundry NextGen의 문서 PII 플레이그라운드 샘플",
-      "summaryKo": "Azure AI Language의 문서 기반 PII 탐지 기능이 Microsoft Foundry NextGen 포털에서 초기 플레이그라운드 경험을 제공합니다. 플레이그라운드는 준비된 샘플 문서를 로드하고, 문서 기반 PII 기능을 실행하여 수정된 결과를 보여줍니다.",
+      "summaryKo": "Azure AI Language의 문서 기반 PII 탐지가 이제 Microsoft Foundry NextGen 포털에서 초기 플레이그라운드 경험을 제공합니다. 플레이그라운드는 준비된 샘플 문서를 로드하고, 문서 기반 PII 기능을 실행하여 수정된 결과를 보여줍니다.",
       "status": "Launched",
       "category": "AI + machine learning",
       "link": "https://azure.microsoft.com/updates?id=563331",
@@ -24,7 +33,7 @@
     {
       "title": "Generally Available: Document PII NextGen Playground in Azure AI Language",
       "titleKo": "일반 제공: Azure AI Language의 문서 PII NextGen 플레이그라운드",
-      "summaryKo": "Azure AI Language가 일반 제공으로 새롭게 업데이트된 문서 PII 플레이그라운드를 제공하여 고객이 문서에서 개인 식별 정보 탐지를 보다 빠르게 평가할 수 있도록 합니다. 플레이그라운드는 선별된 샘플 입력 및 출력을 포함합니다.",
+      "summaryKo": "Azure AI Language는 이제 일반 제공으로 새롭게 개편된 문서 PII 플레이그라운드를 제공하여 고객이 문서에서 개인 식별 정보 탐지를 평가하는 더 빠른 방법을 제공합니다. 플레이그라운드는 선별된 샘플 입력 및 출력을 포함합니다.",
       "status": "Launched",
       "category": "AI + machine learning",
       "link": "https://azure.microsoft.com/updates?id=564382",
@@ -33,20 +42,11 @@
     {
       "title": "Public Preview: Instant Access via application consistent restore points",
       "titleKo": "공식 미리보기: 애플리케이션 일관성 복원 지점을 통한 즉시 액세스",
-      "summaryKo": "Azure가 VM 복원 지점에 대한 즉시 액세스를 도입하여 복원 지점 생성 직후 디스크를 즉시 복원할 수 있도록 합니다. 주요 이점: 더 빠른 복구(더 낮은 RTO): 디스크를 즉시 복원—대기 없음.",
+      "summaryKo": "Azure는 VM 복원 지점에 대한 즉시 액세스를 도입하여 복원 지점 생성 직후 디스크를 즉시 복원할 수 있도록 합니다—백그라운드 데이터 복제를 기다릴 필요가 없습니다. 주요 이점: 더 빠른 복구(더 낮은 RTO): 디스크를 즉시 복원—대기 없음.",
       "status": "In preview",
       "category": "Storage",
       "link": "https://azure.microsoft.com/updates?id=565758",
       "date": "2026-07-01T16:59:39.000Z"
-    },
-    {
-      "title": "Public Preview: Azure Storage Mover now supports migration from Google Cloud Storage (GCS)",
-      "titleKo": "공식 미리보기: Azure Storage Mover가 이제 Google Cloud Storage(GCS)에서의 마이그레이션을 지원합니다.",
-      "summaryKo": "Azure Storage Mover가 이제 Google Cloud Storage(GCS)에서 Azure Blob Storage로의 클라우드 간 데이터 마이그레이션을 지원하여 조직이 Azure로의 다중 클라우드 통합을 간소화할 수 있도록 합니다. S3 호환 인터페이스를 사용하여 고객은 데이터를 마이그레이션할 수 있습니다.",
-      "status": "Launched",
-      "category": "Migration",
-      "link": "https://azure.microsoft.com/updates?id=566948",
-      "date": "2026-07-01T16:56:50.000Z"
     }
   ]
 }
