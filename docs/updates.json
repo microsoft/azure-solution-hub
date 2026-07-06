@@ -1,12 +1,30 @@
 {
-  "generatedAt": "2026-07-05T21:21:14.577Z",
+  "generatedAt": "2026-07-06T21:30:07.393Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "items": [
     {
+      "title": "Generally Available: Microsoft Entra ID-based access for Azure Blob Storage SFTP",
+      "titleKo": "일반 제공: Azure Blob Storage SFTP를 위한 Microsoft Entra ID 기반 액세스",
+      "summaryKo": "Azure Blob Storage SFTP에 대한 Microsoft Entra ID 기반 액세스가 모든 지역에서 일반 제공됩니다. 이제 Entra External Identities를 통해 게스트 사용자를 포함한 Entra ID 신원을 사용하여 SFTP를 통해 Azure Blob Storage에 안전하게 연결할 수 있습니다.",
+      "status": "Launched",
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=567085",
+      "date": "2026-07-06T15:54:08.000Z"
+    },
+    {
+      "title": "Generally Available: Support 5x churn in Azure Site Recovery",
+      "titleKo": "일반 제공: Azure Site Recovery에서 5배 이탈 지원",
+      "summaryKo": "Azure Site Recovery는 이제 최대 5배 이탈(가상 머신당 500 MB/s)을 지원합니다. 이 주요 향상은 고객이 Azure Site Recovery로 높은 IOPS 워크로드를 자신 있게 실행할 수 있도록 하여, 가장 요구되는 애플리케이션에 대한 강력한 재해 복구를 보장합니다.",
+      "status": "Launched",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=566966",
+      "date": "2026-07-06T15:00:33.000Z"
+    },
+    {
       "title": "Generally available: Anthropic Claude Sonnet 5 on Azure Databricks",
-      "titleKo": "일반 제공: Azure Databricks에서 Anthropic Claude Sonnet 5 사용 가능",
-      "summaryKo": "Azure Databricks는 이제 Azure Databricks AI Model Serving을 통해 Anthropic Claude Sonnet 5를 지원합니다. Claude Sonnet 5는 Anthropic의 가장 진보된 Sonnet 모델로, Sonnet의 비용 효율성과 속도로 거의 Opus 수준의 지능을 제공합니다.",
+      "titleKo": "일반 제공: Azure Databricks에서 Anthropic Claude Sonnet 5 지원",
+      "summaryKo": "Azure Databricks는 이제 Azure Databricks AI Model Serving을 통해 Anthropic Claude Sonnet 5를 지원합니다. Claude Sonnet 5는 Anthropic의 가장 능동적인 Sonnet 모델로, Sonnet의 비용 효율성과 속도로 거의 Opus 수준의 지능을 제공합니다.",
       "status": "Launched",
       "category": "AI + machine learning",
       "link": "https://azure.microsoft.com/updates?id=567194",
@@ -15,7 +33,7 @@
     {
       "title": "Generally Available: New Powershell module: Az.PostgreSQLFlexibleServer",
       "titleKo": "일반 제공: 새로운 PowerShell 모듈: Az.PostgreSQLFlexibleServer",
-      "summaryKo": "새롭게 이름이 변경된 Az.PostgreSQLFlexibleServer PowerShell 모듈을 소개하게 되어 기쁩니다. 이 모듈은 PowerShell을 통해 Azure Database for PostgreSQL을 관리하는 보다 간소화된 경험을 제공합니다.",
+      "summaryKo": "새롭게 이름이 변경된 Az.PostgreSQLFlexibleServer PowerShell 모듈을 소개하게 되어 기쁩니다. 이 모듈은 PowerShell을 사용하여 Azure Database for PostgreSQL을 관리하는 보다 간소화된 경험을 제공합니다.",
       "status": "Launched",
       "category": "Databases",
       "link": "https://azure.microsoft.com/updates?id=566209",
@@ -24,29 +42,11 @@
     {
       "title": "Public Preview: Document PII playground sample in Microsoft Foundry NextGen",
       "titleKo": "공식 미리보기: Microsoft Foundry NextGen의 문서 PII 플레이그라운드 샘플",
-      "summaryKo": "Azure AI Language의 문서 기반 PII 탐지가 이제 Microsoft Foundry NextGen 포털에서 초기 플레이그라운드 경험을 제공합니다. 플레이그라운드는 준비된 샘플 문서를 로드하고, 문서 기반 PII 기능을 실행하여 수정된 결과를 보여줍니다.",
+      "summaryKo": "Azure AI Language의 문서 기반 PII 감지가 Microsoft Foundry NextGen 포털에서 초기 플레이그라운드 경험을 제공합니다. 플레이그라운드는 준비된 샘플 문서를 로드하고, 문서 기반 PII 기능을 통해 실행하며, 수정된 결과를 보여줍니다.",
       "status": "Launched",
       "category": "AI + machine learning",
       "link": "https://azure.microsoft.com/updates?id=563331",
       "date": "2026-07-01T17:04:40.000Z"
-    },
-    {
-      "title": "Generally Available: Document PII NextGen Playground in Azure AI Language",
-      "titleKo": "일반 제공: Azure AI Language의 문서 PII NextGen 플레이그라운드",
-      "summaryKo": "Azure AI Language는 이제 일반 제공으로 새롭게 개편된 문서 PII 플레이그라운드를 제공하여 고객이 문서에서 개인 식별 정보 탐지를 평가하는 더 빠른 방법을 제공합니다. 플레이그라운드는 선별된 샘플 입력 및 출력을 포함합니다.",
-      "status": "Launched",
-      "category": "AI + machine learning",
-      "link": "https://azure.microsoft.com/updates?id=564382",
-      "date": "2026-07-01T17:01:07.000Z"
-    },
-    {
-      "title": "Public Preview: Instant Access via application consistent restore points",
-      "titleKo": "공식 미리보기: 애플리케이션 일관성 복원 지점을 통한 즉시 액세스",
-      "summaryKo": "Azure는 VM 복원 지점에 대한 즉시 액세스를 도입하여 복원 지점 생성 직후 디스크를 즉시 복원할 수 있도록 합니다—백그라운드 데이터 복제를 기다릴 필요가 없습니다. 주요 이점: 더 빠른 복구(더 낮은 RTO): 디스크를 즉시 복원—대기 없음.",
-      "status": "In preview",
-      "category": "Storage",
-      "link": "https://azure.microsoft.com/updates?id=565758",
-      "date": "2026-07-01T16:59:39.000Z"
     }
   ]
 }
