@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hyounsookim.github.io/azure-solution-hub/sitemap.xml
+Sitemap: https://microsoft.github.io/azure-solution-hub/sitemap.xml
 
 # LLM / GEO (Generative Engine Optimization) guidance
-# https://hyounsookim.github.io/azure-solution-hub/llms.txt
+# https://microsoft.github.io/azure-solution-hub/llms.txt

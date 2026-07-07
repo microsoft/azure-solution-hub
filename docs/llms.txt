@@ -6,18 +6,18 @@
 
 ## Solutions
 
-- [클라우드 마이그레이션 (Cloud Migration)](https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=cloud-migration): 온프레미스 워크로드를 Azure로 안전하게 이전하는 단계별 아키텍처와 모범 사례.
-- [Azure AI & Copilot](https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=azure-ai-copilot): Azure OpenAI와 Copilot을 활용한 지능형 애플리케이션 구축 시나리오와 레퍼런스 아키텍처.
-- [보안 & 거버넌스 (Security & Governance)](https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=security-governance): Zero Trust 기반 보안 아키텍처와 Microsoft Defender, Entra ID 통합 전략.
-- [데이터 & 애널리틱스 (Data & Analytics)](https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=data-analytics): Microsoft Fabric과 Synapse 기반 통합 데이터 플랫폼 구성 및 분석 시나리오.
-- [Microsoft 365 & 협업 (Modern Work)](https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=microsoft-365): Teams, SharePoint, Copilot for Microsoft 365 기반 생산성 향상 솔루션.
-- [앱 현대화 & DevOps (App Modernization)](https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=app-modernization): 컨테이너, Kubernetes, GitHub 기반 클라우드 네이티브 애플리케이션 현대화.
+- [클라우드 마이그레이션 (Cloud Migration)](https://microsoft.github.io/azure-solution-hub/solution.html?slug=cloud-migration): 온프레미스 워크로드를 Azure로 안전하게 이전하는 단계별 아키텍처와 모범 사례.
+- [Azure AI & Copilot](https://microsoft.github.io/azure-solution-hub/solution.html?slug=azure-ai-copilot): Azure OpenAI와 Copilot을 활용한 지능형 애플리케이션 구축 시나리오와 레퍼런스 아키텍처.
+- [보안 & 거버넌스 (Security & Governance)](https://microsoft.github.io/azure-solution-hub/solution.html?slug=security-governance): Zero Trust 기반 보안 아키텍처와 Microsoft Defender, Entra ID 통합 전략.
+- [데이터 & 애널리틱스 (Data & Analytics)](https://microsoft.github.io/azure-solution-hub/solution.html?slug=data-analytics): Microsoft Fabric과 Synapse 기반 통합 데이터 플랫폼 구성 및 분석 시나리오.
+- [Microsoft 365 & 협업 (Modern Work)](https://microsoft.github.io/azure-solution-hub/solution.html?slug=microsoft-365): Teams, SharePoint, Copilot for Microsoft 365 기반 생산성 향상 솔루션.
+- [앱 현대화 & DevOps (App Modernization)](https://microsoft.github.io/azure-solution-hub/solution.html?slug=app-modernization): 컨테이너, Kubernetes, GitHub 기반 클라우드 네이티브 애플리케이션 현대화.
 
 ## Interactive Demos
 
-- [Ontology Playground](https://hyounsookim.github.io/azure-solution-hub/solutions/ontology/demo/): 인터랙티브 그래프, RDF 가져오기/내보내기, 실습형 학습 경로로 온톨로지 개념을 탐색하는 데모.
+- [Ontology Playground](https://microsoft.github.io/azure-solution-hub/solutions/ontology/demo/): 인터랙티브 그래프, RDF 가져오기/내보내기, 실습형 학습 경로로 온톨로지 개념을 탐색하는 데모.
 
 ## Resources
 
-- [홈 (Home)](https://hyounsookim.github.io/azure-solution-hub/): 솔루션, 워크샵, 신규 기능 업데이트 전체 개요.
-- [개인정보 및 분석 고지 (Privacy Notice)](https://hyounsookim.github.io/azure-solution-hub/privacy/): 분석 기술 사용 및 데이터 수집 범위 안내.
+- [홈 (Home)](https://microsoft.github.io/azure-solution-hub/): 솔루션, 워크샵, 신규 기능 업데이트 전체 개요.
+- [개인정보 및 분석 고지 (Privacy Notice)](https://microsoft.github.io/azure-solution-hub/privacy/): 분석 기술 사용 및 데이터 수집 범위 안내.
