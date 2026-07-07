@@ -1,6 +1,6 @@
 # Copilot 작업 지침 — azure-solution-hub
 
-정적 사이트입니다. 배포 대상은 `docs/` 폴더이며 GitHub Pages(라이브: `https://hyounsookim.github.io/azure-solution-hub/`)로 서빙됩니다.
+정적 사이트입니다. 배포 대상은 `docs/` 폴더이며 GitHub Pages(라이브: `https://microsoft.github.io/azure-solution-hub/`)로 서빙됩니다.
 
 ## 분석 스크립트 (필수)
 
@@ -36,7 +36,7 @@
 
 ## SEO / GEO 파일 (페이지 추가·변경 시 갱신 필수)
 
-페이지를 추가/삭제하거나 URL 구조가 바뀌면 아래 파일을 **함께 업데이트**합니다. 정식 URL은 라이브 호스트 `https://hyounsookim.github.io/azure-solution-hub/`를 기준으로 절대경로를 사용합니다.
+페이지를 추가/삭제하거나 URL 구조가 바뀌면 아래 파일을 **함께 업데이트**합니다. 정식 URL은 라이브 호스트 `https://microsoft.github.io/azure-solution-hub/`를 기준으로 절대경로를 사용합니다.
 
 - `docs/sitemap.xml` — 새 페이지의 `<url>` 항목 추가/수정, 해당 항목의 `<lastmod>`를 갱신일로.
 - `docs/llms.txt` — 사이트 개요 및 주요 페이지 링크 목록(생성형 엔진 최적화, GEO)을 최신 상태로.

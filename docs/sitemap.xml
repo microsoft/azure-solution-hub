@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hyounsookim.github.io/azure-solution-hub/</loc>
+    <loc>https://microsoft.github.io/azure-solution-hub/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=cloud-migration</loc>
+    <loc>https://microsoft.github.io/azure-solution-hub/solution.html?slug=cloud-migration</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=azure-ai-copilot</loc>
+    <loc>https://microsoft.github.io/azure-solution-hub/solution.html?slug=azure-ai-copilot</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=security-governance</loc>
+    <loc>https://microsoft.github.io/azure-solution-hub/solution.html?slug=security-governance</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=data-analytics</loc>
+    <loc>https://microsoft.github.io/azure-solution-hub/solution.html?slug=data-analytics</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=microsoft-365</loc>
+    <loc>https://microsoft.github.io/azure-solution-hub/solution.html?slug=microsoft-365</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyounsookim.github.io/azure-solution-hub/solution.html?slug=app-modernization</loc>
+    <loc>https://microsoft.github.io/azure-solution-hub/solution.html?slug=app-modernization</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hyounsookim.github.io/azure-solution-hub/solutions/ontology/demo/</loc>
+    <loc>https://microsoft.github.io/azure-solution-hub/solutions/ontology/demo/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hyounsookim.github.io/azure-solution-hub/privacy/</loc>
+    <loc>https://microsoft.github.io/azure-solution-hub/privacy/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
