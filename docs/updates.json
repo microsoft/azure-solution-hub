@@ -1,52 +1,52 @@
 {
-  "generatedAt": "2026-07-06T21:30:07.393Z",
+  "generatedAt": "2026-07-07T21:28:45.159Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "items": [
     {
-      "title": "Generally Available: Microsoft Entra ID-based access for Azure Blob Storage SFTP",
-      "titleKo": "일반 제공: Azure Blob Storage SFTP를 위한 Microsoft Entra ID 기반 액세스",
-      "summaryKo": "Azure Blob Storage SFTP에 대한 Microsoft Entra ID 기반 액세스가 모든 지역에서 일반 제공됩니다. 이제 Entra External Identities를 통해 게스트 사용자를 포함한 Entra ID 신원을 사용하여 SFTP를 통해 Azure Blob Storage에 안전하게 연결할 수 있습니다.",
-      "status": "Launched",
-      "category": "Storage",
-      "link": "https://azure.microsoft.com/updates?id=567085",
-      "date": "2026-07-06T15:54:08.000Z"
+      "title": "Public Preview: Exceptions in WAF for Azure Application Gateway and Azure Front Door",
+      "titleKo": "공식 미리보기: Azure Application Gateway 및 Azure Front Door의 WAF 예외",
+      "summaryKo": "Azure 웹 애플리케이션 방화벽(WAF)은 웹 애플리케이션을 일반적인 위협과 공격으로부터 보호합니다. 경우에 따라 WAF는 애플리케이션에 대해 안전하고 예상되는 요청을 차단할 수 있습니다. 기존의 제외 규칙은 안전한 요청을 제외하여 잘못된 경고를 줄이는 데 도움을 줍니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=567218",
+      "date": "2026-07-07T17:42:50.000Z"
     },
     {
-      "title": "Generally Available: Support 5x churn in Azure Site Recovery",
-      "titleKo": "일반 제공: Azure Site Recovery에서 5배 이탈 지원",
-      "summaryKo": "Azure Site Recovery는 이제 최대 5배 이탈(가상 머신당 500 MB/s)을 지원합니다. 이 주요 향상은 고객이 Azure Site Recovery로 높은 IOPS 워크로드를 자신 있게 실행할 수 있도록 하여, 가장 요구되는 애플리케이션에 대한 강력한 재해 복구를 보장합니다.",
-      "status": "Launched",
-      "category": "Management and governance",
-      "link": "https://azure.microsoft.com/updates?id=566966",
-      "date": "2026-07-06T15:00:33.000Z"
+      "title": "Public Preview: Azure Chaos Studio Workspaces and Scenarios",
+      "titleKo": "공식 미리보기: Azure Chaos Studio 작업 공간 및 시나리오",
+      "summaryKo": "Azure Chaos Studio는 이제 작업 공간 및 시나리오를 지원하여 실제 장애 발생 시 워크로드의 안정성을 검증하는 더 빠르고 애플리케이션 중심의 방법을 제공합니다. 작업 공간을 애플리케이션의 범위(구독, 리소스 그룹 또는 서비스 그룹)에 지정하고 Chaos를 사용합니다.",
+      "status": "In preview",
+      "category": "Analytics",
+      "link": "https://azure.microsoft.com/updates?id=567184",
+      "date": "2026-07-07T17:40:32.000Z"
     },
     {
-      "title": "Generally available: Anthropic Claude Sonnet 5 on Azure Databricks",
-      "titleKo": "일반 제공: Azure Databricks에서 Anthropic Claude Sonnet 5 지원",
-      "summaryKo": "Azure Databricks는 이제 Azure Databricks AI Model Serving을 통해 Anthropic Claude Sonnet 5를 지원합니다. Claude Sonnet 5는 Anthropic의 가장 능동적인 Sonnet 모델로, Sonnet의 비용 효율성과 속도로 거의 Opus 수준의 지능을 제공합니다.",
-      "status": "Launched",
-      "category": "AI + machine learning",
-      "link": "https://azure.microsoft.com/updates?id=567194",
-      "date": "2026-07-02T22:21:51.000Z"
+      "title": "Public Preview: Export historical data from Log Analytics workspace with Export jobs",
+      "titleKo": "공식 미리보기: Log Analytics 작업 공간에서 내보내기 작업으로 역사적 데이터 내보내기",
+      "summaryKo": "Log Analytics 내보내기 작업을 사용하면 지정된 쿼리 및 시간 범위에 따라 Log Analytics 작업 공간에서 Azure Storage 계정으로 역사적 데이터를 내보낼 수 있습니다. 이를 통해 필요한 데이터만 추출하여 외부 시스템으로 이동할 수 있습니다.",
+      "status": "In preview",
+      "category": "DevOps",
+      "link": "https://azure.microsoft.com/updates?id=566591",
+      "date": "2026-07-07T17:37:55.000Z"
     },
     {
-      "title": "Generally Available: New Powershell module: Az.PostgreSQLFlexibleServer",
-      "titleKo": "일반 제공: 새로운 PowerShell 모듈: Az.PostgreSQLFlexibleServer",
-      "summaryKo": "새롭게 이름이 변경된 Az.PostgreSQLFlexibleServer PowerShell 모듈을 소개하게 되어 기쁩니다. 이 모듈은 PowerShell을 사용하여 Azure Database for PostgreSQL을 관리하는 보다 간소화된 경험을 제공합니다.",
+      "title": "Generally Available: Network Security Perimeter support for Azure Event Hubs",
+      "titleKo": "일반 제공: Azure Event Hubs의 네트워크 보안 경계 지원",
+      "summaryKo": "Azure Event Hubs는 이제 네트워크 보안 경계(NSP)를 지원하여 조직이 PaaS 리소스에 대한 논리적 네트워크 격리 경계를 정의하고 경계 기반 액세스 규칙을 통해 공용 네트워크 액세스를 제어할 수 있도록 합니다. 네트워크 보안 경계를 통해",
       "status": "Launched",
-      "category": "Databases",
-      "link": "https://azure.microsoft.com/updates?id=566209",
-      "date": "2026-07-01T17:19:25.000Z"
+      "category": "Analytics",
+      "link": "https://azure.microsoft.com/updates?id=567203",
+      "date": "2026-07-07T17:35:19.000Z"
     },
     {
-      "title": "Public Preview: Document PII playground sample in Microsoft Foundry NextGen",
-      "titleKo": "공식 미리보기: Microsoft Foundry NextGen의 문서 PII 플레이그라운드 샘플",
-      "summaryKo": "Azure AI Language의 문서 기반 PII 감지가 Microsoft Foundry NextGen 포털에서 초기 플레이그라운드 경험을 제공합니다. 플레이그라운드는 준비된 샘플 문서를 로드하고, 문서 기반 PII 기능을 통해 실행하며, 수정된 결과를 보여줍니다.",
+      "title": "Generally Available: Confidential Computing support for Azure Event Hubs Dedicated",
+      "titleKo": "일반 제공: Azure Event Hubs 전용의 기밀 컴퓨팅 지원",
+      "summaryKo": "Azure Event Hubs 전용은 이제 기밀 컴퓨팅을 지원하여 조직이 메모리에서 처리되는 스트리밍 데이터를 보호할 수 있도록 합니다. 하드웨어 기반의 신뢰할 수 있는 실행 환경(TEE)을 활용하여 고객은 민감한 데이터를 안전하게 보호할 수 있습니다.",
       "status": "Launched",
-      "category": "AI + machine learning",
-      "link": "https://azure.microsoft.com/updates?id=563331",
-      "date": "2026-07-01T17:04:40.000Z"
+      "category": "Analytics",
+      "link": "https://azure.microsoft.com/updates?id=567212",
+      "date": "2026-07-07T17:33:53.000Z"
     }
   ]
 }
