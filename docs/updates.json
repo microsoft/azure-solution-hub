@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-11T21:15:03.916Z",
+  "generatedAt": "2026-07-12T21:15:53.459Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "items": [
     {
       "title": "Retirement: Support for Python-2.7; 3.8 and PowerShell- 7.1; 7.2 will be retired on September 30, 2026",
-      "titleKo": "서비스 종료: Python-2.7; 3.8 및 PowerShell-7.1; 7.2는 2026년 9월 30일에 종료됩니다.",
+      "titleKo": "퇴출: Python-2.7; 3.8 및 PowerShell-7.1; 7.2는 2026년 9월 30일에 지원 종료",
       "summaryKo": "2026년 10월 1일부터 Python 2.7, Python 3.8 및 PowerShell 7.1과 7.2의 지정된 런타임 버전은 Automation에서 더 이상 지원되지 않습니다. 이러한 버전을 사용하는 Runbook은 계속 실행될 수 있지만 보안 업데이트, 버그 수정 또는 기타 지원을 받지 못합니다.",
       "status": "Retirements",
       "category": "Management and governance",
@@ -15,7 +15,7 @@
     {
       "title": "Public Preview: Manage Azure Chaos Studio from the Azure CLI",
       "titleKo": "공식 미리보기: Azure CLI에서 Azure Chaos Studio 관리",
-      "summaryKo": "이제 새로운 az chaos 확장을 사용하여 Azure CLI에서 직접 Azure Chaos Studio 복원력 시나리오를 생성하고 실행할 수 있습니다. 더 이상 REST 호출 및 JSON 파일을 수동으로 조립할 필요가 없습니다. 한 단계로 시작하세요: az chaos setup은 작업 공간을 설정합니다.",
+      "summaryKo": "이제 새로운 az chaos 확장을 사용하여 Azure CLI에서 직접 Azure Chaos Studio 복원력 시나리오를 생성하고 실행할 수 있습니다. 더 이상 REST 호출 및 JSON 파일을 수동으로 조합할 필요가 없습니다. 한 단계로 시작하세요: az chaos setup은 작업 공간을 설정합니다.",
       "status": "In preview",
       "category": "Analytics",
       "link": "https://azure.microsoft.com/updates?id=567225",
@@ -42,7 +42,7 @@
     {
       "title": "Public Preview: Azure Chaos Studio Workspaces and Scenarios",
       "titleKo": "공식 미리보기: Azure Chaos Studio 작업 공간 및 시나리오",
-      "summaryKo": "Azure Chaos Studio는 이제 작업 공간 및 시나리오를 지원하여 실제 중단 동안 워크로드가 어떻게 유지되는지를 검증하는 더 빠르고 애플리케이션 중심의 방법을 제공합니다. 작업 공간을 애플리케이션의 범위(구독, 리소스 그룹 또는 서비스 그룹)에 지정하고 Chaos를 설정하세요.",
+      "summaryKo": "Azure Chaos Studio는 이제 작업 공간 및 시나리오를 지원하여 실제 중단 동안 워크로드가 어떻게 유지되는지 검증하는 더 빠르고 애플리케이션 중심의 방법을 제공합니다. 작업 공간을 애플리케이션의 범위(구독, 리소스 그룹 또는 서비스 그룹)에 지정하고 Chaos를 활용하세요.",
       "status": "In preview",
       "category": "Analytics",
       "link": "https://azure.microsoft.com/updates?id=567184",
