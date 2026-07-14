@@ -1,12 +1,21 @@
 {
-  "generatedAt": "2026-07-13T21:22:32.815Z",
+  "generatedAt": "2026-07-14T21:19:08.500Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "items": [
     {
+      "title": "Public Preview: Azure Front Door edge actions",
+      "titleKo": "공식 미리보기: Azure Front Door 엣지 액션",
+      "summaryKo": "Azure Front Door 엣지 액션(엣지에서의 서버리스 컴퓨팅)의 공식 미리보기를 발표합니다. 엣지 액션을 통해 고객은 Azure Front Door 요청 처리 중에 경량 JavaScript 함수를 실행하여 사용자와 가까운 곳에서 실시간 결정을 내릴 수 있습니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=567402",
+      "date": "2026-07-14T20:03:32.000Z"
+    },
+    {
       "title": "Generally Available: Azure Databricks SQL Serverless in UK West",
-      "titleKo": "일반 제공: Azure Databricks SQL Serverless in UK West",
-      "summaryKo": "2026년 7월 13일부터 고객은 UK West 지역에서 Azure Databricks SQL Serverless를 사용하여 분석 작업을 간소화하고 즉시 컴퓨팅, 자동 확장 및 인프라 관리 감소의 혜택을 누릴 수 있습니다. 자격이 있는 UK West 작업 공간",
+      "titleKo": "일반 제공: UK West의 Azure Databricks SQL Serverless",
+      "summaryKo": "2026년 7월 13일부터 고객은 UK West 지역에서 Azure Databricks SQL Serverless를 사용하여 분석 작업을 간소화하고 즉각적인 컴퓨팅, 자동 확장 및 인프라 관리 감소의 혜택을 누릴 수 있습니다. 자격이 있는 UK West 작업 공간",
       "status": "Launched",
       "category": "AI + machine learning",
       "link": "https://azure.microsoft.com/updates?id=567444",
@@ -24,7 +33,7 @@
     {
       "title": "Public Preview: Manage Azure Chaos Studio from the Azure CLI",
       "titleKo": "공식 미리보기: Azure CLI에서 Azure Chaos Studio 관리",
-      "summaryKo": "이제 새로운 az chaos 확장을 통해 Azure CLI에서 직접 Azure Chaos Studio 복원력 시나리오를 생성하고 실행할 수 있습니다. 더 이상 REST 호출 및 JSON 파일을 수동으로 조립할 필요가 없습니다. 한 단계로 시작하세요: az chaos setup은 작업 공간을 설정하고 연결합니다.",
+      "summaryKo": "이제 새로운 az chaos 확장을 사용하여 Azure CLI에서 직접 Azure Chaos Studio 복원력 시나리오를 생성하고 실행할 수 있습니다. 더 이상 REST 호출 및 JSON 파일을 수동으로 조립할 필요가 없습니다. 한 단계로 시작하세요: az chaos setup이 작업 공간을 설정합니다.",
       "status": "In preview",
       "category": "Analytics",
       "link": "https://azure.microsoft.com/updates?id=567225",
@@ -33,20 +42,11 @@
     {
       "title": "Generally Available: Open AI GPT-5.6 on Azure Databricks",
       "titleKo": "일반 제공: Azure Databricks에서 Open AI GPT-5.6",
-      "summaryKo": "Open AI GPT-5.6가 이제 Azure Databricks에서 제공됩니다. Microsoft Foundry에서 구매한 GPT 5.6을 Azure Databricks의 Model Serving Endpoint를 통해 사용할 수 있습니다. Foundry와 Azure Databricks 간의 통합을 통해 안전하게 구축, 배포 및 관리할 수 있습니다.",
+      "summaryKo": "Open AI GPT-5.6이 이제 Azure Databricks에서 사용할 수 있습니다. Microsoft Foundry에서 구매한 GPT 5.6을 Azure Databricks의 Model Serving Endpoint를 통해 사용할 수 있습니다. Foundry와 Azure Databricks 간의 통합을 통해 안전하게 구축, 배포 및 관리할 수 있습니다.",
       "status": "Launched",
       "category": "AI + machine learning",
       "link": "https://azure.microsoft.com/updates?id=567431",
       "date": "2026-07-09T20:21:12.000Z"
-    },
-    {
-      "title": "Public Preview: Exceptions in WAF for Azure Application Gateway and Azure Front Door",
-      "titleKo": "공식 미리보기: Azure Application Gateway 및 Azure Front Door의 WAF 예외",
-      "summaryKo": "Azure Web Application Firewall (WAF)은 웹 애플리케이션을 일반적인 위협과 공격으로부터 보호하는 데 도움을 줍니다. 경우에 따라 WAF는 애플리케이션에 대해 안전하고 예상되는 요청을 차단할 수 있습니다. 기존 제외 항목은 안전한 요청을 생략하여 잘못된 긍정 사례를 줄이는 데 도움을 줍니다.",
-      "status": "In preview",
-      "category": "Networking",
-      "link": "https://azure.microsoft.com/updates?id=567218",
-      "date": "2026-07-07T17:42:50.000Z"
     }
   ]
 }
