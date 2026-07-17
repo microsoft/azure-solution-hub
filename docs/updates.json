@@ -1,52 +1,52 @@
 {
-  "generatedAt": "2026-07-16T21:20:48.588Z",
+  "generatedAt": "2026-07-17T21:15:10.593Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "items": [
     {
+      "title": "Generally Available: Azure Functions support for Python 3.14",
+      "titleKo": "일반 제공: Python 3.14에 대한 Azure Functions 지원",
+      "summaryKo": "이제 Python 3.14를 사용하여 로컬에서 함수를 개발하고 Azure Functions 계획에 배포할 수 있습니다. 향상된 보안, 더 긴 지원 기간 및 Azure Functions와의 지속적인 호환성을 활용하려면 앱을 Python 3.14로 업그레이드하세요.",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=567646",
+      "date": "2026-07-17T17:47:00.000Z"
+    },
+    {
+      "title": "Public Preview: Azure Functions Support for PowerShell 7.6",
+      "titleKo": "공식 미리보기: PowerShell 7.6에 대한 Azure Functions 지원",
+      "summaryKo": "Azure Functions의 PowerShell 7.6 지원이 이제 미리보기로 제공됩니다. 이제 PowerShell 7.6을 사용하여 로컬에서 앱을 개발하고 Azure Functions 계획에 배포할 수 있습니다. 자세히 알아보기: PowerShell 7.6의 새로운 기능 및 Azure Functions PowerShell 버전.",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=567651",
+      "date": "2026-07-17T17:44:00.000Z"
+    },
+    {
+      "title": "Generally Available: Microsoft Defender security assessments for Azure Database for PostgreSQL Flexible Server",
+      "titleKo": "일반 제공: Azure Database for PostgreSQL Flexible Server에 대한 Microsoft Defender 보안 평가",
+      "summaryKo": "Azure Database for PostgreSQL Flexible Server에 대한 Microsoft Defender Cloud Security Posture Management (CSPM) 평가가 이제 일반 제공됩니다. 평가를 사용하여 Azure PostgreSQL Flexible Server의 보안 상태를 지속적으로 평가할 수 있습니다.",
+      "status": "Launched",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=567527",
+      "date": "2026-07-17T14:55:28.000Z"
+    },
+    {
+      "title": "Generally Available: Encryption in Transit for Azure Files NFS Shares in Azure Kubernetes Service (AKS)",
+      "titleKo": "일반 제공: Azure Kubernetes Service (AKS)에서 Azure Files NFS 공유를 위한 전송 중 암호화",
+      "summaryKo": "Azure Kubernetes Service (AKS)는 이제 Azure File CSI 드라이버를 통해 Azure Files NFS v4.1 볼륨에 대한 전송 중 암호화(EiT)를 일반적으로 지원합니다. EiT가 활성화되면 AKS 작업 부하와 Azure Files NFS 공유 간에 전송되는 데이터가 TLS를 사용하여 암호화됩니다.",
+      "status": "Launched",
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=567787",
+      "date": "2026-07-17T14:54:09.000Z"
+    },
+    {
       "title": "Announcing: GitHub Copilot and Claude Code connectors in Microsoft Agent Framework",
       "titleKo": "발표: Microsoft Agent Framework의 GitHub Copilot 및 Claude Code 커넥터",
-      "summaryKo": "Microsoft Agent Framework는 이제 GitHub Copilot 및 Claude Code에 대한 일반 사용 가능 커넥터를 제공하여 개발자가 맞춤형 어댑터 코드를 작성하지 않고도 .NET 및 Python 에이전트를 구축하여 코딩 작업을 위임할 수 있습니다.",
+      "summaryKo": "Microsoft Agent Framework는 이제 GitHub Copilot 및 Claude Code에 대한 일반 제공 커넥터를 제공합니다. 개발자는 사용자 정의 어댑터 코드를 작성하지 않고도 두 시스템에 코딩 작업을 위임하는 .NET 및 Python 에이전트를 구축할 수 있습니다. 커넥터는 통합됩니다.",
       "status": "",
       "category": "AI + machine learning",
       "link": "https://azure.microsoft.com/updates?id=563701",
       "date": "2026-07-15T18:58:30.000Z"
-    },
-    {
-      "title": "Announcing: Multi-agent orchestration patterns including Magentic in Microsoft Agent Framework",
-      "titleKo": "발표: Microsoft Agent Framework의 Magentic을 포함한 다중 에이전트 오케스트레이션 패턴",
-      "summaryKo": "Microsoft Agent Framework는 다중 에이전트 오케스트레이션 패턴에 대한 일반 사용 가능성을 달성했으며, 여기에는 GAIA에서 38%의 성과를 달성하고 AssistantBench 및 WebArena의 공개 벤치마크에서 경쟁력 있는 결과를 제공한 동적 Magentic 패턴이 포함됩니다.",
-      "status": "",
-      "category": "AI + machine learning",
-      "link": "https://azure.microsoft.com/updates?id=563571",
-      "date": "2026-07-15T18:57:24.000Z"
-    },
-    {
-      "title": "Announcing: Agent Harness in Microsoft Agent Framework",
-      "titleKo": "발표: Microsoft Agent Framework의 에이전트 하네스",
-      "summaryKo": "Microsoft Agent Framework는 에이전트를 위한 프로덕션 런타임인 에이전트 하네스의 일반 사용 가능성을 달성했습니다. 미리보기 하네스에서 파일럿을 실행 중인 고객은 이제 동일한 에이전트 코드를 프로덕션으로 이전할 수 있습니다.",
-      "status": "",
-      "category": "AI + machine learning",
-      "link": "https://azure.microsoft.com/updates?id=563546",
-      "date": "2026-07-15T18:55:40.000Z"
-    },
-    {
-      "title": "Announcing: Multi-agent orchestration SDK with the Microsoft Foundry Agent Framework in C# and Python",
-      "titleKo": "발표: C# 및 Python용 Microsoft Foundry Agent Framework의 다중 에이전트 오케스트레이션 SDK",
-      "summaryKo": "Microsoft Foundry는 이제 C# 및 Python을 위한 통합 다중 에이전트 오케스트레이션 SDK인 Agent Framework를 소개합니다. 이 릴리스는 AutoGen 및 Semantic Kernel에 분산되어 있던 패턴을 통합하여 개발자에게 일관된 추상화 세트를 제공합니다.",
-      "status": "",
-      "category": "AI + machine learning",
-      "link": "https://azure.microsoft.com/updates?id=564312",
-      "date": "2026-07-15T18:53:28.000Z"
-    },
-    {
-      "title": "Announcing: Tracing for Microsoft Agent Framework (Python and .NET)",
-      "titleKo": "발표: Microsoft Agent Framework(Python 및 .NET)의 추적 기능",
-      "summaryKo": "공식 미리보기에서 Microsoft Foundry는 Python 및 .NET에서 Microsoft Agent Framework의 추적 기능을 제공하여 개발자가 에이전트가 실행 중에 어떻게 추론하고 도구를 호출하며 모델과 상호작용하는지를 관찰할 수 있도록 돕습니다.",
-      "status": "",
-      "category": "AI + machine learning",
-      "link": "https://azure.microsoft.com/updates?id=564071",
-      "date": "2026-07-15T18:51:45.000Z"
     }
   ]
 }
