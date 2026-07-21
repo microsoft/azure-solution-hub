@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-20T21:23:33.057Z",
+  "generatedAt": "2026-07-21T21:24:28.370Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "items": [
     {
       "title": "Public Preview: Protect sensitive generative AI telemetry in Application Insights and Microsoft Foundry",
       "titleKo": "공식 미리보기: Application Insights 및 Microsoft Foundry에서 민감한 생성 AI 텔레메트리 보호",
-      "summaryKo": "Azure Monitor Application Insights는 이제 전용 GenAIContent 테이블(AppGenAIContent in Log Analytics)에 생성 AI 콘텐츠를 저장하여 민감한 AI 텔레메트리에 새로운 접근 제어를 적용할 수 있게 되었습니다.",
+      "summaryKo": "Azure Monitor Application Insights는 이제 생성 AI 콘텐츠를 전용 GenAIContent 테이블(AppGenAIContent in Log Analytics)에 저장하여 민감한 AI 텔레메트리에 대한 새로운 접근 제어를 적용할 수 있게 되었습니다.",
       "status": "In preview",
       "category": "DevOps",
       "link": "https://azure.microsoft.com/updates?id=567594",
@@ -15,7 +15,7 @@
     {
       "title": "Generally Available: IPv6 support for Azure VPN Gateway",
       "titleKo": "일반 제공: Azure VPN Gateway의 IPv6 지원",
-      "summaryKo": "Azure VPN Gateway의 IPv6 지원을 통해 고객은 이중 스택 구성에서 VPN 터널을 통해 IPv6 내부 트래픽을 실행할 수 있습니다. IPv6는 표준 공용 IP를 사용하는 모든 생산 SKU 게이트웨이에서 지원됩니다.",
+      "summaryKo": "Azure VPN Gateway의 IPv6 지원을 통해 고객은 이중 스택 구성에서 VPN 터널을 통해 IPv6 내부 트래픽을 실행할 수 있습니다. IPv6는 표준 공용 IP를 사용하는 모든 프로덕션 SKU 게이트웨이에서 지원됩니다.",
       "status": "Launched",
       "category": "Networking",
       "link": "https://azure.microsoft.com/updates?id=567847",
@@ -24,7 +24,7 @@
     {
       "title": "Generally Available: Azure Functions support for Python 3.14",
       "titleKo": "일반 제공: Python 3.14에 대한 Azure Functions 지원",
-      "summaryKo": "이제 Python 3.14를 사용하여 로컬에서 함수를 개발하고 Linux의 Azure Functions 계획에 배포할 수 있습니다. 보안 강화, 긴 지원 기간 및 Azure Functions와의 지속적인 호환성을 위해 앱을 Python 3.14로 업그레이드하세요.",
+      "summaryKo": "이제 Python 3.14를 사용하여 로컬에서 함수를 개발하고 이를 Linux의 Azure Functions 계획에 배포할 수 있습니다. 보안 강화, 긴 지원 기간 및 Azure Functions와의 지속적인 호환성을 위해 앱을 Python 3.14로 업그레이드하세요.",
       "status": "Launched",
       "category": "Compute",
       "link": "https://azure.microsoft.com/updates?id=567646",
@@ -33,7 +33,7 @@
     {
       "title": "Public Preview: Azure Functions Support for PowerShell 7.6",
       "titleKo": "공식 미리보기: PowerShell 7.6에 대한 Azure Functions 지원",
-      "summaryKo": "Azure Functions의 PowerShell 7.6 지원이 이제 미리보기로 제공됩니다. 이제 로컬에서 PowerShell 7.6을 사용하여 앱을 개발하고 Azure Functions 계획에 배포할 수 있습니다.",
+      "summaryKo": "Azure Functions의 PowerShell 7.6 지원이 이제 미리보기로 제공됩니다. 이제 PowerShell 7.6을 사용하여 로컬에서 앱을 개발하고 Azure Functions 계획에 배포할 수 있습니다.",
       "status": "Launched",
       "category": "Compute",
       "link": "https://azure.microsoft.com/updates?id=567651",
