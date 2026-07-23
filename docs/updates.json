@@ -1,12 +1,21 @@
 {
-  "generatedAt": "2026-07-22T21:22:52.898Z",
+  "generatedAt": "2026-07-23T21:22:12.413Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "items": [
     {
+      "title": "Public Preview: Azure DDoS Protection custom policy",
+      "titleKo": "공식 미리보기: Azure DDoS Protection 맞춤 정책",
+      "summaryKo": "Azure DDoS Protection 맞춤 정책이 이제 공식 미리보기로 제공됩니다. 이 기능은 보호된 Standard Load Balancer 프론트엔드 IP 구성에 대한 DDoS 완화 임계값을 리소스별로 제어할 수 있습니다. 고객은 고정된 인바운드 탐지 임계값을 설정할 수 있습니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=568063",
+      "date": "2026-07-23T16:47:24.000Z"
+    },
+    {
       "title": "Public Preview: Standard service endpoint",
-      "titleKo": "공식 미리보기: 표준 서비스 엔드포인트",
-      "summaryKo": "표준 서비스 엔드포인트가 공식 미리보기로 제공되며, Private Link 가족 아래에서 IaaS 워크로드를 Azure PaaS 서비스에 연결하는 확장 가능하고 안전한 방법을 소개합니다. 이 향상된 기능은",
+      "titleKo": "공식 미리보기: Standard 서비스 엔드포인트",
+      "summaryKo": "Standard 서비스 엔드포인트가 이제 공식 미리보기로 제공되며, IaaS 워크로드를 Azure PaaS 서비스에 연결하는 확장 가능하고 안전한 방법을 소개합니다. 이 향상된 기능은 기존의 확장성 및 관리 제한을 극복합니다.",
       "status": "In preview",
       "category": "Networking",
       "link": "https://azure.microsoft.com/updates?id=561475",
@@ -15,7 +24,7 @@
     {
       "title": "Public Preview: Protect sensitive generative AI telemetry in Application Insights and Microsoft Foundry",
       "titleKo": "공식 미리보기: Application Insights 및 Microsoft Foundry에서 민감한 생성 AI 텔레메트리 보호",
-      "summaryKo": "Azure Monitor Application Insights는 이제 생성 AI 콘텐츠를 전용 GenAIContent 테이블(AppGenAIContent in Log Analytics)에 저장하여 민감한 AI 텔레메트리에 새로 제공되는 액세스 제어를 적용할 수 있게 합니다. Application Insights p",
+      "summaryKo": "Azure Monitor Application Insights는 이제 생성 AI 콘텐츠를 전용 GenAIContent 테이블(AppGenAIContent in Log Analytics)에 저장하여 민감한 AI 텔레메트리에 대한 새로운 접근 제어를 적용할 수 있게 합니다. Application Insights는...",
       "status": "In preview",
       "category": "AI + machine learning",
       "link": "https://azure.microsoft.com/updates?id=567594",
@@ -24,7 +33,7 @@
     {
       "title": "Generally Available: IPv6 support for Azure VPN Gateway",
       "titleKo": "일반 제공: Azure VPN Gateway의 IPv6 지원",
-      "summaryKo": "Azure VPN Gateway의 IPv6 지원은 고객이 이중 스택 구성에서 VPN 터널을 통해 IPv6 내부 트래픽을 실행할 수 있게 합니다. IPv6는 표준 공용 IP를 사용하는 모든 생산 SKU 게이트웨이에서 지원됩니다. IPv6 내부 트래픽은 n",
+      "summaryKo": "Azure VPN Gateway의 IPv6 지원을 통해 고객은 이중 스택 구성에서 VPN 터널을 통해 IPv6 내부 트래픽을 실행할 수 있습니다. IPv6는 표준 공용 IP를 사용하는 모든 생산 SKU 게이트웨이에서 지원됩니다. IPv6 내부 트래픽은...",
       "status": "Launched",
       "category": "Networking",
       "link": "https://azure.microsoft.com/updates?id=567847",
@@ -33,20 +42,11 @@
     {
       "title": "Generally Available: Azure Functions support for Python 3.14",
       "titleKo": "일반 제공: Python 3.14에 대한 Azure Functions 지원",
-      "summaryKo": "이제 Python 3.14를 사용하여 로컬에서 함수를 개발하고 이를 Azure Functions 계획에 배포할 수 있습니다. 향상된 보안, 더 긴 지원 기간 및 Azure Functions와의 지속적인 호환성을 활용하기 위해 앱을 Python 3.14로 업그레이드하세요.",
+      "summaryKo": "이제 Python 3.14를 사용하여 로컬에서 함수를 개발하고 Linux의 Azure Functions 계획에 배포할 수 있습니다. 앱을 Python 3.14로 업그레이드하여 향상된 보안, 더 긴 지원 기간 및 Azure Functions와의 지속적인 호환성을 활용하세요.",
       "status": "Launched",
       "category": "Compute",
       "link": "https://azure.microsoft.com/updates?id=567646",
       "date": "2026-07-17T17:47:00.000Z"
-    },
-    {
-      "title": "Public Preview: Azure Functions Support for PowerShell 7.6",
-      "titleKo": "공식 미리보기: PowerShell 7.6에 대한 Azure Functions 지원",
-      "summaryKo": "Azure Functions의 PowerShell 7.6 지원이 이제 미리보기로 제공됩니다. 이제 PowerShell 7.6을 사용하여 로컬에서 앱을 개발하고 이를 Azure Functions 계획에 배포할 수 있습니다. 자세히 알아보기: PowerShell 7.6의 새로운 기능 Azure Functions PowerShell 버전 및 그들의",
-      "status": "Launched",
-      "category": "Compute",
-      "link": "https://azure.microsoft.com/updates?id=567651",
-      "date": "2026-07-17T17:44:00.000Z"
     }
   ]
 }
