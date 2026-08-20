@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-07-21T22:02:53.180Z",
+  "generatedAt": "2026-08-20T21:10:20.036Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 5,
+  "count": 10,
   "items": [
+    {
+      "title": "Generally Available: Summarized advertised gateway prefixes for route advertisement",
+      "titleKo": "Generally Available: Summarized advertised gateway prefixes for route advertisement",
+      "summaryKo": "Summarized advertised gateway prefixes for route advertisement is now generally available. You can specify aggregated (summarized) prefixes for an Azure gateway to advertise to your on-premises networks, rather than having every individual virtual network",
+      "status": "Launched",
+      "category": "Hybrid + multicloud",
+      "link": "https://azure.microsoft.com/updates?id=569743",
+      "date": "2026-08-20T17:02:23.000Z"
+    },
+    {
+      "title": "Announcing: Azure Copilot introduces direct access to agents",
+      "titleKo": "Announcing: Azure Copilot introduces direct access to agents",
+      "summaryKo": "Starting in August 2026, customers can engage directly with Azure Copilot agents to move more quickly from questions to action.With this update:Choose the right agent for your goal. Customers can select the specific agent best suited to their needs and ge",
+      "status": "",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=569685",
+      "date": "2026-08-20T16:08:02.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Databricks Lakebase in four additional regions",
+      "titleKo": "Generally Available: Azure Databricks Lakebase in four additional regions",
+      "summaryKo": "Lakebase is now generally available in four additional Azure regions: North Central US, France Central, Germany West Central, and East Asia. This expansion provides customers with additional deployment options and broader regional availability for Lakebas",
+      "status": "Launched",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=569684",
+      "date": "2026-08-19T21:04:18.000Z"
+    },
+    {
+      "title": "Generally Available: Azure SQL updates for mid-August 2026",
+      "titleKo": "Generally Available: Azure SQL updates for mid-August 2026",
+      "summaryKo": "In mid-August 2026, the following updates and enhancements were made to Azure SQL: You can customize keyboard shortcuts for Quick Queries, the Results Grid, and the Query Editor directly within Visual Studio Code—without leaving your editor. Shortcut Conf",
+      "status": "Launched",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=569145",
+      "date": "2026-08-19T21:01:47.000Z"
+    },
+    {
+      "title": "Public Preview: SQL Formatter in MSSQL extension",
+      "titleKo": "Public Preview: SQL Formatter in MSSQL extension",
+      "summaryKo": "With SQL Formatter, you can format SQL scripts directly in your editor for cleaner, more consistent, and readable code. Now in public preview, it includes more customizable formatting options to match your preferred coding style and streamline development",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=569155",
+      "date": "2026-08-19T21:00:19.000Z"
+    },
     {
       "title": "Public Preview: Protect sensitive generative AI telemetry in Application Insights and Microsoft Foundry",
       "titleKo": "공식 미리보기: Application Insights 및 Microsoft Foundry에서 민감한 생성 AI 텔레메트리 보호",
