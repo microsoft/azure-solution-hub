@@ -1,8 +1,26 @@
 {
-  "generatedAt": "2026-08-24T21:08:36.306Z",
+  "generatedAt": "2026-08-25T21:06:01.586Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 14,
+  "count": 16,
   "items": [
+    {
+      "title": "Announcing: Aspire 13.5 has shipped",
+      "titleKo": "Announcing: Aspire 13.5 has shipped",
+      "summaryKo": "Aspire 13.5 refreshes the dashboard and aspire.dev, expands the Interaction Service, adds cross-scope Azure references and persistent Kubernetes volumes, and brings live terminals into the apphost.Learn more.",
+      "status": "",
+      "category": "Announcement",
+      "link": "https://azure.microsoft.com/updates?id=569910",
+      "date": "2026-08-25T19:55:34.000Z"
+    },
+    {
+      "title": "Generally Available: Azure 248 and 372 vCPU sizes for D/E v7 series VMs",
+      "titleKo": "Generally Available: Azure 248 and 372 vCPU sizes for D/E v7 series VMs",
+      "summaryKo": "Azure announces the general availability of 248 and 372 vCPU Dl/D/E v7 VM sizes, powered by Intel® Xeon® 6 processors. These general-purpose and memory-optimized VMs deliver up to 20% better compute performance than prior-generation Intel-based v6 VMs, wi",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=569546",
+      "date": "2026-08-25T18:05:54.000Z"
+    },
     {
       "title": "Announcing: Extended Support for Azure Database for PostgreSQL Flexible Server",
       "titleKo": "Announcing: Extended Support for Azure Database for PostgreSQL Flexible Server",
