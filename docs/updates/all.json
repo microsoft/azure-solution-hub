@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-08-25T21:06:01.586Z",
+  "generatedAt": "2026-08-26T21:51:59.578Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 16,
+  "count": 21,
   "items": [
+    {
+      "title": "Generally Available: Azure Bastion shareable link expiration",
+      "titleKo": "Generally Available: Azure Bastion shareable link expiration",
+      "summaryKo": "Azure Bastion shareable link expiration is now generally available. When creating a shareable link, administrators can specify the date and time when the link should expire. After the configured expiration time, the link can no longer be used to connect t",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=570020",
+      "date": "2026-08-26T16:57:56.000Z"
+    },
+    {
+      "title": "Public Preview: IPv6 dual-stack support for Azure Bastion",
+      "titleKo": "Public Preview: IPv6 dual-stack support for Azure Bastion",
+      "summaryKo": "Azure Bastion support for IPv4 and IPv6 dual-stack configurations is now available in public preview. Customers can configure a newly created Bastion deployment with both IPv4 and IPv6 public IP addresses. IPv6 is supported for connections between the use",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=570025",
+      "date": "2026-08-26T16:56:29.000Z"
+    },
+    {
+      "title": "Generally Available: Connect to AKS clusters using Azure Bastion",
+      "titleKo": "Generally Available: Connect to AKS clusters using Azure Bastion",
+      "summaryKo": "Azure Bastion integration with Azure Kubernetes Service is now generally available. Customers can establish a secure tunnel from their local machine through Azure Bastion to an AKS cluster API server. The integration enables customers to use standard Kube",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=570030",
+      "date": "2026-08-26T16:55:25.000Z"
+    },
+    {
+      "title": "Public Preview: Introducing Live Reports for Azure SRE Agent",
+      "titleKo": "Public Preview: Introducing Live Reports for Azure SRE Agent",
+      "summaryKo": "We're excited to announce Live Reports, now in Public Preview for Azure SRE Agent. Live Reports help operations teams create dynamic operational views directly from SRE Agent conversations and keep them continuously up to date with the latest data from co",
+      "status": "In preview",
+      "category": "Features",
+      "link": "https://azure.microsoft.com/updates?id=569690",
+      "date": "2026-08-26T16:52:23.000Z"
+    },
+    {
+      "title": "Generally Available: Azure SRE Agent VNet Integration",
+      "titleKo": "Generally Available: Azure SRE Agent VNet Integration",
+      "summaryKo": "Azure SRE Agent VNet Integration is now generally available. VNet integration enables Azure SRE Agent to operate within your existing network controls, including Network Security Groups (NSGs), private DNS, and firewall policies, etc. With VNet support, t",
+      "status": "Launched",
+      "category": "Features",
+      "link": "https://azure.microsoft.com/updates?id=569695",
+      "date": "2026-08-26T16:51:31.000Z"
+    },
     {
       "title": "Announcing: Aspire 13.5 has shipped",
       "titleKo": "Announcing: Aspire 13.5 has shipped",
