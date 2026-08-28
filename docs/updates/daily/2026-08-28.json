@@ -1,8 +1,26 @@
 {
-  "generatedAt": "2026-08-28T00:03:50.344Z",
+  "generatedAt": "2026-08-28T22:04:50.996Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": false,
   "items": [
+    {
+      "title": "Generally Available: Workload identity support for Azure Files CSI driver (SMB) in Azure",
+      "titleKo": "Generally Available: Workload identity support for Azure Files CSI driver (SMB) in Azure",
+      "summaryKo": "The Azure Files Container Storage Interface (CSI) driver in Azure Kubernetes Service (AKS) now supports workload identity for pod-level authentication to SMB file shares. Previously, managed identity support in AKS enabled workloads to mount Azure Files w",
+      "status": "Launched",
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=570120",
+      "date": "2026-08-28T20:25:22.000Z"
+    },
+    {
+      "title": "Generally Available: Azure VM Image Builder in sovereign and air-gapped clouds",
+      "titleKo": "Generally Available: Azure VM Image Builder in sovereign and air-gapped clouds",
+      "summaryKo": "Overview:Azure VM Image Builder is now generally available in Azure Government, China North 3, Azure Government Secret, and Azure Government Top Secret.You can now use the same managed image-building service across your sovereign and air-gapped environmen",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=570105",
+      "date": "2026-08-28T15:45:32.000Z"
+    },
     {
       "title": "Generally Available: Azure Bastion shareable link expiration",
       "titleKo": "Generally Available: Azure Bastion shareable link expiration",
@@ -29,24 +47,6 @@
       "category": "Networking",
       "link": "https://azure.microsoft.com/updates?id=570030",
       "date": "2026-08-26T16:55:25.000Z"
-    },
-    {
-      "title": "Public Preview: Introducing Live Reports for Azure SRE Agent",
-      "titleKo": "Public Preview: Introducing Live Reports for Azure SRE Agent",
-      "summaryKo": "We're excited to announce Live Reports, now in Public Preview for Azure SRE Agent. Live Reports help operations teams create dynamic operational views directly from SRE Agent conversations and keep them continuously up to date with the latest data from co",
-      "status": "In preview",
-      "category": "Features",
-      "link": "https://azure.microsoft.com/updates?id=569690",
-      "date": "2026-08-26T16:52:23.000Z"
-    },
-    {
-      "title": "Generally Available: Azure SRE Agent VNet Integration",
-      "titleKo": "Generally Available: Azure SRE Agent VNet Integration",
-      "summaryKo": "Azure SRE Agent VNet Integration is now generally available. VNet integration enables Azure SRE Agent to operate within your existing network controls, including Network Security Groups (NSGs), private DNS, and firewall policies, etc. With VNet support, t",
-      "status": "Launched",
-      "category": "Features",
-      "link": "https://azure.microsoft.com/updates?id=569695",
-      "date": "2026-08-26T16:51:31.000Z"
     }
   ]
 }
