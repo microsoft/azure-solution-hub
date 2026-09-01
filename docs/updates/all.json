@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-08-31T21:02:30.953Z",
+  "generatedAt": "2026-09-01T21:02:26.478Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 24,
+  "count": 29,
   "items": [
+    {
+      "title": "Generally Available: Purchase order mapping available in Microsoft Marketplace",
+      "titleKo": "Generally Available: Purchase order mapping available in Microsoft Marketplace",
+      "summaryKo": "Align Microsoft Marketplace purchases to your business's accounting needs. Purchase order mapping helps allocate your Microsoft invoice, including Marketplace purchases, making it easier to reconcile your organization's cloud and AI spend. Get supplementa",
+      "status": "Launched",
+      "category": "Feature",
+      "link": "https://azure.microsoft.com/updates?id=569700",
+      "date": "2026-09-01T18:40:59.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Firewall auto-learn SNAT routes",
+      "titleKo": "Generally Available: Azure Firewall auto-learn SNAT routes",
+      "summaryKo": "Azure Firewall’s auto-learn SNAT routes is now generally available, automatically learning registered and private destination prefixes periodically and applying them as No-SNAT ranges to preserve original source IPs and simplify SNAT management.Learn more",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=570474",
+      "date": "2026-09-01T17:10:38.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Copilot Observability Agent supports Basic and Auxiliary table plans",
+      "titleKo": "Generally Available: Azure Copilot Observability Agent supports Basic and Auxiliary table plans",
+      "summaryKo": "Azure Copilot Observability Agent, an AI-powered operational companion in Azure Monitor, is now covering Log Analytics data in Basic and Auxiliary table plans during interactive analysis and deep investigations. Teams can move high-volume telemetry - incl",
+      "status": "Launched",
+      "category": "DevOps",
+      "link": "https://azure.microsoft.com/updates?id=570250",
+      "date": "2026-09-01T16:31:14.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Monitor Auxiliary Logs Plan in Azure Government and China regions",
+      "titleKo": "Generally Available: Azure Monitor Auxiliary Logs Plan in Azure Government and China regions",
+      "summaryKo": "The Auxiliary table plan in Azure Monitor Logs is a cost-effective option for ingesting and retaining high-volume, verbose logs used for compliance and auditing. Auxiliary Logs is now generally available in the sovereign clouds: Azure Government (Fairfax)",
+      "status": "Launched",
+      "category": "DevOps",
+      "link": "https://azure.microsoft.com/updates?id=569899",
+      "date": "2026-09-01T16:29:24.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Monitor Auxiliary Logs Plan support for Azure tables and plan switching",
+      "titleKo": "Generally Available: Azure Monitor Auxiliary Logs Plan support for Azure tables and plan switching",
+      "summaryKo": "The Auxiliary table plan in Azure Monitor Logs gives you a cost-effective way to ingest and retain high-volume, verbose logs that you keep for compliance and auditing but rarely query. Two highly requested capabilities are now generally available.Auxiliar",
+      "status": "Launched",
+      "category": "DevOps",
+      "link": "https://azure.microsoft.com/updates?id=569904",
+      "date": "2026-09-01T16:25:33.000Z"
+    },
     {
       "title": "Public Preview: Azure Multicloud Interconnect",
       "titleKo": "Public Preview: Azure Multicloud Interconnect",
