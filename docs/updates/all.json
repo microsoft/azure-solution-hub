@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-09-01T21:02:26.478Z",
+  "generatedAt": "2026-09-02T21:02:10.681Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 29,
+  "count": 34,
   "items": [
+    {
+      "title": "Public Preview: Azure Front Door profile and route level WAF policies",
+      "titleKo": "Public Preview: Azure Front Door profile and route level WAF policies",
+      "summaryKo": "Azure Front Door’s Web Application Firewall (WAF) now supports profile and route level WAF policy associations in public preview. This gives you more flexibility to apply broad baseline protection across an Azure Front Door profile while using targeted po",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=569804",
+      "date": "2026-09-02T17:00:51.000Z"
+    },
+    {
+      "title": "Public Preview: Reader Endpoint for Azure Database for MySQL",
+      "titleKo": "Public Preview: Reader Endpoint for Azure Database for MySQL",
+      "summaryKo": "We’re happy to announce the public preview of reader endpoint support to simplify connection management when using multiple replicas in Azure Database for MySQL - Flexible Server. A reader endpoint enables automatic load balancing of read-only connection",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=569653",
+      "date": "2026-09-02T16:59:15.000Z"
+    },
+    {
+      "title": "Generally Available: Microsoft Defender for Cloud support for Azure Container Apps (Serverless Containers Posture)",
+      "titleKo": "Generally Available: Microsoft Defender for Cloud support for Azure Container Apps (Serverless Containers Posture)",
+      "summaryKo": "Customers can now bring Azure Container Apps environments into Microsoft Defender for Cloud’s Serverless Containers Posture experience, helping security teams extend posture management across more of their container estate from a single workflow. This mak",
+      "status": "Launched",
+      "category": "Containers",
+      "link": "https://azure.microsoft.com/updates?id=570282",
+      "date": "2026-09-01T22:34:43.000Z"
+    },
+    {
+      "title": "Generally Available: Windows Server 2025 on AKS",
+      "titleKo": "Generally Available: Windows Server 2025 on AKS",
+      "summaryKo": "Organizations running Windows-based workloads on Azure Kubernetes Service (AKS) face increasing pressure to modernize as support timelines for older Windows Server versions approach retirement. To help customers prepare, AKS now offers GA support for Wind",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=570090",
+      "date": "2026-09-01T22:31:50.000Z"
+    },
+    {
+      "title": "Generally Available: Artifact Streaming on AKS",
+      "titleKo": "Generally Available: Artifact Streaming on AKS",
+      "summaryKo": "You can now accelerate your containerized workloads on Azure Kubernetes Service (AKS) using Azure Container Registry (ACR) with Artifact streaming. Artifact streaming will allow you to scale your workloads without having to fully wait for images to be pul",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=570095",
+      "date": "2026-09-01T22:30:59.000Z"
+    },
     {
       "title": "Generally Available: Purchase order mapping available in Microsoft Marketplace",
       "titleKo": "Generally Available: Purchase order mapping available in Microsoft Marketplace",
