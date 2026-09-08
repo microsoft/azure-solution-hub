@@ -1,8 +1,26 @@
 {
-  "generatedAt": "2026-09-07T21:02:14.679Z",
+  "generatedAt": "2026-09-08T21:02:03.185Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 35,
+  "count": 37,
   "items": [
+    {
+      "title": "Generally Available: Playwright Workspaces in Australia East, Japan East, and Switzerland North",
+      "titleKo": "Generally Available: Playwright Workspaces in Australia East, Japan East, and Switzerland North",
+      "summaryKo": "Playwright Workspaces in Azure App Testing is now generally available in Switzerland North, Japan East, and Australia East.Playwright Workspaces provides fully managed cloud-hosted browsers for running end-to-end Playwright tests at scale, with parallel e",
+      "status": "Launched",
+      "category": "Developer tools",
+      "link": "https://azure.microsoft.com/updates?id=570919",
+      "date": "2026-09-08T17:35:32.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Developer CLI (azd) Extension Framework",
+      "titleKo": "Generally Available: Azure Developer CLI (azd) Extension Framework",
+      "summaryKo": "The Azure Developer CLI (azd) Extension Framework is now generally available. The framework enables developers, teams, and partners to extend Azure Developer CLI with custom capabilities that support their preferred application development workflows.With",
+      "status": "Launched",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=570881",
+      "date": "2026-09-08T17:18:38.000Z"
+    },
     {
       "title": "Generally Available: Azure Virtual Network Manager IPAM in additional Azure regions",
       "titleKo": "Generally Available: Azure Virtual Network Manager IPAM in additional Azure regions",
@@ -22,10 +40,10 @@
       "date": "2026-09-02T17:00:51.000Z"
     },
     {
-      "title": "Public Preview: Reader Endpoint for Azure Database for MySQL",
-      "titleKo": "Public Preview: Reader Endpoint for Azure Database for MySQL",
+      "title": "Private Preview: Reader Endpoint for Azure Database for MySQL",
+      "titleKo": "Private Preview: Reader Endpoint for Azure Database for MySQL",
       "summaryKo": "We’re happy to announce the public preview of reader endpoint support to simplify connection management when using multiple replicas in Azure Database for MySQL - Flexible Server. A reader endpoint enables automatic load balancing of read-only connection",
-      "status": "In preview",
+      "status": "In development",
       "category": "Databases",
       "link": "https://azure.microsoft.com/updates?id=569653",
       "date": "2026-09-02T16:59:15.000Z"
