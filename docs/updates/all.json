@@ -1,8 +1,44 @@
 {
-  "generatedAt": "2026-09-09T21:04:04.598Z",
+  "generatedAt": "2026-09-10T21:02:00.866Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 37,
+  "count": 41,
   "items": [
+    {
+      "title": "Generally Available: TLS/SSL certificate and end-to-end TLS encryption support for Azure Functions Flex Consumption",
+      "titleKo": "Generally Available: TLS/SSL certificate and end-to-end TLS encryption support for Azure Functions Flex Consumption",
+      "summaryKo": "Azure Functions Flex Consumption support for TLS/SSL certificates is now generally available through a new site-scoped certificate model. Each function app can hold up to 3 private (.pfx) and 3 public (.cer) certificates uploaded directly, imported from A",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=570940",
+      "date": "2026-09-10T16:12:49.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Copilot Troubleshooting Agent",
+      "titleKo": "Generally Available: Azure Copilot Troubleshooting Agent",
+      "summaryKo": "Azure Copilot Troubleshooting Agent is now generally available. Troubleshooting Agent is a unified, built-in Azure Copilot capability that helps customers investigate and resolve operational issues faster. Available through both Azure Copilot and Support",
+      "status": "Launched",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=570980",
+      "date": "2026-09-10T15:25:52.000Z"
+    },
+    {
+      "title": "Generally Available: User-bound user delegation SAS for Azure Storage",
+      "titleKo": "Generally Available: User-bound user delegation SAS for Azure Storage",
+      "summaryKo": "Announcing the addition of enhanced secure authentication in Azure Storage that combines the flexibility of user-delegation shared access signature (SAS) with the user-bound access of Entra ID. User-bound user delegation SAS is now generally available for",
+      "status": "Launched",
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=569241",
+      "date": "2026-09-09T22:30:41.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Ephemeral OS Disk with full caching for VM/VMSS",
+      "titleKo": "Generally Available: Azure Ephemeral OS Disk with full caching for VM/VMSS",
+      "summaryKo": "Azure Ephemeral OS Disk with full caching is now generally available for new virtual machines and Virtual Machine Scale Sets. The capability caches the complete OS image on a VM’s local storage, eliminating remote-storage reads after caching finishes. Thi",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=570551",
+      "date": "2026-09-09T21:24:37.000Z"
+    },
     {
       "title": "Generally Available: Playwright Workspaces in Australia East, Japan East, and Switzerland North",
       "titleKo": "Generally Available: Playwright Workspaces in Australia East, Japan East, and Switzerland North",
