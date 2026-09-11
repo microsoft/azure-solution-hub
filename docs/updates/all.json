@@ -1,8 +1,26 @@
 {
-  "generatedAt": "2026-09-10T21:02:00.866Z",
+  "generatedAt": "2026-09-11T21:02:13.007Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 41,
+  "count": 43,
   "items": [
+    {
+      "title": "Retirement: Azure Linux with OS Guard in Azure Kubernetes Service",
+      "titleKo": "Retirement: Azure Linux with OS Guard in Azure Kubernetes Service",
+      "summaryKo": "Support for Azure Linux with OS Guard in Azure Kubernetes Service will end on December 10, 2026. Azure Container Linux is the replacement for Azure Linux with OS Guard (preview). Starting on December 10, 2026:Users won’t be able to create new Azure Linux",
+      "status": "Retirements",
+      "category": "",
+      "link": "https://azure.microsoft.com/updates?id=571257",
+      "date": "2026-09-11T18:08:28.000Z"
+    },
+    {
+      "title": "Public Preview: Agentless migration of on-premises SMB file shares to Azure Files (SMB)",
+      "titleKo": "Public Preview: Agentless migration of on-premises SMB file shares to Azure Files (SMB)",
+      "summaryKo": "Azure Storage Mover now supports agentless migration of on-premises SMB file shares to Azure Files (SMB), in public preview. You can move file data from Windows Server or NAS shares into Azure without deploying, registering, or maintaining a migration age",
+      "status": "In preview",
+      "category": "Migration",
+      "link": "https://azure.microsoft.com/updates?id=570910",
+      "date": "2026-09-11T15:58:56.000Z"
+    },
     {
       "title": "Generally Available: TLS/SSL certificate and end-to-end TLS encryption support for Azure Functions Flex Consumption",
       "titleKo": "Generally Available: TLS/SSL certificate and end-to-end TLS encryption support for Azure Functions Flex Consumption",
