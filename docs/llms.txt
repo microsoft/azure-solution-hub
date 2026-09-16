@@ -14,6 +14,7 @@
 - [앱 현대화 & DevOps (App Modernization)](https://microsoft.github.io/azure-solution-hub/solution.html?slug=app-modernization): 컨테이너, Kubernetes, GitHub 기반 클라우드 네이티브 애플리케이션 현대화.
 
 ## Hands-on Workshops
+- [Microsoft Foundry Workshop (Code)](https://microsoft.github.io/azure-solution-hub/workshop.html?slug=foundry-agent-sdk-workshop-kr): Microsoft Foundry에서 Python으로 Chat Completions·Embeddings·RAG·에이전트를 구축하는 입문 핸즈온 (건강·피트니스 예제)
 
 - [Azure Basic Workshop](https://microsoft.github.io/azure-solution-hub/workshop.html?slug=azure-basic-workshop): 가상 네트워크·가상 머신·SQL Database·Load Balancer로 Azure에 웹 앱을 직접 배포하는 단계별 실습(사전 준비 → 웹 앱 배포 → VMSS).
 - [Azure Landing Zone Workshop](https://microsoft.github.io/azure-solution-hub/workshop.html?slug=azure-landing-zone-workshop): Azure Virtual WAN 기반 Hub-Spoke 네트워크에 Application Gateway(WAF v2)와 Azure Firewall을 적용한 랜딩 존을 단계별로 구성(네트워크 → 보안 → 테스트 시스템 → 연결성 확인).

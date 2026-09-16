@@ -432,6 +432,7 @@ function setRoundedStat(id, count) {
         if (ws) ws.included = /^(true|yes|1)$/i.test(inc[1].trim());
         return;
       }
+      if (/^ref\s*:/i.test(line)) return;
 
       // 폴더 방식: 'folder: <슬러그>' → workshops/<슬러그>/index.md 상세 페이지 연결
       const fm = line.match(/^folder\s*:\s*([A-Za-z0-9_-]+)\s*$/i);
@@ -650,6 +651,14 @@ function setRoundedStat(id, count) {
     }
     setRoundedStat('statWorkshops', wsAll.length);
 
+    const catalog = await window.WorkshopData.loadCatalog();
+    wsAll.forEach(workshop => {
+      const metadata = window.WorkshopData.findMetadata(catalog, workshop.folder, workshop.links[0]?.url);
+      if (!metadata) return;
+      workshop.title = metadata.title;
+      workshop.description = metadata.description;
+      workshop.badges = window.WorkshopData.metadataBadges(metadata);
+    });
     await Promise.all(wsAll.map(enrich));
 
     // 같은 카테고리 이름끼리 병합 (솔루션과 동일한 카테고리 기준)
@@ -813,10 +822,11 @@ function setRoundedStat(id, count) {
         return;
       }
       if (line.startsWith('#')) return;
-      if (/^included\s*:/i.test(line)) return;
+      if (/^(included|ref)\s*:/i.test(line)) return;
       const fm = line.match(/^folder\s*:\s*([A-Za-z0-9_-]+)\s*$/i);
       if (fm) {
         if (!cur) cur = { type: 'workshop', title: cat || '워크샵', summary: '', url: '', extra: cat, date: '', external: false };
+        cur.folder = fm[1];
         cur.url = `workshop.html?slug=${encodeURIComponent(fm[1])}`;
         cur.external = false;
         return;
@@ -825,6 +835,7 @@ function setRoundedStat(id, count) {
       const um = head.match(/https?:\/\/github\.com\/[^\s)\]]+/i);
       if (um) {
         if (!cur) cur = { type: 'workshop', title: cat || '워크샵', summary: '', url: '', extra: cat, date: '', external: true };
+        if (!cur.repo) cur.repo = um[0];
         if (!cur.url) cur.url = um[0];
         return;
       }
@@ -847,10 +858,20 @@ function setRoundedStat(id, count) {
         .then((r) => (r.ok ? r.json() : null))
         .catch(() => null)
         .then((j) => j || fetch('updates/updates.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : { items: [] })).catch(() => ({ items: [] }))),
-    ]).then(([solText, wsText, upJson]) => {
+      window.WorkshopData.loadCatalog(),
+    ]).then(([solText, wsText, upJson, catalog]) => {
       const items = [];
       parseSolutions(solText).forEach((s) => items.push(s));
-      parseWorkshops(wsText).forEach((w) => items.push(w));
+      parseWorkshops(wsText).forEach((workshop) => {
+        const metadata = window.WorkshopData.findMetadata(catalog, workshop.folder, workshop.repo);
+        if (metadata) {
+          workshop.title = metadata.title;
+          workshop.summary = metadata.description;
+          workshop.extra += ` ${metadata.tags.join(' ')} ${window.WorkshopData.metadataBadges(metadata).join(' ')}`;
+          workshop.date = metadata.last_updated;
+        }
+        items.push(workshop);
+      });
       (Array.isArray(upJson.items) ? upJson.items : []).forEach((u) => {
         items.push({
           type: 'update',
