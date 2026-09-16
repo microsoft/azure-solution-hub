@@ -1,33 +1,29 @@
 // @ts-nocheck
 /**
- * 워크샵 표준화 (baseline 자동화)
+ * 공개 워크샵 수집과 사이트 매니페스트 생성
  * ---------------------------------------------------------------------------
  * docs/workshops/workshops.md 에서 `included: true` 로 표시된 워크샵을 찾아,
  * 사이트 공통 단계형(step) 포맷으로 표준화합니다.
- *   1) GitHub 레포 구조를 분석해 단계를 판별
- *      - 유형 A: 단계 폴더(각 폴더에 README.md)
- *      - 유형 B: 루트 단계 .md 파일(README 하단 'Contents' 순서)
+ *   1) 표준 리포는 frontmatter와 학습 경로 표를, 기존 리포는 폴더/목차를 분석
  *   2) docs/workshops/<slug>/index.md 를 생성 (개요 + 단계, 첫 단계는 개요)
  *   3) workshops.md 항목에 `folder: <slug>` 연결
- *   4) docs/sitemap.xml, docs/llms.txt 에 뷰어 URL 반영
+ *   4) catalog.json, sitemap.xml, llms.txt 에 메타데이터와 뷰어 URL 반영
  *
- * 이미 index.md 가 있으면 콘텐츠는 건드리지 않고 folder/SEO 연결만 보정합니다.
- * (사람이 다듬은 매니페스트를 덮어쓰지 않기 위함)
+ * 자동 생성 표시가 있는 표준 매니페스트만 갱신하며 수동 매니페스트는 보호합니다.
+ * 모든 수집/검사가 성공한 뒤에만 파일을 기록합니다.
  *
  * 실행: GitHub Actions(workshops.md 변경 시) 또는 로컬 `node scripts/standardize-workshops.mjs`
  * 상세 규칙은 .github/skills/workshop-standardization/SKILL.md 를 참고하세요.
  */
 
 import { writeFile, readFile, mkdir, access } from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join } from 'node:path';
+import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
+import { analyzeStandard, frontmatter, MANAGED_BY, parseManifest, renderStandard } from './workshop-standard.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
-const DOCS = join(ROOT, 'docs');
-const WORKSHOPS_MD = join(DOCS, 'workshops', 'workshops.md');
-const SITEMAP = join(DOCS, 'sitemap.xml');
-const LLMS = join(DOCS, 'llms.txt');
 const HOST = 'https://microsoft.github.io/azure-solution-hub';
 
 const GH_HEADERS = {
@@ -61,8 +57,8 @@ function encodePath(p) {
 }
 
 /** workshops.md 파싱 → included 항목 목록 */
-function parseIncluded(text) {
-  const lines = text.split(/\r?\n/);
+export function parseIncluded(text) {
+  const lines = text.replace(/<!--[\s\S]*?-->/g, comment => comment.replace(/[^\r\n]/g, '')).split(/\r?\n/);
   const items = [];
   let cur = null;
   const flush = () => { if (cur) items.push(cur); cur = null; };
@@ -72,7 +68,7 @@ function parseIncluded(text) {
     if (line.startsWith('### ')) {
       flush();
       let title = line.slice(4).trim().replace(/\s*\([^)]*\)\s*$/, '');
-      cur = { title, headerLine: i, included: false, folder: '', repo: '', lastLine: i };
+      cur = { title, headerLine: i, included: false, folder: '', repo: '', ref: '', lastLine: i };
       continue;
     }
     if (!cur) continue;
@@ -81,6 +77,8 @@ function parseIncluded(text) {
     if (/^included\s*:/i.test(line)) { cur.included = /^(true|yes|1)$/i.test(line.split(':')[1].trim()); continue; }
     const fm = line.match(/^folder\s*:\s*([A-Za-z0-9_-]+)/i);
     if (fm) { cur.folder = fm[1]; continue; }
+    const ref = line.match(/^ref\s*:\s*(\S+)$/i);
+    if (ref) { cur.ref = ref[1]; continue; }
     const gh = line.match(/https?:\/\/github\.com\/[^\s)\]]+/i);
     if (gh && !cur.repo) cur.repo = gh[0];
   }
@@ -89,8 +87,8 @@ function parseIncluded(text) {
 }
 
 /** README 하단 Contents 목록(표시명) 순서 추출 */
-function parseContentsOrder(readme) {
-  const m = readme.match(/^#{1,6}\s*Contents\s*$([\s\S]*?)(?:^#{1,6}\s|\Z)/im);
+export function parseContentsOrder(readme) {
+  const m = readme.match(/^#{1,6}\s*Contents\s*$([\s\S]*?)(?:^#{1,6}\s|(?![\s\S]))/im);
   if (!m) return [];
   const names = [];
   for (const l of m[1].split(/\r?\n/)) {
@@ -126,14 +124,29 @@ function parseOverview(readme) {
 const norm = (s) => String(s).toLowerCase().replace(/[^a-z0-9]/g, '');
 
 /** 레포 구조 분석 → { title, overview, steps:[{title, source, desc}] } */
-async function analyzeRepo(owner, repo) {
-  const meta = await fetch(`https://api.github.com/repos/${owner}/${repo}`, { headers: GH_HEADERS }).then((r) => (r.ok ? r.json() : null));
-  const branch = (meta && meta.default_branch) || 'main';
-  const tree = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`, { headers: GH_HEADERS }).then((r) => (r.ok ? r.json() : null));
-  if (!tree || !Array.isArray(tree.tree)) throw new Error(`레포 트리를 읽지 못했습니다: ${owner}/${repo}`);
-
-  const rawBase = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}`;
-  const readme = await fetch(`${rawBase}/README.md`, { cache: 'no-cache' }).then((r) => (r.ok ? r.text() : '')).catch(() => '');
+export async function analyzeRepo(owner, repo, { ref, fetcher = fetch, standardOnly = false } = {}) {
+  const apiBase = `https://api.github.com/repos/${owner}/${repo}`;
+  const request = async (url, json = false) => {
+    const response = await fetcher(url, { headers: json ? GH_HEADERS : {}, signal: AbortSignal.timeout(20000) });
+    if (!response.ok) throw new Error(`HTTP ${response.status}: ${url}`);
+    return json ? response.json() : response.text();
+  };
+  const meta = await request(apiBase, true);
+  if (meta.private !== false || meta.visibility !== 'public') throw new Error(`공개 리포만 등재할 수 있습니다: ${owner}/${repo}`);
+  const branch = ref || meta.default_branch;
+  const commit = await request(`${apiBase}/commits/${encodeURIComponent(branch)}`, true);
+  if (!/^[a-f0-9]{40}$/.test(commit.sha)) throw new Error('Invalid source commit');
+  const tree = await request(`${apiBase}/git/trees/${commit.sha}?recursive=1`, true);
+  if (tree.truncated || !Array.isArray(tree.tree)) throw new Error(`불완전한 레포 트리: ${owner}/${repo}`);
+  const files = new Set(tree.tree.filter(entry => entry.type === 'blob').map(entry => entry.path));
+  const rawBase = `https://raw.githubusercontent.com/${owner}/${repo}/${commit.sha}`;
+  const read = path => request(`${rawBase}/${encodePath(path)}`);
+  const readme = await read('README.md');
+  const document = frontmatter(readme);
+  if (document.metadata?.type === 'workshop') {
+    return analyzeStandard({ readme, files, read, repoUrl: `https://github.com/${owner}/${repo}`, ref: branch, sha: commit.sha });
+  }
+  if (standardOnly) throw new Error('표준 리포의 type: workshop 또는 frontmatter가 제거되었습니다.');
   const { title: readmeTitle, overview } = parseOverview(readme);
   const title = readmeTitle || repo;
 
@@ -202,7 +215,7 @@ function renderManifest({ repoUrl, title, overview, steps }) {
 }
 
 /** workshops.md 항목에 folder 줄 추가 (없을 때) */
-function ensureFolderLine(text, item, slug) {
+export function ensureFolderLine(text, item, slug) {
   if (item.folder) return text;
   const lines = text.split(/\r?\n/);
   // included 줄 바로 다음에 삽입, 없으면 헤더 다음
@@ -215,70 +228,105 @@ function ensureFolderLine(text, item, slug) {
 }
 
 /** sitemap.xml 에 뷰어 URL 추가 (없을 때) */
-function ensureSitemap(xml, slug) {
-  const loc = `${HOST}/workshop.html?slug=${slug}`;
-  if (xml.includes(loc)) return xml;
-  const entry = `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today()}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
-  return xml.replace(/<\/urlset>/, `${entry}</urlset>`);
+export function ensureSitemap(xml, slug, changed = false) {
+  const loc = slug ? `${HOST}/workshop.html?slug=${slug}` : `${HOST}/`;
+  const document = new DOMParser().parseFromString(xml, 'application/xml');
+  const root = document.documentElement;
+  if (root.localName !== 'urlset') throw new Error('Invalid sitemap.xml');
+  let entry = Array.from(root.getElementsByTagName('url')).find(node => node.getElementsByTagName('loc')[0]?.textContent === loc);
+  if (entry && !changed) return xml;
+  const append = (parent, name, value) => {
+    const node = document.createElementNS(root.namespaceURI, name);
+    node.textContent = value;
+    parent.appendChild(document.createTextNode('\n    '));
+    parent.appendChild(node);
+  };
+  if (entry) {
+    const lastmod = entry.getElementsByTagName('lastmod')[0];
+    if (lastmod) lastmod.textContent = today();
+    else append(entry, 'lastmod', today());
+  } else {
+    entry = document.createElementNS(root.namespaceURI, 'url');
+    append(entry, 'loc', loc);
+    append(entry, 'lastmod', today());
+    append(entry, 'changefreq', 'monthly');
+    append(entry, 'priority', '0.7');
+    entry.appendChild(document.createTextNode('\n  '));
+    root.appendChild(document.createTextNode('  '));
+    root.appendChild(entry);
+    root.appendChild(document.createTextNode('\n'));
+  }
+  return new XMLSerializer().serializeToString(document);
 }
 
 /** llms.txt 에 뷰어 링크 추가 (없을 때) */
-function ensureLlms(txt, slug, title) {
+function ensureLlms(txt, slug, title, description = '') {
   const url = `${HOST}/workshop.html?slug=${slug}`;
-  if (txt.includes(url)) return txt;
-  const line = `- [${title}](${url}): 단계별 실습 워크샵.`;
+  const line = `- [${title.replace(/[\[\]]/g, '')}](${url}): ${description || '단계별 실습 워크샵.'}`;
+  if (txt.includes(url)) return description ? txt.split('\n').map(existing => existing.includes(`](${url})`) ? line : existing).join('\n') : txt;
   if (/##\s*Hands-on Workshops/i.test(txt)) {
     return txt.replace(/(##\s*Hands-on Workshops[^\n]*\n)/i, `$1${line}\n`);
   }
   return `${txt.trimEnd()}\n\n## Hands-on Workshops\n\n${line}\n`;
 }
 
-async function main() {
-  let wsText = await readFile(WORKSHOPS_MD, 'utf8');
+export async function main({ root = ROOT, fetcher = fetch } = {}) {
+  const docs = join(root, 'docs');
+  const workshopsPath = join(docs, 'workshops', 'workshops.md');
+  const sitemapPath = join(docs, 'sitemap.xml');
+  const llmsPath = join(docs, 'llms.txt');
+  let wsText = await readFile(workshopsPath, 'utf8');
   const items = parseIncluded(wsText);
-  if (!items.length) {
-    console.log('included: true 워크샵이 없습니다. 종료합니다.');
-    return;
-  }
-
-  let sitemap = await readFile(SITEMAP, 'utf8').catch(() => '');
-  let llms = await readFile(LLMS, 'utf8').catch(() => '');
-
+  let sitemap = await readFile(sitemapPath, 'utf8');
+  let llms = await readFile(llmsPath, 'utf8');
+  const writes = new Map();
+  const catalog = [];
+  const folders = new Set();
+  const connections = [];
   for (const item of items) {
     const info = repoOf(item.repo);
-    if (!info) { console.warn(`레포 URL 파싱 실패: ${item.title}`); continue; }
+    if (!info) throw new Error(`레포 URL 파싱 실패: ${item.title}`);
     const slug = item.folder || slugify(info.repo);
-    const dir = join(DOCS, 'workshops', slug);
+    if (folders.has(slug)) throw new Error(`중복 folder: ${slug}`);
+    folders.add(slug);
+    const dir = join(docs, 'workshops', slug);
     const manifestPath = join(dir, 'index.md');
-
-    if (await exists(manifestPath)) {
-      console.log(`유지: ${slug} (index.md 이미 존재) — 연결만 확인`);
+    const existing = await exists(manifestPath) ? await readFile(manifestPath, 'utf8') : '';
+    const previous = existing ? parseManifest(existing) : null;
+    let manifest = existing;
+    let model = previous;
+    if (previous && previous.metadata?.managed_by !== MANAGED_BY) {
+      console.log(`유지: ${slug} (수동 매니페스트)`);
     } else {
-      console.log(`생성: ${slug} ← ${info.owner}/${info.repo}`);
-      try {
-        const analyzed = await analyzeRepo(info.owner, info.repo);
-        const manifest = renderManifest({ repoUrl: item.repo, ...analyzed });
-        await mkdir(dir, { recursive: true });
-        await writeFile(manifestPath, manifest, 'utf8');
-      } catch (e) {
-        console.error(`  분석 실패(${slug}): ${e.message}`);
-        continue;
-      }
+      console.log(`수집: ${slug} ← ${info.owner}/${info.repo}`);
+      const analyzed = await analyzeRepo(info.owner, info.repo, { ref: item.ref, fetcher, standardOnly: !!previous });
+      const repoUrl = `https://github.com/${info.owner}/${info.repo}`;
+      manifest = analyzed.metadata ? renderStandard({ repoUrl, ...analyzed }) : renderManifest({ repoUrl, ...analyzed });
+      model = parseManifest(manifest);
+      writes.set(manifestPath, manifest);
     }
-
-    // 연결(folder) + SEO 보정
-    wsText = ensureFolderLine(wsText, item, slug);
-    sitemap = ensureSitemap(sitemap, slug);
-    llms = ensureLlms(llms, slug, item.title);
+    connections.push({ item, slug });
+    if (model.metadata) catalog.push({ slug, repo: model.repo, metadata: model.metadata });
+    sitemap = ensureSitemap(sitemap, slug, manifest !== existing);
+    llms = ensureLlms(llms, slug, model.title || item.title, model.metadata?.description);
   }
-
-  await writeFile(WORKSHOPS_MD, wsText, 'utf8');
-  if (sitemap) await writeFile(SITEMAP, sitemap, 'utf8');
-  if (llms) await writeFile(LLMS, llms, 'utf8');
+  for (const { item, slug } of connections.reverse()) wsText = ensureFolderLine(wsText, item, slug);
+  const catalogPath = join(docs, 'workshops', 'catalog.json');
+  const catalogText = JSON.stringify({ schema_version: 1, workshops: catalog }, null, 2) + '\n';
+  const previousCatalog = await exists(catalogPath) ? await readFile(catalogPath, 'utf8') : '';
+  if (catalogText !== previousCatalog) sitemap = ensureSitemap(sitemap, null, true);
+  writes.set(workshopsPath, wsText);
+  writes.set(sitemapPath, sitemap);
+  writes.set(llmsPath, llms);
+  writes.set(catalogPath, catalogText);
+  for (const [path, content] of writes) {
+    if (await exists(path) && await readFile(path, 'utf8') === content) continue;
+    await mkdir(dirname(path), { recursive: true });
+    await writeFile(path, content, 'utf8');
+  }
   console.log('완료.');
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch(error => { console.error(error); process.exitCode = 1; });
+}

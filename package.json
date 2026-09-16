@@ -1,0 +1,16 @@
+{
+  "name": "azure-solution-hub",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "sync:workshops": "node scripts/standardize-workshops.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "0.9.12",
+    "js-yaml": "4.3.2",
+    "marked": "12.0.2"
+  }
+}

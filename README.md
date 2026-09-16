@@ -22,13 +22,15 @@
 ```text
 docs/                          # GitHub Pages 로 배포되는 정적 사이트
 ├─ index.html                  # 메인 랜딩 페이지
-├─ solution.html               # 솔루션·워크샵 상세 문서 뷰어 (마크다운 렌더링)
+├─ solution.html               # 솔루션 상세 문서 뷰어
+├─ workshop.html               # 워크샵 단계형 뷰어
 ├─ solutions/                  # 솔루션 설명 자료
 │  ├─ solutions.md             # 솔루션 카드 매니페스트 (편집 시 자동 반영)
 │  ├─ _template/index.md       # 새 솔루션 작성용 템플릿
 │  └─ cloud-migration/         # 예시 솔루션 (index.md + images/)
 ├─ workshops/                  # 실습 워크샵
 │  ├─ workshops.md             # 워크샵 매니페스트 (편집 시 자동 반영)
+│  ├─ catalog.json             # 표준 리포 메타데이터 (자동 생성, 카드·검색 공용)
 │  └─ _template/index.md       # 폴더형 워크샵 작성용 템플릿
 ├─ updates/                    # 신규 기능 업데이트 (자동 생성)
 │  ├─ updates.json             # 최신 스냅샷 (사이트 표시용)
@@ -40,7 +42,8 @@ docs/                          # GitHub Pages 로 배포되는 정적 사이트
       ├─ main.js               # 목록·검색 렌더링
       └─ search-synonyms.js    # 검색 약어집(동의어) — 여기만 편집하면 확장 검색 추가
 .github/workflows/
-├─ deploy-pages.yml            # main 브랜치 push 시 자동 배포
+├─ deploy-pages.yml            # main push 또는 표준화 성공 후 배포
+├─ standardize-workshops.yml   # 공개 워크샵 수집·검사·생성·커밋
 └─ update-feed.yml             # 매일 신규 기능 업데이트 수집
 ```
 
@@ -88,6 +91,39 @@ date: 2026-08-20 09:30
 
 [docs/workshops/workshops.md](docs/workshops/workshops.md) 매니페스트에 항목을 추가합니다. `## 카테고리` 아래에 워크샵을 나열하며, 솔루션과 동일한 카테고리 이름을 사용하세요.
 
+**표준 공개 리포 연결 (권장)**
+
+워크샵마다 별도 공개 GitHub 리포를 사용합니다. 실습 문서·노트북·이미지·실행 환경은 원본 리포에서 관리하고, 허브는 등재 여부·카테고리·slug·ref만 관리합니다.
+
+```markdown
+## AI & 데이터
+
+### Microsoft Foundry Workshop (Code)
+included: true
+folder: foundry-agent-sdk-workshop-kr
+ref: main
+https://github.com/Azure-Samples/foundry-agent-sdk-workshop-kr
+```
+
+`folder`는 고정 URL 식별자입니다. 생략하면 리포 이름으로 생성하며, `ref`를 생략하면 원본 기본 브랜치를 사용합니다. 제목·설명·배지는 원본 frontmatter에서 읽습니다. 기존 URL 전용 항목과 수동 매니페스트도 계속 사용할 수 있습니다.
+
+표준 리포의 입력 규칙은 다음과 같습니다.
+
+- 루트 README에 `type: workshop`, `title`, `description`, `level`, `authors`, `contacts`, `duration_minutes`, `tags`, `language`, `execution`, `status`, `source`, `last_updated`, `validated_on`을 선언합니다. `validated_on` 키는 필수지만 값은 공란이어도 됩니다. 저자의 E2E 검증일이며 자동으로 채우지 않습니다.
+- 루트의 `## 개요`와 `## 워크샵 학습 경로`가 필수입니다. 학습 경로 섹션 안의 모든 표를 순서대로 읽습니다. 링크는 `01-name/README.md` 또는 `labs/01-name/README.md` 형식의 리포 상대 경로여야 합니다.
+- 각 랩 README에는 `title`, 양의 정수 `duration_minutes`, `last_updated`를 선언합니다. 분할형은 `## 학습 단계` 또는 `## 실습 단계`의 표에서 같은 폴더의 `01-name.md`를 순서대로 연결합니다. 하위 문서는 H1 하나를 사용하고 frontmatter를 반복하지 않습니다.
+- 노트북은 랩 README에서 상대 링크로 연결합니다. 뷰어는 GitHub 노트북 화면으로 연결하며 직접 실행하지 않습니다. Codespaces 버튼은 `execution`에 `codespaces`가 있을 때 표시합니다.
+
+생성 매니페스트의 `metadata:`는 JSON 한 줄이며 `schema_version: 2`, `managed_by`, `ref`, `source_commit`을 기록합니다. `step:`에는 문서 경로 기반 ID와 랩별 정보를 기록합니다. 본문은 해당 commit의 raw 문서에서 읽습니다. 카드·검색은 [docs/workshops/catalog.json](docs/workshops/catalog.json)을 함께 사용합니다. 검증일 미등록과 90일 초과를 구분해서 표시합니다.
+
+```powershell
+npm ci
+npm test
+npm run sync:workshops
+```
+
+수집기는 공개 여부·메타데이터·목차 링크를 검사한 뒤 파일을 기록합니다. 어느 리포에서든 검사에 실패하면 생성 파일을 쓰지 않고 종료합니다. 수동 매니페스트는 덮어쓰지 않으며, 동일한 원본을 다시 수집하면 파일 내용과 sitemap 날짜가 바뀌지 않습니다. 자동 생성 파일을 직접 편집하는 대신 원본 리포나 등재 항목을 수정하십시오.
+
 **방식 A — URL 추가 (GitHub 저장소 링크)**
 
 ```markdown
@@ -108,7 +144,7 @@ https://github.com/owner/repo
 
 ```markdown
 ### 폴더형 워크샵 제목 (배지)
-folder: 폴더-이름              # 클릭 시 solution.html?base=workshops&slug=<슬러그>
+folder: 폴더-이름              # 클릭 시 workshop.html?slug=<슬러그>
 워크샵 한 줄 설명
 ```
 
@@ -131,6 +167,8 @@ python -m http.server 8080
 ## 배포
 
 `main` 브랜치에 push 하면 [GitHub Actions 워크플로](.github/workflows/deploy-pages.yml)가 `docs/` 폴더를 자동으로 GitHub Pages에 배포합니다. 별도의 Pages 설정은 필요하지 않습니다.
+
+워크샵 표준화는 기존처럼 별도 [워크플로](.github/workflows/standardize-workshops.yml)에서 생성 후 변경 파일을 커밋·push합니다. 목록·수집 코드 변경 시, 매주 월요일 01:00 UTC, 또는 수동 실행으로 수집합니다. Pages 워크플로는 생성 작업을 수행하지 않고, `main`의 표준화 실행이 성공하면 `workflow_run`으로 최신 `main`을 다시 배포합니다. 수집 실패 시 이 후속 배포는 실행하지 않습니다.
 
 ## 지원
 
