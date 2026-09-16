@@ -1,8 +1,44 @@
 {
-  "generatedAt": "2026-09-15T21:02:57.757Z",
+  "generatedAt": "2026-09-16T21:02:16.073Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 45,
+  "count": 49,
   "items": [
+    {
+      "title": "Retirement Update: SAP container images removed October 14, 2026",
+      "titleKo": "Retirement Update: SAP container images removed October 14, 2026",
+      "summaryKo": "The containerized SAP data connector retired on September 14, 2026 and is unsupported and unmaintained. Existing TLS-compliant agents may continue sending logs through the retired HTTP Data Collector API. Container images will be removed on October 14, 20",
+      "status": "Retirements",
+      "category": "",
+      "link": "https://azure.microsoft.com/updates?id=571342",
+      "date": "2026-09-16T17:19:02.000Z"
+    },
+    {
+      "title": "Public Preview: Azure SQL updates for mid-September 2026",
+      "titleKo": "Public Preview: Azure SQL updates for mid-September 2026",
+      "summaryKo": "In mid-September 2026, the following updates and enhancements were made to Azure SQL:Configure soft delete for the Azure SQL logical server. When the logical server is deleted, it goes into a soft deleted state and is self-restorable during the configured",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=571056",
+      "date": "2026-09-16T17:15:10.000Z"
+    },
+    {
+      "title": "Public Preview: Azure Red Hat OpenShift with hosted control planes",
+      "titleKo": "Public Preview: Azure Red Hat OpenShift with hosted control planes",
+      "summaryKo": "Azure Red Hat OpenShift with hosted control planes is now in public preview. It is a new deployment option for Azure Red Hat OpenShift that runs the OpenShift control plane as a fully managed service, separate from the worker nodes that run customer appli",
+      "status": "In preview",
+      "category": "Containers",
+      "link": "https://azure.microsoft.com/updates?id=571621",
+      "date": "2026-09-16T14:13:08.000Z"
+    },
+    {
+      "title": "Public Preview: PostgreSQL skills and MCP plugin for Azure Database for PostgreSQL",
+      "titleKo": "Public Preview: PostgreSQL skills and MCP plugin for Azure Database for PostgreSQL",
+      "summaryKo": "The PostgreSQL skills and MCP plugin turns supported AI coding assistants into context-aware PostgreSQL experts that can both provide guidance and act on a connected database. The bundled plugin combines expert-curated skills for PostgreSQL and Azure Data",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=569664",
+      "date": "2026-09-16T14:07:14.000Z"
+    },
     {
       "title": "Announcing: New Windows App client-side endpoints for Azure Virtual Desktop",
       "titleKo": "Announcing: New Windows App client-side endpoints for Azure Virtual Desktop",
