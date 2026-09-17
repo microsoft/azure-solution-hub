@@ -1,8 +1,26 @@
 {
-  "generatedAt": "2026-09-16T21:02:16.073Z",
+  "generatedAt": "2026-09-17T21:02:14.553Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 49,
+  "count": 51,
   "items": [
+    {
+      "title": "Public Preview: Azure Payments HSM v2",
+      "titleKo": "Public Preview: Azure Payments HSM v2",
+      "summaryKo": "Azure Payments HSM v2 is a highly available, single-tenant Payment HSM service for payment processing, credential issuance, PIN processing, key management, and authentication data protection. Customers retain exclusive administrative control of an isolate",
+      "status": "In preview",
+      "category": "Features",
+      "link": "https://azure.microsoft.com/updates?id=570509",
+      "date": "2026-09-17T18:36:44.000Z"
+    },
+    {
+      "title": "Generally Available: High-scale mesh in Azure Virtual Network Manager",
+      "titleKo": "Generally Available: High-scale mesh in Azure Virtual Network Manager",
+      "summaryKo": "High-scale mesh using connected group in Azure Virtual Network Manager is now in general availability. In available regions, customers may connect up to 3,000 virtual networks in a single mesh connectivity configuration by default and higher scale IP conn",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=571572",
+      "date": "2026-09-17T17:40:33.000Z"
+    },
     {
       "title": "Retirement Update: SAP container images removed October 14, 2026",
       "titleKo": "Retirement Update: SAP container images removed October 14, 2026",
