@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-09-17T21:02:14.553Z",
+  "generatedAt": "2026-09-18T21:01:53.253Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 51,
+  "count": 56,
   "items": [
+    {
+      "title": "Public Preview: Foundry Routines in Foundry Agent Service",
+      "titleKo": "Public Preview: Foundry Routines in Foundry Agent Service",
+      "summaryKo": "In public preview, Foundry Agent Service adds Foundry Routines, a native trigger primitive for running published agents automatically. Production agents often need to run on a schedule or when a business event occurs, and today that means assembling exter",
+      "status": "In preview",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=563536",
+      "date": "2026-09-18T19:10:53.000Z"
+    },
+    {
+      "title": "Public Preview: Mdsv4 and Msv4 Series Virtual Machines for SAP",
+      "titleKo": "Public Preview: Mdsv4 and Msv4 Series Virtual Machines for SAP",
+      "summaryKo": "The Mdsv4 and Msv4 Series are memory-optimized virtual machine series built on 6th Generation Intel® Xeon® Scalable processors and enhanced with advanced security capabilities and the latest Azure Boost technologies. Designed for demanding memory-intensiv",
+      "status": "In preview",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=571530",
+      "date": "2026-09-18T17:29:29.000Z"
+    },
+    {
+      "title": "Generally Available: Enable and disable controls for Microsoft Foundry agents in Agent 365",
+      "titleKo": "Generally Available: Enable and disable controls for Microsoft Foundry agents in Agent 365",
+      "summaryKo": "Microsoft Foundry now exposes enable and disable actions for Foundry agent objects within the Agent 365 governance surface in Microsoft Admin Center, generally available. Administrators can control whether a Foundry agent is available for use across their",
+      "status": "Launched",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=571826",
+      "date": "2026-09-18T17:24:02.000Z"
+    },
+    {
+      "title": "Public Preview: Network egress controls for hosted agents in Microsoft Foundry",
+      "titleKo": "Public Preview: Network egress controls for hosted agents in Microsoft Foundry",
+      "summaryKo": "In public preview, Microsoft Foundry now lets customers govern the outbound connections a hosted agent can make. Customers author ordered rules matched on destination host, including FQDN with wildcards such as *.contoso.com, with actions to allow, deny,",
+      "status": "In preview",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=571821",
+      "date": "2026-09-18T17:23:21.000Z"
+    },
+    {
+      "title": "Generally Available: Publishing Microsoft Foundry agents to Microsoft 365 Copilot and Teams",
+      "titleKo": "Generally Available: Publishing Microsoft Foundry agents to Microsoft 365 Copilot and Teams",
+      "summaryKo": "Publishing Microsoft Foundry agents to Microsoft 365 Copilot and Teams is now generally available. An agent only delivers value once it reaches the people who need it, and Foundry developers previously had no native path to make their agents operational a",
+      "status": "Launched",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=571816",
+      "date": "2026-09-18T17:21:06.000Z"
+    },
     {
       "title": "Public Preview: Azure Payments HSM v2",
       "titleKo": "Public Preview: Azure Payments HSM v2",
