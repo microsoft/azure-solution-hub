@@ -1,8 +1,35 @@
 {
-  "generatedAt": "2026-09-20T21:02:06.691Z",
+  "generatedAt": "2026-09-21T21:01:54.817Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 56,
+  "count": 59,
   "items": [
+    {
+      "title": "Generally Available: Azure Sphere OS version 26.09 is now available",
+      "titleKo": "Generally Available: Azure Sphere OS version 26.09 is now available",
+      "summaryKo": "Azure Sphere OS version 26.09 is now available in the Retail feed. This release includes updates to the Azure Sphere OS only, with no update to the SDK. If your devices are connected to the internet, they will receive the updated OS from the cloud.The 26.",
+      "status": "Launched",
+      "category": "Internet of Things",
+      "link": "https://azure.microsoft.com/updates?id=572579",
+      "date": "2026-09-21T18:44:49.000Z"
+    },
+    {
+      "title": "Public Preview: Introducing a Guided Copilot Experience for Building Azure Apps in VS Code",
+      "titleKo": "Public Preview: Introducing a Guided Copilot Experience for Building Azure Apps in VS Code",
+      "summaryKo": "Today we're previewing a new way to build cloud apps with GitHub Copilot in VS Code: a guided Copilot experience that takes you from idea to a deployed Azure app through a structured, predictable workflow instead of a free-form chat session that may or ma",
+      "status": "In preview",
+      "category": "Developer tools",
+      "link": "https://azure.microsoft.com/updates?id=572214",
+      "date": "2026-09-21T16:58:19.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Functions support for PowerShell 7.6",
+      "titleKo": "Generally Available: Azure Functions support for PowerShell 7.6",
+      "summaryKo": "Azure Functions support for PowerShell 7.6 is now generally available. You can now develop apps using PowerShell 7.6 locally and deploy them to Azure Functions plans. Learn more: Updating your app to PowerShell 7.6 What's new in PowerShell 7.6? Azure",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=572219",
+      "date": "2026-09-21T16:55:34.000Z"
+    },
     {
       "title": "Public Preview: Foundry Routines in Foundry Agent Service",
       "titleKo": "Public Preview: Foundry Routines in Foundry Agent Service",
