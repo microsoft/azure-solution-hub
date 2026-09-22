@@ -1,8 +1,26 @@
 {
-  "generatedAt": "2026-09-21T21:01:54.817Z",
+  "generatedAt": "2026-09-22T21:02:37.414Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 59,
+  "count": 61,
   "items": [
+    {
+      "title": "Retirement: Support for Node.js 22 ends on April 30, 2027",
+      "titleKo": "Retirement: Support for Node.js 22 ends on April 30, 2027",
+      "summaryKo": "Support for Node.js 22 will end on April 30, 2027, please transition to Node.js 24 by that date. Your Azure Function apps will continue to run, but security patches and updates will no longer be provided and customer support for Node.js 22 will be discont",
+      "status": "Retirements",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=572771",
+      "date": "2026-09-22T19:22:34.000Z"
+    },
+    {
+      "title": "Public Preview: Flex Nodes for AKS",
+      "titleKo": "Public Preview: Flex Nodes for AKS",
+      "summaryKo": "Flex Nodes for AKS is a deployment option for application and platform teams to use hybrid and edge infrastructure as connected worker nodes to an AKS control plane in Azure. Flex Nodes provide a consistent Kubernetes control plane while enabling teams to",
+      "status": "In preview",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=571919",
+      "date": "2026-09-22T18:51:48.000Z"
+    },
     {
       "title": "Generally Available: Azure Sphere OS version 26.09 is now available",
       "titleKo": "Generally Available: Azure Sphere OS version 26.09 is now available",
