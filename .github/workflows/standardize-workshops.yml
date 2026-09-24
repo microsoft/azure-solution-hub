@@ -7,7 +7,12 @@ on:
   push:
     paths:
       - 'docs/workshops/workshops.md'
+      - 'docs/assets/js/workshop-data.js'
+      - 'scripts/*workshop*.mjs'
+      - 'package*.json'
   workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * 1'
 
 permissions:
   contents: write
@@ -27,11 +32,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test workshop integration
+        run: npm test
 
       - name: Standardize included workshops
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/standardize-workshops.mjs
+        run: npm run sync:workshops
 
       - name: Commit if changed
         run: |

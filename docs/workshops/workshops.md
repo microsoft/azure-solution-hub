@@ -70,6 +70,20 @@ https://github.com/Azure-Samples/AKSBasicWorkshop
 
 ## AI & 데이터
 
+### Microsoft Foundry Workshop (Code)
+included: true
+folder: foundry-agent-sdk-workshop-kr
+ref: main
+https://github.com/Azure-Samples/foundry-agent-sdk-workshop-kr
+
+### Azure AI Foundry Workshop (Portal / L200 / 4시간)
+Azure AI Foundry를 기반으로 데이터 업로드, 임베딩, 챗봇 생성 등 핵심 기능을 직접 실습하며 AI 에이전트 개발 전 과정을 경험합니다. Semantic Kernel과 AutoGen을 활용한 다중 에이전트 연동, 모니터링, RAG 아키텍처 확장 등 실무 시나리오를 단계적으로 학습할 수 있습니다.
+https://github.com/Anna-Jeong-MS/AzureAIFoundryWorkshop
+
+### Observe, Manage, and Scale Agentic AI Apps with Microsoft Foundry
+Microsoft Foundry를 활용해 Agentic AI 애플리케이션을 구축하고, 에이전트 실행 상태를 관찰(Observe)·운영 관리(Manage)·엔터프라이즈 환경 확장(Scale)하는 방법을 실습 중심으로 다룹니다. 에이전트 오케스트레이션, 모니터링, 운영 자동화 관점의 실제 아키텍처와 Best Practice를 학습합니다.
+https://github.com/haew0nsh1n/ignite25-kor-observe-manage-and-scale-agentic-ai-apps-with-microsoft-foundry
+
 ### Microsoft Fabric Camp
 Microsoft Fabric 전반을 하루 안에 익힐 수 있도록 구성된 핸즈온 워크샵입니다. 데이터 수집·변환, Lakehouse, Warehouse, 보고서 시각화까지 Fabric의 엔드-투-엔드 기능을 실습 중심으로 경험하며, 단계별 랩 지침을 따라 데이터 파이프라인 구축부터 분석·리포트 생성까지 학습할 수 있습니다.
 https://github.com/jiyongseong/microsoft-fabric-camp/tree/main/microsoft-fabric-in-a-day
@@ -81,21 +95,9 @@ https://github.com/yujeny/CosmosBulkDemo
 
 ## 앱 혁신 & DevOps
 
-### Azure AI Foundry Workshop (Portal / L200 / 4시간)
-Azure AI Foundry를 기반으로 데이터 업로드, 임베딩, 챗봇 생성 등 핵심 기능을 직접 실습하며 AI 에이전트 개발 전 과정을 경험합니다. Semantic Kernel과 AutoGen을 활용한 다중 에이전트 연동, 모니터링, RAG 아키텍처 확장 등 실무 시나리오를 단계적으로 학습할 수 있습니다.
-https://github.com/Anna-Jeong-MS/AzureAIFoundryWorkshop
-
-### Azure AI Foundry Workshop (Code / L200 / 4시간)
-Azure AI Foundry Workshop 실습을 위한 코드 저장소로, Python 3.10 기반 노트북 환경에서 인증 설정부터 Chat Completion & RAG, 에이전트 개발까지 순서대로 따라갈 수 있도록 구성되어 있습니다.
-https://github.com/Anna-Jeong-MS/AzureAIFoundryWorkshop-Code
-
 ### Azure AI Gateway 기반 RAG 검색 시스템 구축
 Azure AI Search와 Azure OpenAI를 활용해 벡터 검색, 하이브리드 검색, RAG 기반 AI 검색 시스템을 직접 구현하는 핸즈온 워크샵입니다. 리소스 생성부터 모델 배포, 검색 아키텍처 구현까지 단계별 실습으로 AI 기반 검색 서비스 구축 전 과정을 학습합니다.
 https://github.com/ChangJu-Ahn/Azure-AI-Gateway-KR
-
-### Observe, Manage, and Scale Agentic AI Apps with Microsoft Foundry
-Microsoft Foundry를 활용해 Agentic AI 애플리케이션을 구축하고, 에이전트 실행 상태를 관찰(Observe)·운영 관리(Manage)·엔터프라이즈 환경 확장(Scale)하는 방법을 실습 중심으로 다룹니다. 에이전트 오케스트레이션, 모니터링, 운영 자동화 관점의 실제 아키텍처와 Best Practice를 학습합니다.
-https://github.com/haew0nsh1n/ignite25-kor-observe-manage-and-scale-agentic-ai-apps-with-microsoft-foundry
 
 ### GitHub Copilot Workshop
 GitHub Copilot, MCP 서버, 에이전트, GitHub CLI 등을 실습하기 위한 데모 코드와 시나리오 모음입니다. C#, Python, HTML/JS 등 다양한 언어의 샘플이 포함되어 코드 생성, 함수 확장, 자동화 플로우, 코드 리뷰 흐름, MCP 서버 연동 등을 테스트할 수 있습니다.

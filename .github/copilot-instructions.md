@@ -51,4 +51,6 @@
 
 ## 배포
 
-`feat/ontology-solution` 브랜치의 `docs/` 변경을 push하면 GitHub Pages(레거시 브랜치 배포, 소스 `/docs`)가 자동 재배포합니다.
+`main` 브랜치에 push하면 `deploy-pages.yml`이 `docs/`를 GitHub Pages에 배포합니다. 표준화 워크플로는 기존처럼 생성 결과를 커밋·push하며, `main`에서 성공하면 Pages의 `workflow_run`이 최신 `main`을 배포합니다. Pages에서 수집기를 다시 실행하지 않습니다.
+
+워크샵 변경 시 `npm ci`, `npm test`, `npm run sync:workshops`로 검사합니다. `metadata.managed_by`가 `azure-solution-hub/standardize-workshops`인 매니페스트와 `docs/workshops/catalog.json`은 자동 생성 대상입니다. 수동 매니페스트는 보호하며, 원본 문서·이미지·노트북을 허브에 복제하지 않습니다. `validated_on`은 저자가 기록한 값을 유지합니다.

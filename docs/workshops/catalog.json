@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "workshops": [
+    {
+      "slug": "foundry-agent-sdk-workshop-kr",
+      "repo": "https://github.com/Azure-Samples/foundry-agent-sdk-workshop-kr",
+      "metadata": {
+        "schema_version": 2,
+        "managed_by": "azure-solution-hub/standardize-workshops",
+        "ref": "main",
+        "source_commit": "79d3f03e645f7189861bb09b15a40697690b644c",
+        "overview_source": "https://raw.githubusercontent.com/Azure-Samples/foundry-agent-sdk-workshop-kr/79d3f03e645f7189861bb09b15a40697690b644c/README.md",
+        "type": "workshop",
+        "title": "Microsoft Foundry Workshop (Code)",
+        "description": "Microsoft Foundry에서 Python으로 Chat Completions·Embeddings·RAG·에이전트를 구축하는 입문 핸즈온 (건강·피트니스 예제)",
+        "level": "beginner",
+        "authors": [
+          "Kyungtaak Noh"
+        ],
+        "contacts": [
+          "@kyungtaak"
+        ],
+        "duration_minutes": 180,
+        "tags": [
+          "foundry",
+          "azure-openai",
+          "rag",
+          "agent",
+          "ai-search"
+        ],
+        "language": "ko",
+        "execution": [
+          "codespaces",
+          "local"
+        ],
+        "status": "active",
+        "source": "localized: Azure/ai-foundry-workshop",
+        "last_updated": "2026-08-20",
+        "validated_on": "2026-08-12"
+      }
+    }
+  ]
+}
