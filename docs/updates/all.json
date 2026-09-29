@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-07-21T22:02:53.180Z",
+  "generatedAt": "2026-09-29T00:26:04.244Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 5,
+  "count": 10,
   "items": [
+    {
+      "title": "Generally Available: Vector search and vector indexes in Azure SQL",
+      "titleKo": "일반적으로 사용 가능: Azure SQL의 벡터 검색 및 벡터 인덱스",
+      "summaryKo": "이제 Azure SQL Database에서 벡터 검색 및 벡터 인덱스를 일반적으로 사용할 수 있습니다. 벡터 인덱스 및 VECTOR_SEARCH T-SQL 생성 기능을 사용하여 시맨틱과 같은 AI 시나리오에 대한 효율적인 근사 근접 이웃 (ANN) 검색을 수행할 수 있습니다.",
+      "status": "Launched",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=571800",
+      "date": "2026-09-28T22:07:19.000Z"
+    },
+    {
+      "title": "Public Preview: Azure SQL Dev Hub",
+      "titleKo": "공개 미리 보기: Azure SQL Dev Hub",
+      "summaryKo": "Azure SQL Dev Hub는 직접 개발하든 AI 에이전트를 사용하든 Azure SQL로 응용 프로그램을 빌드하기 위한 중앙 출발점을 제공합니다. Resour와 함께 .NET, Python, Node.js 및 Java에서 Azure SQL에 연결하는 방법에 대한 지침을 찾을 수 있습니다.",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=572998",
+      "date": "2026-09-28T22:06:05.000Z"
+    },
+    {
+      "title": "Generally Available: Azure SQL Managed Instance updates for late-September 2026",
+      "titleKo": "일반 사용 가능: 2026년 9월 말 Azure SQL 관리형 인스턴스 업데이트",
+      "summaryKo": "2026년 9월 말, Azure SQL Managed Instance에 다음과 같은 업데이트 및 개선 사항이 적용되었습니다. Azure SQL Managed Instance의 유연한 메모리 기능을 사용하여 SQL 관리 인스턴스에 할당된 메모리 양을 변경할 수 있습니다.",
+      "status": "Launched",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=571632",
+      "date": "2026-09-28T18:52:10.000Z"
+    },
+    {
+      "title": "Generally Available: Luxembourg - Azure Extended Zones",
+      "titleKo": "일반적으로 사용 가능: 룩셈부르크 - Azure 확장 영역",
+      "summaryKo": "Luxembourg Azure Extended Zone의 일반 가용성을 발표합니다. Azure Extended Zones는 대기 시간이 짧고 데이터 보존 작업을 수행하기 위해 대도시 지역, 산업 센터 또는 특정 관할권에 배치된 Azure의 소규모 확장 기능입니다.",
+      "status": "Launched",
+      "category": "Regions & Datacenters",
+      "link": "https://azure.microsoft.com/updates?id=572968",
+      "date": "2026-09-28T17:08:48.000Z"
+    },
+    {
+      "title": "Public Preview: Azure HorizonDB supports PostgreSQL 18",
+      "titleKo": "공개 미리 보기: Azure HorizonDB는 PostgreSQL 18을 지원합니다",
+      "summaryKo": "Azure HorizonDB는 확장 가능한 고성능 워크로드를 위해 설계된 완전히 관리되는 PostgreSQL 호환 클라우드 네이티브 데이터베이스 서비스입니다 .Azure HorizonDB는 현재 공개 미리 보기에 있으며 PostgreSQL 18 지원을 포함합니다. 자세히 알아보기.",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=573048",
+      "date": "2026-09-25T18:07:26.000Z"
+    },
     {
       "title": "Public Preview: Protect sensitive generative AI telemetry in Application Insights and Microsoft Foundry",
       "titleKo": "공식 미리보기: Application Insights 및 Microsoft Foundry에서 민감한 생성 AI 텔레메트리 보호",
