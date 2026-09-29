@@ -14,7 +14,7 @@
   <meta property="og:locale" content="ko_KR" />
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260916" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260929d" />
 
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
@@ -153,7 +153,7 @@
 
         <!--
           아래 그리드는 solutions/solutions.md 매니페스트를 기반으로 JavaScript가
-          자동으로 채웁니다. 왼쪽은 카테고리 목록, 오른쪽은 카테고리별 카드입니다.
+          자동으로 채웁니다. 왼쪽은 카테고리 목록, 오른쪽은 태그 칩 필터 + 카드입니다.
           각 카드는 solution.html?slug=<slug> 상세 페이지(또는 외부 URL)로 연결됩니다.
         -->
         <div class="solutions-layout">
@@ -175,12 +175,12 @@
         </div>
 
         <!--
-          아래 컨테이너는 workshops.md 파일의 카테고리·워크샵 목록을 기반으로
-          JavaScript가 자동으로 채웁니다. 왼쪽은 카테고리, 오른쪽은 카드입니다.
+          아래 컨테이너는 workshops.md 파일의 워크샵 목록을 기반으로
+          JavaScript가 자동으로 채웁니다. 상단에 레벨·카테고리·서비스
+          드롭다운 필터가 표시되고, 그 아래에 워크샵 카드가 나열됩니다.
         -->
-        <div class="solutions-layout">
-          <aside class="solutions-nav" id="workshopNav" aria-label="워크샵 카테고리"></aside>
-          <div class="solutions-main" id="workshopContainer" data-source="workshops/workshops.md" aria-live="polite">
+        <div class="workshops-wrap">
+          <div id="workshopContainer" data-source="workshops/workshops.md" aria-live="polite">
             <div class="workshop-loading">워크샵 목록을 불러오는 중입니다…</div>
           </div>
         </div>
@@ -298,7 +298,7 @@
   </footer>
 
   <script src="assets/js/search-synonyms.js?v=20260702"></script>
-  <script src="assets/js/workshop-data.js?v=20260916"></script>
-  <script src="assets/js/main.js?v=20260916"></script>
+  <script src="assets/js/workshop-data.js?v=20260929d"></script>
+  <script src="assets/js/main.js?v=20260929d"></script>
 </body>
 </html>

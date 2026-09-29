@@ -102,11 +102,19 @@ function setRoundedStat(id, count) {
       const line = raw.trim();
       if (!line || line.startsWith('#') && !line.startsWith('###')) return;
       if (line.startsWith('### ')) {
-        cur = { title: line.slice(4).trim(), slug: '', tag: '', icon: 'cloud', summary: '', category: '', date: '', url: '', workshops: [] };
+        cur = { title: line.slice(4).trim(), slug: '', tag: '', icon: 'cloud', summary: '', category: '', date: '', url: '', workshops: [], tags: [] };
         items.push(cur);
         return;
       }
       if (!cur) return;
+      // 태그(복수, 쉼표 구분): 'tags: 태그1, 태그2' — 필터링에 사용
+      const tags = line.match(/^tags\s*:\s*(.+)$/i);
+      if (tags) {
+        cur.tags = (cur.tags || []).concat(
+          tags[1].split(/[,，]/).map((s) => s.trim()).filter(Boolean)
+        );
+        return;
+      }
       // 관련 워크샵: 'workshop: 라벨 | https://...' (라벨 생략 시 URL 사용). 최대 2개.
       const ws = line.match(/^workshop\s*:\s*(.+)$/i);
       if (ws) {
@@ -137,6 +145,14 @@ function setRoundedStat(id, count) {
     const detailAttrs = isUrl ? ' target="_blank" rel="noopener"' : '';
     const dateHtml = it._date ? `<span class="card-date">업데이트 ${esc(fmtDate(it._date))}</span>` : '';
     const newBadge = isNewest ? '<span class="badge-new">최신</span>' : '';
+    const tagChips = it.tags && it.tags.length
+      ? `<div class="ws-card-tags">${it.tags
+          .map(
+            (t) =>
+              `<button type="button" class="ws-card-tag${tagSel.has(t) ? ' active' : ''}" data-tag="${esc(t)}">${esc(t)}</button>`
+          )
+          .join('')}</div>`
+      : '';
     const wsHtml = it.workshops && it.workshops.length
       ? `<div class="srow-workshops">
             <span class="sw-label">워크샵 바로가기</span>
@@ -162,6 +178,7 @@ function setRoundedStat(id, count) {
             </div>
             <h3>${esc(it.title)}</h3>
             <p>${esc(it.summary)}</p>
+            ${tagChips}
           </div>
         </div>
         <div class="srow-actions">
@@ -171,7 +188,7 @@ function setRoundedStat(id, count) {
       </article>`;
   }
 
-  // ---- 상태 & 뷰 렌더링 (카테고리 필터 + 페이지네이션) ----
+  // ---- 상태 & 뷰 렌더링 (카테고리 네비 + 태그 칩 필터 + 페이지네이션) ----
   const PAGE_SIZE = 3; // 한 화면 최대 3행
   let allItems = [];
   let groups = new Map();
@@ -179,14 +196,49 @@ function setRoundedStat(id, count) {
   let newest = null;
   let curCat = '__all';
   let curPage = 1;
+  const tagSel = new Set(); // 선택된 태그(다중 선택, OR)
 
-  function listFor(cat) {
+  // 카테고리만 적용한 목록(태그 필터 전)
+  function baseList(cat) {
     if (cat === '__all') {
       return [...allItems].sort(
         (a, b) => (b._date ? b._date.getTime() : 0) - (a._date ? a._date.getTime() : 0)
       );
     }
     return groups.get(cat) || [];
+  }
+
+  // 카테고리 + 태그 필터를 모두 적용한 목록
+  function listFor() {
+    let list = baseList(curCat);
+    if (tagSel.size) list = list.filter((it) => (it.tags || []).some((t) => tagSel.has(t)));
+    return list;
+  }
+
+  // 태그 칩 필터 바 (현재 카테고리 기준 태그, 빈도순)
+  function renderTagBar() {
+    const base = baseList(curCat);
+    const freq = new Map();
+    base.forEach((it) => (it.tags || []).forEach((t) => freq.set(t, (freq.get(t) || 0) + 1)));
+    tagSel.forEach((t) => { if (!freq.has(t)) freq.set(t, 0); }); // 선택된 태그는 항상 노출
+    let entries = [...freq.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ko'));
+    if (!entries.length) return '';
+    const wide = curCat !== '__all' || tagSel.size > 0;
+    const label = wide ? '태그' : '';
+    if (!wide) entries = entries.slice(0, 10); // 전체·미선택 시 상위 10개만
+    const clear = tagSel.size
+      ? `<button type="button" class="ws-tag-clear" data-tagclear="1">태그 초기화</button>`
+      : '';
+    return `<div class="ws-quick">
+        ${label ? `<span class="ws-quick-label">${label}</span>` : ''}
+        <div class="ws-quick-chips">${entries
+          .map(
+            ([t, c]) =>
+              `<button type="button" class="ws-quick-chip${tagSel.has(t) ? ' active' : ''}" data-tag="${esc(t)}">${esc(t)} <span class="qc">${c}</span></button>`
+          )
+          .join('')}</div>
+        ${clear}
+      </div>`;
   }
 
   function renderPager(totalPages) {
@@ -203,17 +255,20 @@ function setRoundedStat(id, count) {
   }
 
   function renderView() {
-    const list = listFor(curCat);
+    const list = listFor();
     const totalPages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
     if (curPage > totalPages) curPage = totalPages;
     const start = (curPage - 1) * PAGE_SIZE;
     const pageItems = list.slice(start, start + PAGE_SIZE);
     const title = curCat === '__all' ? '전체' : curCat;
-
+    const rows = pageItems.length
+      ? `<div class="solution-rows">${pageItems.map((it) => renderCard(it, it === newest)).join('')}</div>`
+      : `<div class="workshop-loading">선택한 태그에 해당하는 솔루션이 없습니다.</div>`;
     grid.innerHTML = `
+      ${renderTagBar()}
       <section class="cat-group">
         <h3 class="cat-title">${esc(title)} <span class="cat-count">${list.length}</span></h3>
-        <div class="solution-rows">${pageItems.map((it) => renderCard(it, it === newest)).join('')}</div>
+        ${rows}
         ${totalPages > 1 ? renderPager(totalPages) : ''}
       </section>`;
   }
@@ -270,8 +325,26 @@ function setRoundedStat(id, count) {
         });
       }
 
-      // 페이지네이션 클릭 (이벤트 위임)
+      // 태그 칩 · 카드 태그 · 페이지네이션 (이벤트 위임)
       grid.addEventListener('click', (e) => {
+        // 태그 초기화
+        if (e.target.closest('.ws-tag-clear')) {
+          tagSel.clear();
+          curPage = 1;
+          renderView();
+          return;
+        }
+        // 태그 토글(칩 또는 카드 태그)
+        const tagBtn = e.target.closest('[data-tag]');
+        if (tagBtn) {
+          const t = tagBtn.getAttribute('data-tag');
+          if (tagSel.has(t)) tagSel.delete(t);
+          else tagSel.add(t);
+          curPage = 1;
+          renderView();
+          return;
+        }
+        // 페이지 이동
         const btn = e.target.closest('.page-btn');
         if (!btn || btn.disabled) return;
         const p = parseInt(btn.getAttribute('data-page'), 10);
@@ -369,7 +442,6 @@ function setRoundedStat(id, count) {
   const container = document.getElementById('workshopContainer');
   if (!container) return;
 
-  const nav = document.getElementById('workshopNav');
   const source = container.getAttribute('data-source') || 'workshops/workshops.md';
 
   const escapeHtml = (str) =>
@@ -420,7 +492,7 @@ function setRoundedStat(id, count) {
           title = title.slice(0, paren.index).trim();
           paren[1].split('/').map((s) => s.trim()).filter(Boolean).forEach((b) => badges.push(b));
         }
-        ws = { title, badges, description: '', links: [], folder: '' };
+        ws = { title, badges, description: '', links: [], folder: '', tags: [] };
         return;
       }
       // 다른 주석 줄 무시
@@ -439,9 +511,24 @@ function setRoundedStat(id, count) {
       if (fm) {
         if (!ws) {
           if (!cat) cat = { name: '워크샵', workshops: [] };
-          ws = { title: fm[1], badges: [], description: '', links: [], folder: '' };
+          ws = { title: fm[1], badges: [], description: '', links: [], folder: '', tags: [] };
         }
         ws.folder = fm[1];
+        return;
+      }
+
+      // 태그 줄: 'tags: 태그1, 태그2, ...' (쉼표로 구분). 필터링에 사용됩니다.
+      const tg = line.match(/^tags?\s*:\s*(.+)$/i);
+      if (tg) {
+        if (!ws) {
+          if (!cat) cat = { name: '워크샵', workshops: [] };
+          ws = { title: '워크샵', badges: [], description: '', links: [], folder: '', tags: [] };
+        }
+        const arr = tg[1]
+          .split(/[,，]/)
+          .map((s) => s.trim())
+          .filter(Boolean);
+        ws.tags = (ws.tags || []).concat(arr);
         return;
       }
 
@@ -464,7 +551,7 @@ function setRoundedStat(id, count) {
 
         if (!ws) {
           if (!cat) cat = { name: '워크샵', workshops: [] };
-          ws = { title: label || info.repo, badges: [], description: '', links: [], folder: '' };
+          ws = { title: label || info.repo, badges: [], description: '', links: [], folder: '', tags: [] };
           ws.links.push(link);
           extraBadges.forEach((b) => ws.badges.push(b));
           flushWs();
@@ -538,9 +625,9 @@ function setRoundedStat(id, count) {
     return renderLinks(ws);
   }
 
-  // 워크샵 아이콘 (비커/실습)
+  // 워크샵 아이콘 (레이어/모듈 — 엔터프라이즈 느낌)
   const WS_ICON =
-    '<path d="M9 3h6M10 3v6l-5 8a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-8V3"/><path d="M7.5 14h9"/>';
+    '<path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/>';
 
   // 가로형 카드 오른쪽 액션 (워크샵 바로가기 · 실습 레포 링크)
   function renderRowActions(ws) {
@@ -570,9 +657,17 @@ function setRoundedStat(id, count) {
   // 가로형(한 행에 하나) 워크샵 카드
   function renderRowCard(ws) {
     const meta = ws.badges.length
-      ? `<div class="workshop-meta">${ws.badges.map((b) => `<span>🏷️ ${escapeHtml(b)}</span>`).join('')}</div>`
+      ? `<div class="workshop-meta">${ws.badges.map((b) => `<span>${escapeHtml(b)}</span>`).join('')}</div>`
       : '';
     const desc = ws.description ? `<p>${escapeHtml(ws.description)}</p>` : '';
+    const tags = ws.tags && ws.tags.length
+      ? `<div class="ws-card-tags">${ws.tags
+          .map(
+            (t) =>
+              `<button type="button" class="ws-card-tag${wsSel.service.has(t) ? ' active' : ''}" data-facet="service" data-val="${escapeHtml(t)}">${escapeHtml(t)}</button>`
+          )
+          .join('')}</div>`
+      : '';
     return `
       <article class="card solution-row reveal visible">
         <div class="srow-main">
@@ -584,23 +679,166 @@ function setRoundedStat(id, count) {
             <h3>${escapeHtml(ws.title)}</h3>
             ${desc}
             ${meta}
+            ${tags}
           </div>
         </div>
         <div class="srow-actions">${renderRowActions(ws)}</div>
       </article>`;
   }
 
-  // ---- 상태 & 뷰 렌더링 (카테고리 필터 + 페이지네이션) ----
+  // ---- 상태 & 뷰 렌더링 (카테고리 + 태그 필터 + 페이지네이션) ----
   const WS_PAGE_SIZE = 3; // 한 화면 최대 3행
-  let wsGroups = [];
-  let wsAll = [];
-  let wsCat = '__all';
-  let wsPage = 1;
 
-  function wsListFor(cat) {
-    if (cat === '__all') return wsAll;
-    const g = wsGroups.find((x) => x.name === cat);
-    return g ? g.workshops : [];
+  // 태그를 메인 서비스 영역으로 묶어 드롭다운에 그룹으로 표시합니다.
+  // 여기에 없는 태그는 자동으로 '기타' 그룹에 표시됩니다.
+  const WS_TAG_GROUPS = [
+    {
+      name: 'AI & 에이전트',
+      tags: [
+        'AI', 'Agent', 'Multi-Agent', 'RAG', 'GenAIOps', 'Observability',
+        'Microsoft Agent Framework', 'Microsoft Foundry', 'Azure AI Foundry',
+        'Azure AI Search', 'Azure OpenAI', 'Semantic Kernel', 'AutoGen',
+      ],
+    },
+    { name: '데이터 & 분석', tags: ['Data', 'Analytics', 'Fabric', 'Lakehouse', 'Cosmos DB'] },
+    {
+      name: '인프라 & 플랫폼',
+      tags: [
+        'Azure', 'Compute', 'Network', 'Storage', 'Security', 'Landing Zone',
+        'AKS', 'Kubernetes', 'Container', 'Serverless', 'Functions',
+        'Event-driven', 'Terraform',
+      ],
+    },
+    { name: '개발 & DevOps', tags: ['GitHub Copilot', 'DevOps', 'MCP', 'Python', '.NET'] },
+  ];
+
+  let wsAll = [];
+  let wsAllTags = []; // 전체 워크샵에서 수집한 태그(정렬)
+  let wsCatNames = []; // 카테고리 이름 목록
+  let wsLevels = []; // 레벨 목록 (예: L200)
+  let wsPage = 1;
+  let wsOpenFacet = null; // 현재 열린 드롭다운 facet ('level'|'category'|'service'|null)
+
+  // facet별 선택 상태 (facet 내 OR, facet 간 AND)
+  const wsSel = { level: new Set(), category: new Set(), service: new Set() };
+  const FACET_MATCH = {
+    level: (w, v) => w.level === v,
+    category: (w, v) => w.category === v,
+    service: (w, v) => (w.tags || []).includes(v),
+  };
+
+  // 선택된 facet 필터를 적용한 목록. except를 주면 그 facet은 제외(교차 카운트용).
+  function wsFilteredList(except) {
+    let list = wsAll;
+    ['category', 'level', 'service'].forEach((f) => {
+      if (f === except || !wsSel[f].size) return;
+      const vals = [...wsSel[f]];
+      list = list.filter((w) => vals.some((v) => FACET_MATCH[f](w, v)));
+    });
+    return list;
+  }
+
+  function wsListFor() {
+    return wsFilteredList();
+  }
+
+  // 드롭다운 옵션 1개 (체크박스형)
+  function wsOptHtml(facet, value, label, count) {
+    const active = wsSel[facet].has(value);
+    const disabled = count === 0 && !active ? ' disabled' : '';
+    return `<button type="button" class="ws-fs-opt${active ? ' active' : ''}" data-facet="${facet}" data-val="${escapeHtml(value)}"${disabled}><span class="chk" aria-hidden="true"></span><span class="lbl">${escapeHtml(label)}</span><span class="c">${count}</span></button>`;
+  }
+
+  // 단일 facet 드롭다운
+  function renderFacet(facet, labelText, placeholder, panelInnerHtml) {
+    const n = wsSel[facet].size;
+    const open = wsOpenFacet === facet;
+    let summary = placeholder;
+    if (n === 1) summary = [...wsSel[facet]][0];
+    else if (n > 1) summary = `${n}개 선택`;
+    return `
+      <div class="ws-fs${open ? ' open' : ''}">
+        <label class="ws-fs-label">${escapeHtml(labelText)}</label>
+        <button type="button" class="ws-fs-toggle${n ? ' has-sel' : ''}" data-facet="${facet}" aria-haspopup="true" aria-expanded="${open}">
+          <span class="ws-fs-summary">${escapeHtml(summary)}</span>
+          <span class="ws-fs-caret" aria-hidden="true">▾</span>
+        </button>
+        <div class="ws-fs-panel"${open ? '' : ' hidden'}>${panelInnerHtml}</div>
+      </div>`;
+  }
+
+  // 필터 바 (레벨 / 카테고리 / 서비스 및 기능 드롭다운 + 선택 칩)
+  function renderWsFilterBar() {
+    if (!wsAll.length) return '';
+
+    // 레벨 옵션
+    const levelBase = wsFilteredList('level');
+    const levelOpts = wsLevels.length
+      ? wsLevels
+          .map((lv) => wsOptHtml('level', lv, lv, levelBase.filter((w) => w.level === lv).length))
+          .join('')
+      : '<div class="ws-fs-empty">레벨 정보 없음</div>';
+
+    // 카테고리 옵션
+    const catBase = wsFilteredList('category');
+    const catOpts = wsCatNames
+      .map((c) => wsOptHtml('category', c, c, catBase.filter((w) => w.category === c).length))
+      .join('');
+
+    // 서비스(태그) 옵션 — 그룹별
+    const svcBase = wsFilteredList('service');
+    const svcCount = (t) => svcBase.filter((w) => (w.tags || []).includes(t)).length;
+    const used = new Set();
+    const groupsHtml = WS_TAG_GROUPS.map((g) => {
+      const tags = g.tags.filter((t) => wsAllTags.includes(t));
+      tags.forEach((t) => used.add(t));
+      if (!tags.length) return '';
+      return `<div class="ws-fs-group"><div class="ws-fs-group-title">${escapeHtml(g.name)}</div><div class="ws-fs-opts">${tags.map((t) => wsOptHtml('service', t, t, svcCount(t))).join('')}</div></div>`;
+    }).join('');
+    const etc = wsAllTags.filter((t) => !used.has(t));
+    const etcHtml = etc.length
+      ? `<div class="ws-fs-group"><div class="ws-fs-group-title">기타</div><div class="ws-fs-opts">${etc.map((t) => wsOptHtml('service', t, t, svcCount(t))).join('')}</div></div>`
+      : '';
+
+    const facets =
+      renderFacet('level', '레벨', '모든 레벨', `<div class="ws-fs-opts">${levelOpts}</div>`) +
+      renderFacet('category', '카테고리', '모든 카테고리', `<div class="ws-fs-opts">${catOpts}</div>`) +
+      renderFacet('service', '서비스 및 기능', '서비스 선택', `<div class="ws-fs-grid">${groupsHtml}${etcHtml}</div>`);
+
+    // 선택된 항목 칩 (모든 facet)
+    const chips = [];
+    ['category', 'level', 'service'].forEach((f) => {
+      wsSel[f].forEach((v) =>
+        chips.push(
+          `<button type="button" class="ws-sel-chip" data-remove-facet="${f}" data-val="${escapeHtml(v)}">${escapeHtml(v)} <span class="x" aria-hidden="true">✕</span></button>`
+        )
+      );
+    });
+    const selRow = chips.length
+      ? `<div class="ws-selected">${chips.join('')}<button type="button" class="ws-tag-clear" data-clear="1">전체 초기화</button></div>`
+      : '';
+
+    // 대표 태그 / 결과 태그 퀵 칩 — 현재 필터된 목록의 태그 빈도순
+    const resultList = wsListFor();
+    const tagFreq = new Map();
+    resultList.forEach((w) => (w.tags || []).forEach((t) => tagFreq.set(t, (tagFreq.get(t) || 0) + 1)));
+    const anySel = wsSel.level.size || wsSel.category.size || wsSel.service.size;
+    let quickTags = [...tagFreq.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ko'));
+    const quickLabel = anySel ? '이 결과의 태그' : '';
+    if (!anySel) quickTags = quickTags.slice(0, 10); // 미필터 시 상위 10개만
+    const quickHtml = quickTags.length
+      ? `<div class="ws-quick">
+          ${quickLabel ? `<span class="ws-quick-label">${quickLabel}</span>` : ''}
+          <div class="ws-quick-chips">${quickTags
+            .map(
+              ([t, c]) =>
+                `<button type="button" class="ws-quick-chip${wsSel.service.has(t) ? ' active' : ''}" data-facet="service" data-val="${escapeHtml(t)}">${escapeHtml(t)} <span class="qc">${c}</span></button>`
+            )
+            .join('')}</div>
+        </div>`
+      : '';
+
+    return `<div class="ws-filters">${facets}</div>${selRow}${quickHtml}`;
   }
 
   function renderWsPager(totalPages) {
@@ -617,16 +855,21 @@ function setRoundedStat(id, count) {
   }
 
   function renderWsView() {
-    const list = wsListFor(wsCat);
+    const list = wsListFor();
     const totalPages = Math.max(1, Math.ceil(list.length / WS_PAGE_SIZE));
     if (wsPage > totalPages) wsPage = totalPages;
     const start = (wsPage - 1) * WS_PAGE_SIZE;
     const pageItems = list.slice(start, start + WS_PAGE_SIZE);
-    const title = wsCat === '__all' ? '전체' : wsCat;
+    const anySel = wsSel.level.size || wsSel.category.size || wsSel.service.size;
+    const title = anySel ? '필터 결과' : '전체';
+    const rows = pageItems.length
+      ? `<div class="solution-rows">${pageItems.map(renderRowCard).join('')}</div>`
+      : `<div class="workshop-loading">선택한 조건에 해당하는 워크샵이 없습니다.</div>`;
     container.innerHTML = `
+      ${renderWsFilterBar()}
       <section class="cat-group">
-        <h3 class="cat-title">${escapeHtml(title)} <span class="cat-count">${list.length}</span></h3>
-        <div class="solution-rows">${pageItems.map(renderRowCard).join('')}</div>
+        <h3 class="cat-title">${title} <span class="cat-count">${list.length}</span></h3>
+        ${rows}
         ${totalPages > 1 ? renderWsPager(totalPages) : ''}
       </section>`;
   }
@@ -643,10 +886,15 @@ function setRoundedStat(id, count) {
     }
 
     const categories = parse(text);
+    // 각 워크샵에 카테고리 부여
+    categories.forEach((c) =>
+      c.workshops.forEach((w) => {
+        w.category = c.name;
+      })
+    );
     wsAll = categories.flatMap((c) => c.workshops);
     if (!wsAll.length) {
       container.innerHTML = `<div class="workshop-loading">아직 등록된 워크샵이 없습니다. <code>docs/workshops/workshops.md</code> 파일을 편집하세요.</div>`;
-      if (nav) nav.innerHTML = '';
       return;
     }
     setRoundedStat('statWorkshops', wsAll.length);
@@ -659,38 +907,70 @@ function setRoundedStat(id, count) {
       workshop.description = metadata.description;
       workshop.badges = window.WorkshopData.metadataBadges(metadata);
     });
+    // 카탈로그 반영 후 최종 배지에서 레벨 추출
+    wsAll.forEach((w) => {
+      const lv = (w.badges || []).find((b) => /^L\s*\d/i.test(b));
+      w.level = lv || '';
+    });
     await Promise.all(wsAll.map(enrich));
 
-    // 같은 카테고리 이름끼리 병합 (솔루션과 동일한 카테고리 기준)
-    const merged = new Map();
-    categories.forEach((c) => {
-      if (!merged.has(c.name)) merged.set(c.name, { name: c.name, workshops: [] });
-      merged.get(c.name).workshops.push(...c.workshops);
-    });
-    wsGroups = [...merged.values()];
+    // 전체 워크샵에서 태그 수집(한글 우선 정렬)
+    const tagSet = new Set();
+    wsAll.forEach((w) => (w.tags || []).forEach((t) => tagSet.add(t)));
+    wsAllTags = [...tagSet].sort((a, b) => a.localeCompare(b, 'ko'));
 
-    // 왼쪽: 카테고리 네비게이션 (전체 + 카테고리별 개수)
-    if (nav) {
-      nav.innerHTML =
-        `<button class="cat-item active" data-cat="__all">전체 <span class="count">${wsAll.length}</span></button>` +
-        wsGroups
-          .map(
-            (g) =>
-              `<button class="cat-item" data-cat="${escapeHtml(g.name)}">${escapeHtml(g.name)} <span class="count">${g.workshops.length}</span></button>`
-          )
-          .join('');
-      nav.addEventListener('click', (e) => {
-        const btn = e.target.closest('.cat-item');
-        if (!btn) return;
-        nav.querySelectorAll('.cat-item').forEach((b) => b.classList.toggle('active', b === btn));
-        wsCat = btn.getAttribute('data-cat');
+    // 카테고리(등장 순서) · 레벨(정렬) 옵션 수집
+    wsCatNames = [];
+    categories.forEach((c) => {
+      if (!wsCatNames.includes(c.name)) wsCatNames.push(c.name);
+    });
+    const lvlSet = new Set();
+    wsAll.forEach((w) => {
+      if (w.level) lvlSet.add(w.level);
+    });
+    wsLevels = [...lvlSet].sort();
+
+    // 이벤트 위임: facet 드롭다운 · 카드 태그 · 페이지네이션
+    container.addEventListener('click', (e) => {
+      // facet 드롭다운 열기/닫기
+      const toggle = e.target.closest('.ws-fs-toggle');
+      if (toggle) {
+        const f = toggle.getAttribute('data-facet');
+        wsOpenFacet = wsOpenFacet === f ? null : f;
+        renderWsView();
+        return;
+      }
+      // 선택 칩 제거
+      const rm = e.target.closest('[data-remove-facet]');
+      if (rm) {
+        wsSel[rm.getAttribute('data-remove-facet')].delete(rm.getAttribute('data-val'));
         wsPage = 1;
         renderWsView();
-      });
-    }
-
-    // 페이지네이션 클릭 (이벤트 위임)
-    container.addEventListener('click', (e) => {
+        return;
+      }
+      // facet 옵션 · 카드 태그 토글
+      const opt = e.target.closest('[data-facet][data-val]');
+      if (opt && !opt.disabled) {
+        const f = opt.getAttribute('data-facet');
+        const v = opt.getAttribute('data-val');
+        if (wsSel[f].has(v)) wsSel[f].delete(v);
+        else wsSel[f].add(v);
+        // 카드 태그(패널 밖) 클릭이면 드롭다운은 닫힘 유지
+        if (!opt.closest('.ws-fs-panel')) wsOpenFacet = null;
+        wsPage = 1;
+        renderWsView();
+        return;
+      }
+      // 전체 초기화
+      if (e.target.closest('.ws-tag-clear')) {
+        wsSel.level.clear();
+        wsSel.category.clear();
+        wsSel.service.clear();
+        wsPage = 1;
+        renderWsView();
+        return;
+      }
+      // 페이지 이동
       const btn = e.target.closest('.page-btn');
       if (!btn || btn.disabled) return;
       const p = parseInt(btn.getAttribute('data-page'), 10);
@@ -699,6 +979,14 @@ function setRoundedStat(id, count) {
       renderWsView();
       const head = document.getElementById('workshops');
       if (head) head.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // 드롭다운 바깥 클릭 시 닫기
+    document.addEventListener('click', (e) => {
+      if (!wsOpenFacet) return;
+      if (e.target.closest('.ws-fs')) return;
+      wsOpenFacet = null;
+      renderWsView();
     });
 
     renderWsView();

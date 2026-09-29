@@ -6,7 +6,9 @@
  *   - daily/YYYY-MM-DD.json 날짜별 스냅샷 (이력 보관)
  *   - all.json            누적 아카이브 (검색용, 중복 제거)
  *
- * - 번역: GitHub Models (GITHUB_TOKEN 사용, 추가 키 불필요)
+ * - 번역: MyMemory 무키(no API key) 번역 API. GITHUB_TOKEN 등 별도 키가 필요 없습니다.
+ *   (기존 GitHub Models는 2026-07-30 서비스 종료되어 더 이상 사용하지 않습니다.)
+ *   선택적으로 MYMEMORY_EMAIL 환경변수를 주면 일일 번역 한도가 상향됩니다.
  * - 실행: GitHub Actions (매일) 또는 로컬(`node scripts/update-feed.mjs`)
  *
  * 번역에 실패해도 원문(영문)으로 폴백하여 항상 유효한 JSON을 생성합니다.
@@ -18,8 +20,6 @@ import { dirname, join } from 'node:path';
 
 const FEED_URL = 'https://www.microsoft.com/releasecommunications/api/v2/azure/rss';
 const MAX_ITEMS = 5;
-const MODEL = 'openai/gpt-4o-mini';
-const MODELS_ENDPOINT = 'https://models.github.ai/inference/chat/completions';
 
 const KNOWN_STATUS = ['Launched', 'In preview', 'In development', 'Retirements'];
 
@@ -90,68 +90,39 @@ function parseFeed(xml) {
   return items;
 }
 
-/** GitHub Models로 배치 번역. 실패 시 null 반환(호출부에서 폴백) */
-async function translate(items, token) {
-  if (!token) return null;
+/** MyMemory(무키) 단일 텍스트 번역. 실패/미번역 시 빈 문자열 반환 */
+async function mmTranslate(text) {
+  const q = String(text || '').slice(0, 480); // MyMemory 세그먼트 길이 제한(~500자)
+  if (!q) return '';
+  const email = process.env.MYMEMORY_EMAIL || ''; // 있으면 일일 한도 상향
+  const url =
+    `https://api.mymemory.translated.net/get?langpair=en|ko&q=${encodeURIComponent(q)}` +
+    (email ? `&de=${encodeURIComponent(email)}` : '');
+  const res = await fetch(url, { headers: { 'User-Agent': 'azure-solution-hub-feed/1.0' } });
+  if (!res.ok) throw new Error(`MyMemory HTTP ${res.status}`);
+  const j = await res.json();
+  const t = j?.responseData?.translatedText;
+  if (!t || /MYMEMORY WARNING|QUERY LENGTH LIMIT/i.test(t)) return '';
+  return t;
+}
 
-  const payload = items.map((it, i) => ({
-    i,
-    title: it.title,
-    summary: (it.description || '').slice(0, 300),
-  }));
-
-  const system =
-    'You are a professional software localization translator. ' +
-    'Translate Azure service update titles and summaries from English into natural, concise Korean. ' +
-    'Keep product/brand names and technical identifiers (e.g., Azure, Foundry, PostgreSQL, Az.PostgreSQLFlexibleServer) in English. ' +
-    'Do not add explanations. Return ONLY a JSON object.';
-
-  const user =
-    'Translate each item. Return JSON exactly as: ' +
-    '{"items":[{"i":<number>,"titleKo":"...","summaryKo":"..."}]}\n\n' +
-    'Input:\n' +
-    JSON.stringify({ items: payload });
-
-  try {
-    const res = await fetch(MODELS_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({
-        model: MODEL,
-        temperature: 0.2,
-        response_format: { type: 'json_object' },
-        messages: [
-          { role: 'system', content: system },
-          { role: 'user', content: user },
-        ],
-      }),
-    });
-
-    if (!res.ok) {
-      console.warn(`[translate] HTTP ${res.status}: ${await res.text()}`);
-      return null;
+/** GitHub Models 실패 시 무키 폴백(MyMemory). 실패 시 null 반환 */
+async function translateFree(items) {
+  const map = new Map();
+  for (let i = 0; i < items.length; i++) {
+    const it = items[i];
+    try {
+      const titleKo = await mmTranslate(it.title);
+      const summaryKo = await mmTranslate((it.description || '').slice(0, 300));
+      if (titleKo || summaryKo) map.set(i, { i, titleKo, summaryKo });
+    } catch (err) {
+      console.warn(`[translate:free] item ${i} failed:`, err.message);
     }
-
-    const data = await res.json();
-    const content = data?.choices?.[0]?.message?.content;
-    if (!content) return null;
-
-    const parsed = JSON.parse(content);
-    const map = new Map();
-    for (const t of parsed.items || []) map.set(Number(t.i), t);
-    return map;
-  } catch (err) {
-    console.warn('[translate] failed:', err.message);
-    return null;
   }
+  return map.size ? map : null;
 }
 
 async function main() {
-  const token = process.env.GITHUB_TOKEN || '';
-
   console.log('[feed] fetching', FEED_URL);
   const res = await fetch(FEED_URL, {
     headers: { 'User-Agent': 'azure-solution-hub-feed/1.0' },
@@ -165,7 +136,9 @@ async function main() {
 
   console.log(`[feed] parsed ${parsed.length} items`);
 
-  const translations = await translate(parsed, token);
+  // MyMemory 무키 번역 (기존 GitHub Models는 2026-07-30 종료)
+  const translations = await translateFree(parsed);
+  const translatedBy = translations ? 'mymemory' : null;
   if (!translations) {
     console.warn('[feed] translation unavailable — falling back to English text');
   }
@@ -187,6 +160,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     source: FEED_URL,
     translated: Boolean(translations),
+    translatedBy,
     items,
   };
 

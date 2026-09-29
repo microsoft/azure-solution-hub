@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: write
-  models: read
 
 concurrency:
   group: update-feed
@@ -27,8 +26,6 @@ jobs:
           node-version: 20
 
       - name: Generate updates.json
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/update-feed.mjs
 
       - name: Commit if changed
