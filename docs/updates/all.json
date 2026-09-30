@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-09-29T21:02:28.626Z",
+  "generatedAt": "2026-09-30T21:02:26.973Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 75,
+  "count": 80,
   "items": [
+    {
+      "title": "Retirement: NVv3-series Azure Virtual Machines",
+      "titleKo": "퇴직: NVv3 시리즈 Azure 가상 머신",
+      "summaryKo": "2026년 9월 30일 Microsoft Azure는 NVv3 시리즈 VM에서 Standard_NV12s_v3, Standard_NV12hs_v3, Standard_NV24s_v3, Standard_NV24ms_v3, Standard_NV32ms_v3 및 Standard_NV48s_v3 가상 머신 (VM) 을 폐기했습니다. 나머지 NVv3 시리즈 VM은",
+      "status": "Retirements",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=573414",
+      "date": "2026-09-30T18:26:47.000Z"
+    },
+    {
+      "title": "Retirement: NVv4-series Azure Virtual Machines",
+      "titleKo": "폐기: NVv4 시리즈 Azure 가상 머신",
+      "summaryKo": "2026년 9월 30일 Microsoft Azure는 NVv4 시리즈에서 Standard_NV4as_v4, Standard_NV4ahs_v4, Standard_NV8as_v4, Standard_NV8ahs_v4, Standard_NV16as_v4, Standard_NV16ahs_v4, Standard_NV32as_v4 및 Standard_NV32ahs_v4 가상 머신 (VM) 을 폐기했습니다.",
+      "status": "Retirements",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=573415",
+      "date": "2026-09-30T18:24:01.000Z"
+    },
+    {
+      "title": "Public Preview: Ubuntu 26.04 support in AKS",
+      "titleKo": "공개 미리보기: AKS에서 Ubuntu 26.04 지원",
+      "summaryKo": "AKS에서 Ubuntu 노드 풀을 실행하는 팀은 Ubuntu LTS 릴리스를 통해 최신 상태를 유지해야 하지만 각 OS 전환은 패키지 설치 공간, 보안 및 호환성 문제를 도입할 수 있습니다. Ubuntu 26.04 지원은 Ubuntu Minimal을 사용하여 Ubuntu2604 OS SKU를 도입합니다.",
+      "status": "In preview",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=573214",
+      "date": "2026-09-30T17:11:11.000Z"
+    },
+    {
+      "title": "Announcing: Azure canvases for GitHub Copilot",
+      "titleKo": "발표: GitHub Copilot용 Azure 캔버스",
+      "summaryKo": "GitHub Copilot용 Azure 캔버스, Azure 도구, 대시보드 및 안내 워크플로를 Copilot 대화와 함께 직접 가져오는 대화형 공유 작업 공간을 찾아보세요. Azure 리소스를 탐색하고, 비용을 분석하고, 호스팅 기술을 구축하는 동시에",
+      "status": "",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=573385",
+      "date": "2026-09-30T17:09:51.000Z"
+    },
+    {
+      "title": "Retirement: Dv3, Dsv3, Ev3, and Esv3 Azure VMs",
+      "titleKo": "은퇴: Dv3, Dsv3, Ev3 및 Esv3 Azure VM",
+      "summaryKo": "Microsoft Azure VM 수명 주기 정책의 일환으로 Microsoft는 퍼블릭 클라우드 Azure 지역에서 Dv3, Dsv3, Ev3 및 Esv3 Azure VM 시리즈의 중단을 발표합니다. 이러한 VM은 수명 종료 수명 주기 단계에 들어가 2029년 11월 15일에 퇴역합니다.",
+      "status": "Retirements",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=572346",
+      "date": "2026-09-30T17:07:30.000Z"
+    },
     {
       "title": "Retirement: Azure Functions v1 hosting model on Azure Container Apps",
       "titleKo": "은퇴: Azure Container Apps의 Azure Functions v1 호스팅 모델",
