@@ -1,8 +1,35 @@
 {
-  "generatedAt": "2026-09-30T21:02:26.973Z",
+  "generatedAt": "2026-10-02T21:53:24.408Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 80,
+  "count": 83,
   "items": [
+    {
+      "title": "Public Preview: Major version upgrades (MVU) for Azure Database for PostgreSQL elastic clusters",
+      "titleKo": "공개 미리 보기: PostgreSQL 탄성 클러스터용 Azure Database용 주요 버전 업그레이드 (MVU)",
+      "summaryKo": "이제 PostgreSQL용 Azure Database의 탄력적 클러스터에서 MVU를 사용할 수 있습니다. 교체 클러스터를 프로비저닝하거나 분산 데이터를 마이그레이션하거나 변경하지 않고 기존 탄력 클러스터를 지원되는 최신 PostgreSQL 버전으로 업그레이드할 수 있습니다.",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=571504",
+      "date": "2026-10-02T17:35:21.000Z"
+    },
+    {
+      "title": "Retirement: DCsv3 and DCdsv3-series Azure Virtual Machines will be retired on October 31, 2029",
+      "titleKo": "단종: DCsv3 및 DCdsv3 시리즈 Azure 가상 머신은 2029년 10월 31일에 단종됩니다.",
+      "summaryKo": "2029년 10월 31일에 DCsv3 및 DCdsv3 시리즈 Azure Linux, Windows 및 전용 호스트 가상 머신이 폐기됩니다. 해당 날짜 이후에는 더 이상 사용하거나 구매할 수 없습니다. 2029년 10월 31일 이전에 워크로드를 다음 중 하나로 마이그레이션하십시오.",
+      "status": "Retirements",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=569592",
+      "date": "2026-10-01T17:02:55.000Z"
+    },
+    {
+      "title": "Public Preview: SQL performance monitoring for SQL Server on Azure Virtual Machines",
+      "titleKo": "공개 미리 보기: Azure 가상 시스템의 SQL Server에 대한 SQL 성능 모니터링",
+      "summaryKo": "Azure Virtual Machines에서 SQL Server에 대한 Microsoft 관리 성능 모니터링의 공개 미리보기를 사용할 수 있습니다. 이제 사용자 지정 컬렉션 스크립트를 구축하거나 원격 분석을 상관시키지 않고 Azure Virtual Machines에서 SQL Server를 모니터링할 수 있습니다.",
+      "status": "In preview",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=571894",
+      "date": "2026-09-30T21:13:13.000Z"
+    },
     {
       "title": "Retirement: NVv3-series Azure Virtual Machines",
       "titleKo": "퇴직: NVv3 시리즈 Azure 가상 머신",
