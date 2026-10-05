@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-10-04T21:20:05.229Z",
+  "generatedAt": "2026-10-05T21:24:28.057Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 83,
+  "count": 88,
   "items": [
+    {
+      "title": "Public Preview: Azure HorizonDB expands to additional regions",
+      "titleKo": "공개 미리 보기: Azure HorizonDB가 추가 지역으로 확장됨",
+      "summaryKo": "Azure HorizonDB는 추가 Azure 지역으로 확장되어 응용 프로그램 및 사용자에 더 가까운 PostgreSQL 워크로드를 배포할 수 있는 유연성을 제공합니다. 지역 가용성이 확장되면 Azure Ho를 배포할 위치를 선택할 때 더 많은 옵션이 제공됩니다.",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=572940",
+      "date": "2026-10-05T18:51:57.000Z"
+    },
+    {
+      "title": "Generally Available: SQL Server on Azure Virtual Machines in Azure Bleu",
+      "titleKo": "일반적으로 사용 가능: Azure Bleu의 Azure 가상 컴퓨터에서 SQL Server",
+      "summaryKo": "Azure Virtual Machines 기반 SQL Server를 이제 Azure Bleu에서 사용할 수 있으므로 데이터 상주 및 주권 요구 사항을 충족하면서 프랑스의 주권 클라우드 환경에서 SQL Server 워크로드를 배포하고 관리할 수 있습니다. 자세히 알아보기.",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=571499",
+      "date": "2026-10-05T18:12:09.000Z"
+    },
+    {
+      "title": "Announcing: Table discovery in OneLake Catalog search",
+      "titleKo": "발표: OneLake 카탈로그 검색에서 테이블 검색",
+      "summaryKo": "2026년 10월 15일부터 Microsoft Fabric 검색은 의미 모델, 레이크하우스 및 미러링된 데이터베이스의 테이블을 개별 결과로 반환합니다. 사용자는 테이블 이름 또는 설명으로 검색하거나 정확한 열 이름 일치로 테이블을 찾을 수 있습니다. 더 보기",
+      "status": "",
+      "category": "Analytics",
+      "link": "https://azure.microsoft.com/updates?id=573875",
+      "date": "2026-10-05T17:55:23.000Z"
+    },
+    {
+      "title": "Public Preview: Azure Backup for PostgreSQL flexible server and elastic cluster (v2)",
+      "titleKo": "공개 미리 보기: PostgreSQL 유연한 서버 및 탄력적 클러스터용 Azure Backup (v2)",
+      "summaryKo": "Azure Backup for PostgreSQL 유연한 서버 및 탄력적 클러스터 (v2) 미리 보기는 PostgreSQL에 엔터프라이즈급 장기 보존을 제공합니다. 백업은 관리되는 디스크 스냅샷의 물리적 백업으로 간주되며 Azure Backup 볼트에서 볼팅되므로 보호 n",
+      "status": "In preview",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=573425",
+      "date": "2026-10-05T17:44:31.000Z"
+    },
+    {
+      "title": "Public Preview: IPv6 Support for Application Gateway WAF",
+      "titleKo": "공개 미리보기: 애플리케이션 게이트웨이 WAF에 대한 IPv6 지원",
+      "summaryKo": "응용 프로그램 게이트웨이 WAF에 대한 IPv6 지원의 공개 미리보기를 발표합니다. 응용 프로그램 게이트웨이 웹 응용 프로그램 방화벽 (WAF) 은 이제 공개 미리보기에서 IPv6 트래픽에 대한 검사 및 집행을 지원하여 플래트포를 현대화하는 데 있어 주요 단계를 나타냅니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=573861",
+      "date": "2026-10-05T17:41:41.000Z"
+    },
     {
       "title": "Public Preview: Major version upgrades (MVU) for Azure Database for PostgreSQL elastic clusters",
       "titleKo": "공개 미리 보기: PostgreSQL 탄성 클러스터용 Azure Database용 주요 버전 업그레이드 (MVU)",
