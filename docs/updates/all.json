@@ -1,8 +1,44 @@
 {
-  "generatedAt": "2026-10-05T21:24:28.057Z",
+  "generatedAt": "2026-10-06T21:02:26.802Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 88,
+  "count": 92,
   "items": [
+    {
+      "title": "Retirement: Azure App Service on Azure Stack Hub",
+      "titleKo": "은퇴: Azure Stack Hub의 Azure 앱 서비스",
+      "summaryKo": "Azure Stack Hub의 Azure App Service는 2029년 9월 30일에 중단됩니다. 2026년 9월 30일부터 새로운 설치는 더 이상 지원되지 않으며 새로운 제품 릴리스, 기능 또는 향상된 기능을 사용할 수 없습니다. 기존에 지원되는 deplo",
+      "status": "Retirements",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=568178",
+      "date": "2026-10-06T18:24:43.000Z"
+    },
+    {
+      "title": "Retirement: Support for Java 8, 11 and 17 will end on September 1, 2027",
+      "titleKo": "퇴직: Java 8, 11 및 17에 대한 지원은 2027년 9월 1일에 종료됩니다.",
+      "summaryKo": "2027년 9월 1일에 Java 8, 11 및 17에 대한 지원이 종료됩니다. App Service에서 호스팅되는 앱은 계속 실행되지만 보안 업데이트는 더 이상 사용할 수 없으며 Java 8, 11 및 17에 대한 고객 서비스는 더 이상 제공되지 않습니다. 필수 actio",
+      "status": "Retirements",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=568585",
+      "date": "2026-10-06T18:21:59.000Z"
+    },
+    {
+      "title": "Retirement: Always Encrypted with Intel SGX Enclaves",
+      "titleKo": "폐기: 인텔 SGX 엔클레이브로 항상 암호화됨",
+      "summaryKo": "Azure SQL Database의 Intel SGX 엔클레이브로 항상 암호화됨 은 SGX 지원 DC 시리즈 하드웨어에 대한 지원이 단계적으로 중단됨에 따라 2027년 10월 31일에 중단됩니다. 고객은 하드웨어 독립적인 가상화 기반 보안 (VBS) 환경으로 전환해야 합니다.",
+      "status": "Retirements",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=569236",
+      "date": "2026-10-06T16:42:33.000Z"
+    },
+    {
+      "title": "Public Preview: AKS on bare metal now on Ubuntu",
+      "titleKo": "공개 미리보기: 이제 우분투에서 베어 메탈의 AKS",
+      "summaryKo": "온프레미스에서 쿠버네티스를 실행하는 것은 종종 가상화 계층을 추가하거나, 익숙하지 않은 인프라에 적응하거나, 애플리케이션이 의존하는 하드웨어 및 소프트웨어에 대한 제어를 포기하는 것을 의미합니다. AI 워크로드의 경우, 이러한 절충점은 로컬 워크로드에 대한 액세스를 제한할 수 있습니다.",
+      "status": "In preview",
+      "category": "Feature",
+      "link": "https://azure.microsoft.com/updates?id=573782",
+      "date": "2026-10-06T15:44:06.000Z"
+    },
     {
       "title": "Public Preview: Azure HorizonDB expands to additional regions",
       "titleKo": "공개 미리 보기: Azure HorizonDB가 추가 지역으로 확장됨",
