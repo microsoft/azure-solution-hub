@@ -6,12 +6,8 @@
 
 ## Solutions
 
-- [클라우드 마이그레이션 (Cloud Migration)](https://microsoft.github.io/azure-solution-hub/solution.html?slug=cloud-migration): 온프레미스 워크로드를 Azure로 안전하게 이전하는 단계별 아키텍처와 모범 사례.
-- [Azure AI & Copilot](https://microsoft.github.io/azure-solution-hub/solution.html?slug=azure-ai-copilot): Azure OpenAI와 Copilot을 활용한 지능형 애플리케이션 구축 시나리오와 레퍼런스 아키텍처.
-- [보안 & 거버넌스 (Security & Governance)](https://microsoft.github.io/azure-solution-hub/solution.html?slug=security-governance): Zero Trust 기반 보안 아키텍처와 Microsoft Defender, Entra ID 통합 전략.
-- [데이터 & 애널리틱스 (Data & Analytics)](https://microsoft.github.io/azure-solution-hub/solution.html?slug=data-analytics): Microsoft Fabric과 Synapse 기반 통합 데이터 플랫폼 구성 및 분석 시나리오.
-- [Microsoft 365 & 협업 (Modern Work)](https://microsoft.github.io/azure-solution-hub/solution.html?slug=microsoft-365): Teams, SharePoint, Copilot for Microsoft 365 기반 생산성 향상 솔루션.
-- [앱 현대화 & DevOps (App Modernization)](https://microsoft.github.io/azure-solution-hub/solution.html?slug=app-modernization): 컨테이너, Kubernetes, GitHub 기반 클라우드 네이티브 애플리케이션 현대화.
+- [Why Build AI on Azure? — 원페이지](https://hijigoo.github.io/why-build-ai-on-azure/why-build-ai-on-azure-onepage.html): Azure에서 AI를 구축해야 하는 이유를 한 페이지로 정리한 요약 자료.
+- [Microsoft Foundry 네트워크 격리](https://hijigoo.github.io/why-build-ai-on-azure/samples/foundry-network-isolation/foundry-network-isolation.html): 사설 경계 안에서 에이전트를 안전하게 운영하는 Microsoft Foundry 네트워크 격리 가이드.
 
 ## Hands-on Workshops
 - [Microsoft Foundry Workshop (Code)](https://microsoft.github.io/azure-solution-hub/workshop.html?slug=foundry-agent-sdk-workshop-kr): Microsoft Foundry에서 Python으로 Chat Completions·Embeddings·RAG·에이전트를 구축하는 입문 핸즈온 (건강·피트니스 예제)
