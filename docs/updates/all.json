@@ -1,8 +1,35 @@
 {
-  "generatedAt": "2026-10-06T21:02:26.802Z",
+  "generatedAt": "2026-10-07T21:02:52.723Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 92,
+  "count": 95,
   "items": [
+    {
+      "title": "Generally Available: Anyscale on Azure",
+      "titleKo": "일반적으로 사용 가능: Azure에서 Anyscale",
+      "summaryKo": "Azure의 Anyscale을 이제 일반적으로 사용할 수 있습니다. Anyscale on Azure는 Ray에서 분산 Python 워크로드를 실행하기 위한 관리형 플랫폼입니다. Azure Kubernetes Service (AKS) 클러스터에 직접 배포하고 팀에서 제공하는 Azure 서비스와 통합됩니다.",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=573744",
+      "date": "2026-10-07T17:06:00.000Z"
+    },
+    {
+      "title": "Generally Available: Enabling the Bulk admin role for SQL Server on Linux",
+      "titleKo": "일반적으로 사용 가능: Linux에서 SQL Server에 대한 대량 관리자 역할 활성화",
+      "summaryKo": "SQL Server 2025 CU9 및 SQL Server 2022 CU27부터 Linux의 SQL Server는 사용자가 구성원이 될 필요 없이 대량 데이터 가져오기 작업을 수행하기 위한 대량 관리 고정 서버 역할 및 관리 대량 작업 권한을 지원합니다.",
+      "status": "Launched",
+      "category": "Feature",
+      "link": "https://azure.microsoft.com/updates?id=573443",
+      "date": "2026-10-07T16:57:04.000Z"
+    },
+    {
+      "title": "Retirement: Pod name dimension in AKS pod platform metrics",
+      "titleKo": "폐기: AKS POD 플랫폼 메트릭의 POD 이름 치수",
+      "summaryKo": "2027년 9월 30일부터 다음 Azure Monitor 플랫폼 메트릭의 POD 이름 차원에 대한 지원이 중단되고 이러한 메트릭이 집계 POD 카운터로 전환됩니다. 단계별 POD 수 (kube_pod_status_phase) Re의 POD 수",
+      "status": "Retirements",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=570232",
+      "date": "2026-10-06T22:37:54.000Z"
+    },
     {
       "title": "Retirement: Azure App Service on Azure Stack Hub",
       "titleKo": "은퇴: Azure Stack Hub의 Azure 앱 서비스",
