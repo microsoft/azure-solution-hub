@@ -1,8 +1,26 @@
 {
-  "generatedAt": "2026-10-08T21:02:36.608Z",
+  "generatedAt": "2026-10-09T21:02:20.944Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 100,
+  "count": 102,
   "items": [
+    {
+      "title": "Retirement: Azure Key Vault Secrets Provider Extension for Azure Arc enabled Kubernetes clusters",
+      "titleKo": "폐기: Azure Arc용 Azure Key Vault Secrets Provider Extension이 활성화된 쿠버네티스 클러스터",
+      "summaryKo": "Azure Arc를 사용하는 쿠버네티스용 Azure Key Vault Secrets Provider Extension은 2027년 10월 9일에 종료됩니다. 현재 확장 프로그램을 사용하는 고객은 사용 중지 날짜 이전에 Azure Key Vault Secret Store Extension으로 마이그레이션할 계획이 있어야 합니다.",
+      "status": "Retirements",
+      "category": "",
+      "link": "https://azure.microsoft.com/updates?id=570313",
+      "date": "2026-10-09T20:27:17.000Z"
+    },
+    {
+      "title": "Generally Available: Managed StandardV2 NAT Gateway for AKS",
+      "titleKo": "일반적으로 사용 가능: AKS용 관리형 StandardV2 NAT 게이트웨이",
+      "summaryKo": "이제 AKS는 AKS 관리 가상 네트워크를 사용하여 클러스터에 대한 StandardV2 NAT 게이트웨이를 프로비저닝하고 관리합니다. 이제 managedNATGateway 아웃바운드 유형을 사용할 때 표준V2가 지원되는 지역의 새 클러스터에 대한 기본 관리 NAT 게이트웨이 SKU입니다. Standa",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=574430",
+      "date": "2026-10-08T22:51:01.000Z"
+    },
     {
       "title": "Generally Available: Azure Database for PostgreSQL flexible server in East US 3",
       "titleKo": "일반적으로 사용 가능: 미국 동부 3의 PostgreSQL 유연한 서버용 Azure 데이터베이스",
