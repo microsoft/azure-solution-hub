@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-10-14T21:02:26.797Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Generally Available: Azure Cloud HSM hardware audit logging",
+      "titleKo": "일반적으로 사용 가능: Azure Cloud HSM 하드웨어 감사 로깅",
+      "summaryKo": "Azure Cloud HSM용 하드웨어 감사 로깅은 지원되는 HSM 관리 작업에 대해 하드웨어 생성 감사 레코드를 제공하여 조직이 보안 모니터링, 규정 준수 보고, 거버넌스 및 포렌식 조사를 강화하는 데 도움이 됩니다. 고객 ca",
+      "status": "Launched",
+      "category": "Feature",
+      "link": "https://azure.microsoft.com/updates?id=576377",
+      "date": "2026-10-14T19:17:47.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Site Recovery Support for Azure ARC-enabled Windows VMWare/Physical servers",
+      "titleKo": "일반적으로 사용 가능: Azure ARC 지원 Windows VMWare/물리적 서버에 대한 Azure 사이트 복구 지원",
+      "summaryKo": "Azure 사이트 복구 (ASR) 는 이제 Azure ARC 지원 Windows VMWare 가상 시스템 및 사내 물리적 서버에 대한 재해 복구를 지원합니다. 고객은 거버넌스, 인벤토리에 Azure ARC를 계속 사용하면서 ASR로 ARC 관리 시스템을 보호할 수 있습니다.",
+      "status": "Launched",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=576214",
+      "date": "2026-10-14T19:13:31.000Z"
+    },
+    {
+      "title": "Retirement: Azure Key Vault Secrets Provider Extension for Azure Arc enabled Kubernetes clusters",
+      "titleKo": "폐기: Azure Arc용 Azure Key Vault Secrets Provider Extension이 활성화된 쿠버네티스 클러스터",
+      "summaryKo": "Azure Arc를 사용하는 쿠버네티스용 Azure Key Vault Secrets Provider Extension은 2027년 10월 9일에 종료됩니다. 현재 확장 프로그램을 사용하는 고객은 사용 중지 날짜 이전에 Azure Key Vault Secret Store Extension으로 마이그레이션할 계획이 있어야 합니다.",
+      "status": "Retirements",
+      "category": "",
+      "link": "https://azure.microsoft.com/updates?id=570313",
+      "date": "2026-10-09T20:27:17.000Z"
+    },
+    {
+      "title": "Generally Available: Managed StandardV2 NAT Gateway for AKS",
+      "titleKo": "일반적으로 사용 가능: AKS용 관리형 StandardV2 NAT 게이트웨이",
+      "summaryKo": "이제 AKS는 AKS 관리 가상 네트워크를 사용하여 클러스터에 대한 StandardV2 NAT 게이트웨이를 프로비저닝하고 관리합니다. 이제 managedNATGateway 아웃바운드 유형을 사용할 때 표준V2가 지원되는 지역의 새 클러스터에 대한 기본 관리 NAT 게이트웨이 SKU입니다. Standa",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=574430",
+      "date": "2026-10-08T22:51:01.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Database for PostgreSQL flexible server in East US 3",
+      "titleKo": "일반적으로 사용 가능: 미국 동부 3의 PostgreSQL 유연한 서버용 Azure 데이터베이스",
+      "summaryKo": "이제 미국 동부 3 Azure 지역에 PostgreSQL 유연한 서버용 Azure Database를 배포할 수 있습니다. 자세히 알아보기.",
+      "status": "Launched",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=573691",
+      "date": "2026-10-08T19:56:31.000Z"
+    }
+  ]
+}
