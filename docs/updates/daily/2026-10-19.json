@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-10-19T21:02:21.434Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Generally Available: Azure DNS enables DNS-based load balancing through Traffic Manager linked records",
+      "titleKo": "일반적으로 사용 가능: Azure DNS는 트래픽 관리자 연결 레코드를 통해 DNS 기반 로드 밸런싱을 활성화합니다.",
+      "summaryKo": "Azure DNS는 이제 Azure Traffic Manager와의 원활한 통합을 통해 DNS 기반 로드 밸런싱을 제공합니다. 고객은 Azure DNS 레코드 세트를 트래픽 관리자 프로필과 직접 연결할 수 있으므로 트래프를 가리키는 CNAME 레코드를 만들 필요가 없습니다.",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=573917",
+      "date": "2026-10-19T17:55:40.000Z"
+    },
+    {
+      "title": "Public Preview: Azure Databricks Private network gateway",
+      "titleKo": "공개 미리 보기: Azure Databricks 프라이빗 네트워크 게이트웨이",
+      "summaryKo": "Azure Databricks용 사설 네트워크 게이트웨이가 이제 공개 미리 보기로 제공되어 서버리스 컴퓨팅이 단일 관리 게이트웨이를 통해 가상 네트워크 (VNet) 및 일시적으로 연결된 네트워크의 리소스에 연결할 수 있습니다. 고객은 게이트웨이 T를 사용할 수 있습니다.",
+      "status": "In preview",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=576556",
+      "date": "2026-10-16T16:59:02.000Z"
+    },
+    {
+      "title": "Generally Available: External key management for Azure Key Vault Managed HSM",
+      "titleKo": "일반적으로 사용 가능: Azure Key Vault Managed HSM에 대한 외부 키 관리",
+      "summaryKo": "Azure Key Vault Managed HSM의 외부 키 관리는 이제 모든 Azure 공용 지역에서 일반적으로 사용할 수 있습니다. 규제 또는 주권 요건이 있는 조직이 키 암호화 키에 대한 물리적 제어를 유지하려면 Azure 서비스가",
+      "status": "Launched",
+      "category": "Security",
+      "link": "https://azure.microsoft.com/updates?id=574296",
+      "date": "2026-10-16T16:50:27.000Z"
+    },
+    {
+      "title": "Public Preview: Azure Files cross-region data copy and synchronization with Azure Storage Mover",
+      "titleKo": "공개 미리 보기: Azure 파일 지역 간 데이터 복사 및 Azure Storage Mover와의 동기화",
+      "summaryKo": "이제 Azure Files 고객은 Azure Storage Mover를 사용하여 동일한 테넌트 내의 저장소 계정, Azure 지역 및 구독 간에 파일 공유 데이터를 복사하고 동기화할 수 있습니다. 버스를 지원할 수 있는 보조 사본을 유지하기 위해 증분 전송 예약",
+      "status": "In preview",
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=576542",
+      "date": "2026-10-15T19:05:18.000Z"
+    },
+    {
+      "title": "Generally Available: Standard service endpoint",
+      "titleKo": "일반적으로 사용 가능: 표준 서비스 엔드포인트",
+      "summaryKo": "Azure Private Link 제품군의 새로운 기능인 표준 서비스 엔드포인트는 Azure IaaS 워크로드를 Azure PaaS 서비스에 연결하기 위한 확장 가능하고 안전한 접근 방식을 제공합니다. 표준 서비스 엔드포인트는 관리 용이성과 규모 제한을 해결합니다.",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=571025",
+      "date": "2026-10-15T17:39:51.000Z"
+    }
+  ]
+}
