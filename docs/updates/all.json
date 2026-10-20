@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-10-19T21:02:21.437Z",
+  "generatedAt": "2026-10-20T21:02:39.356Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 110,
+  "count": 115,
   "items": [
+    {
+      "title": "Public Preview: Disable VNet peering route",
+      "titleKo": "공개 미리보기: VNet 피어링 경로 비활성화",
+      "summaryKo": "피어링된 가상 네트워크 간의 트래픽을 더 잘 제어할 수 있는 라우팅 테이블 기능인 VNet 피어링 경로 비활성화 공개 미리보기를 발표합니다. DPR은 라우트 테이블과 연결된 서브넷에서 시스템 생성 피어링 경로를 억제합니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=576242",
+      "date": "2026-10-20T18:55:47.000Z"
+    },
+    {
+      "title": "Generally Available: Service tag match condition for Azure Front Door Premium WAF",
+      "titleKo": "일반적으로 사용 가능: Azure Front Door Premium WAF에 대한 서비스 태그 일치 조건",
+      "summaryKo": "Azure Front Door Premium에서 Azure Web Application Firewall (WAF) 사용자 정의 규칙에 대한 서비스 태그 일치 조건의 일반 가용성을 발표합니다. 서비스 태그는 Azure 서비스에서 사용하는 IP 주소 접두사 그룹을 나타내며 Microsoft는",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=577156",
+      "date": "2026-10-20T16:57:35.000Z"
+    },
+    {
+      "title": "Generally Available: Keyless TLS on Application Gateway with Azure Key Vault Managed HSM",
+      "titleKo": "일반적으로 사용 가능: Azure Key Vault Managed HSM을 사용하는 애플리케이션 게이트웨이의 Keyless TLS",
+      "summaryKo": "Azure Application Gateway는 이제 개인 키가 Azure Key Vault Managed HSM에 남아 있는 인증서를 사용하여 키리스 TLS 종료를 지원합니다. 각 TLS 핸드셰이크 서명은 HSM 내부에서 수행되며 개인 키는 게이트웨이로 내보내지 않습니다. 이것은",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=577130",
+      "date": "2026-10-20T16:55:59.000Z"
+    },
+    {
+      "title": "Generally Available: Advanced platform metrics for Azure Monitor",
+      "titleKo": "일반적으로 사용 가능: Azure Monitor에 대한 고급 플랫폼 메트릭",
+      "summaryKo": "Azure Monitor에 대한 고급 플랫폼 메트릭을 이제 일반적으로 사용할 수 있습니다. 고급 플랫폼 지표는 고객이 리소스 내의 변화와 추세를 보다 빠르고 정확하게 식별하는 데 도움이 되는 세분화된 신호를 제공합니다. 이번 릴리스를 통해 고객은",
+      "status": "Launched",
+      "category": "DevOps",
+      "link": "https://azure.microsoft.com/updates?id=575329",
+      "date": "2026-10-20T16:54:24.000Z"
+    },
+    {
+      "title": "Generally Available: Metrics usage insights for Azure Monitor workspace",
+      "titleKo": "일반적으로 사용 가능: Azure Monitor 작업 영역에 대한 메트릭 사용량 인사이트",
+      "summaryKo": "이제 메트릭 사용량 통찰력을 일반적으로 사용할 수 있으므로 Azure Monitor 작업 영역 전체에서 메트릭 사용량을 유도하는 요소에 대한 가시성을 높일 수 있습니다. 작업 공간 활용도 모니터링, 사용되지 않는 지표 식별, 사용 추세 파악, 변경 사항 조사",
+      "status": "Launched",
+      "category": "DevOps",
+      "link": "https://azure.microsoft.com/updates?id=577165",
+      "date": "2026-10-19T20:23:15.000Z"
+    },
     {
       "title": "Generally Available: Azure DNS enables DNS-based load balancing through Traffic Manager linked records",
       "titleKo": "일반적으로 사용 가능: Azure DNS는 트래픽 관리자 연결 레코드를 통해 DNS 기반 로드 밸런싱을 활성화합니다.",

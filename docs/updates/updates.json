@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-10-19T21:02:21.434Z",
+  "generatedAt": "2026-10-20T21:02:39.353Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "translatedBy": "mymemory",
   "items": [
     {
-      "title": "Generally Available: Azure DNS enables DNS-based load balancing through Traffic Manager linked records",
-      "titleKo": "일반적으로 사용 가능: Azure DNS는 트래픽 관리자 연결 레코드를 통해 DNS 기반 로드 밸런싱을 활성화합니다.",
-      "summaryKo": "Azure DNS는 이제 Azure Traffic Manager와의 원활한 통합을 통해 DNS 기반 로드 밸런싱을 제공합니다. 고객은 Azure DNS 레코드 세트를 트래픽 관리자 프로필과 직접 연결할 수 있으므로 트래프를 가리키는 CNAME 레코드를 만들 필요가 없습니다.",
+      "title": "Public Preview: Disable VNet peering route",
+      "titleKo": "공개 미리보기: VNet 피어링 경로 비활성화",
+      "summaryKo": "피어링된 가상 네트워크 간의 트래픽을 더 잘 제어할 수 있는 라우팅 테이블 기능인 VNet 피어링 경로 비활성화 공개 미리보기를 발표합니다. DPR은 라우트 테이블과 연결된 서브넷에서 시스템 생성 피어링 경로를 억제합니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=576242",
+      "date": "2026-10-20T18:55:47.000Z"
+    },
+    {
+      "title": "Generally Available: Service tag match condition for Azure Front Door Premium WAF",
+      "titleKo": "일반적으로 사용 가능: Azure Front Door Premium WAF에 대한 서비스 태그 일치 조건",
+      "summaryKo": "Azure Front Door Premium에서 Azure Web Application Firewall (WAF) 사용자 정의 규칙에 대한 서비스 태그 일치 조건의 일반 가용성을 발표합니다. 서비스 태그는 Azure 서비스에서 사용하는 IP 주소 접두사 그룹을 나타내며 Microsoft는",
       "status": "Launched",
       "category": "Networking",
-      "link": "https://azure.microsoft.com/updates?id=573917",
-      "date": "2026-10-19T17:55:40.000Z"
+      "link": "https://azure.microsoft.com/updates?id=577156",
+      "date": "2026-10-20T16:57:35.000Z"
     },
     {
-      "title": "Public Preview: Azure Databricks Private network gateway",
-      "titleKo": "공개 미리 보기: Azure Databricks 프라이빗 네트워크 게이트웨이",
-      "summaryKo": "Azure Databricks용 사설 네트워크 게이트웨이가 이제 공개 미리 보기로 제공되어 서버리스 컴퓨팅이 단일 관리 게이트웨이를 통해 가상 네트워크 (VNet) 및 일시적으로 연결된 네트워크의 리소스에 연결할 수 있습니다. 고객은 게이트웨이 T를 사용할 수 있습니다.",
-      "status": "In preview",
-      "category": "AI + machine learning",
-      "link": "https://azure.microsoft.com/updates?id=576556",
-      "date": "2026-10-16T16:59:02.000Z"
-    },
-    {
-      "title": "Generally Available: External key management for Azure Key Vault Managed HSM",
-      "titleKo": "일반적으로 사용 가능: Azure Key Vault Managed HSM에 대한 외부 키 관리",
-      "summaryKo": "Azure Key Vault Managed HSM의 외부 키 관리는 이제 모든 Azure 공용 지역에서 일반적으로 사용할 수 있습니다. 규제 또는 주권 요건이 있는 조직이 키 암호화 키에 대한 물리적 제어를 유지하려면 Azure 서비스가",
-      "status": "Launched",
-      "category": "Security",
-      "link": "https://azure.microsoft.com/updates?id=574296",
-      "date": "2026-10-16T16:50:27.000Z"
-    },
-    {
-      "title": "Public Preview: Azure Files cross-region data copy and synchronization with Azure Storage Mover",
-      "titleKo": "공개 미리 보기: Azure 파일 지역 간 데이터 복사 및 Azure Storage Mover와의 동기화",
-      "summaryKo": "이제 Azure Files 고객은 Azure Storage Mover를 사용하여 동일한 테넌트 내의 저장소 계정, Azure 지역 및 구독 간에 파일 공유 데이터를 복사하고 동기화할 수 있습니다. 버스를 지원할 수 있는 보조 사본을 유지하기 위해 증분 전송 예약",
-      "status": "In preview",
-      "category": "Storage",
-      "link": "https://azure.microsoft.com/updates?id=576542",
-      "date": "2026-10-15T19:05:18.000Z"
-    },
-    {
-      "title": "Generally Available: Standard service endpoint",
-      "titleKo": "일반적으로 사용 가능: 표준 서비스 엔드포인트",
-      "summaryKo": "Azure Private Link 제품군의 새로운 기능인 표준 서비스 엔드포인트는 Azure IaaS 워크로드를 Azure PaaS 서비스에 연결하기 위한 확장 가능하고 안전한 접근 방식을 제공합니다. 표준 서비스 엔드포인트는 관리 용이성과 규모 제한을 해결합니다.",
+      "title": "Generally Available: Keyless TLS on Application Gateway with Azure Key Vault Managed HSM",
+      "titleKo": "일반적으로 사용 가능: Azure Key Vault Managed HSM을 사용하는 애플리케이션 게이트웨이의 Keyless TLS",
+      "summaryKo": "Azure Application Gateway는 이제 개인 키가 Azure Key Vault Managed HSM에 남아 있는 인증서를 사용하여 키리스 TLS 종료를 지원합니다. 각 TLS 핸드셰이크 서명은 HSM 내부에서 수행되며 개인 키는 게이트웨이로 내보내지 않습니다. 이것은",
       "status": "Launched",
       "category": "Networking",
-      "link": "https://azure.microsoft.com/updates?id=571025",
-      "date": "2026-10-15T17:39:51.000Z"
+      "link": "https://azure.microsoft.com/updates?id=577130",
+      "date": "2026-10-20T16:55:59.000Z"
+    },
+    {
+      "title": "Generally Available: Advanced platform metrics for Azure Monitor",
+      "titleKo": "일반적으로 사용 가능: Azure Monitor에 대한 고급 플랫폼 메트릭",
+      "summaryKo": "Azure Monitor에 대한 고급 플랫폼 메트릭을 이제 일반적으로 사용할 수 있습니다. 고급 플랫폼 지표는 고객이 리소스 내의 변화와 추세를 보다 빠르고 정확하게 식별하는 데 도움이 되는 세분화된 신호를 제공합니다. 이번 릴리스를 통해 고객은",
+      "status": "Launched",
+      "category": "DevOps",
+      "link": "https://azure.microsoft.com/updates?id=575329",
+      "date": "2026-10-20T16:54:24.000Z"
+    },
+    {
+      "title": "Generally Available: Metrics usage insights for Azure Monitor workspace",
+      "titleKo": "일반적으로 사용 가능: Azure Monitor 작업 영역에 대한 메트릭 사용량 인사이트",
+      "summaryKo": "이제 메트릭 사용량 통찰력을 일반적으로 사용할 수 있으므로 Azure Monitor 작업 영역 전체에서 메트릭 사용량을 유도하는 요소에 대한 가시성을 높일 수 있습니다. 작업 공간 활용도 모니터링, 사용되지 않는 지표 식별, 사용 추세 파악, 변경 사항 조사",
+      "status": "Launched",
+      "category": "DevOps",
+      "link": "https://azure.microsoft.com/updates?id=577165",
+      "date": "2026-10-19T20:23:15.000Z"
     }
   ]
 }
