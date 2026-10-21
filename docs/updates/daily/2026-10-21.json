@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-10-21T21:02:28.867Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Announcing: Choose Your Own Telephony (CYOT) for Microsoft Entra",
+      "titleKo": "발표: Microsoft Entra용 CYOT (Choose Your Own Telephony)",
+      "summaryKo": "2026년 10월 30일부터 Microsoft Entra ID는 Choose Your Own Telephony Provider 환경을 제공합니다. 이 기능을 통해 조직은 SMS 및 음성 인증을 위해 지원되는 타사 통신 공급자를 사용할 수 있습니다.",
+      "status": "",
+      "category": "Identity",
+      "link": "https://azure.microsoft.com/updates?id=577273",
+      "date": "2026-10-21T17:38:32.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Cosmos DB Safe Key Rotation",
+      "titleKo": "일반 사용 가능: Azure Cosmos DB 안전 키 회전",
+      "summaryKo": "Azure Cosmos DB용 Safe Key Rotation을 이제 일반적으로 사용할 수 있습니다. 각 계정 키가 마지막으로 사용된 시점을 보여주는 타임스탬프 메타데이터를 볼 수 있어 자격 증명을 회전하거나 폐기하기 전에 활성 키를 식별하는 데 도움이 됩니다. 이 가시성은 위험을 줄이는 데 도움이 됩니다 o",
+      "status": "Launched",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=576716",
+      "date": "2026-10-21T17:13:16.000Z"
+    },
+    {
+      "title": "Public Preview: Disable VNet peering route",
+      "titleKo": "공개 미리보기: VNet 피어링 경로 비활성화",
+      "summaryKo": "피어링된 가상 네트워크 간의 트래픽을 더 잘 제어할 수 있는 라우팅 테이블 기능인 VNet 피어링 경로 비활성화 공개 미리보기를 발표합니다. DPR은 라우트 테이블과 연결된 서브넷에서 시스템 생성 피어링 경로를 억제합니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=576242",
+      "date": "2026-10-20T18:55:47.000Z"
+    },
+    {
+      "title": "Generally Available: Service tag match condition for Azure Front Door Premium WAF",
+      "titleKo": "일반적으로 사용 가능: Azure Front Door Premium WAF에 대한 서비스 태그 일치 조건",
+      "summaryKo": "Azure Front Door Premium에서 Azure Web Application Firewall (WAF) 사용자 정의 규칙에 대한 서비스 태그 일치 조건의 일반 가용성을 발표합니다. 서비스 태그는 Azure 서비스에서 사용하는 IP 주소 접두사 그룹을 나타내며 Microsoft는",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=577156",
+      "date": "2026-10-20T16:57:35.000Z"
+    },
+    {
+      "title": "Generally Available: Keyless TLS on Application Gateway with Azure Key Vault Managed HSM",
+      "titleKo": "일반적으로 사용 가능: Azure Key Vault Managed HSM을 사용하는 애플리케이션 게이트웨이의 Keyless TLS",
+      "summaryKo": "Azure Application Gateway는 이제 개인 키가 Azure Key Vault Managed HSM에 남아 있는 인증서를 사용하여 키리스 TLS 종료를 지원합니다. 각 TLS 핸드셰이크 서명은 HSM 내부에서 수행되며 개인 키는 게이트웨이로 내보내지 않습니다. 이것은",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=577130",
+      "date": "2026-10-20T16:55:59.000Z"
+    }
+  ]
+}
