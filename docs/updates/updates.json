@@ -1,9 +1,18 @@
 {
-  "generatedAt": "2026-10-22T21:02:41.119Z",
+  "generatedAt": "2026-10-23T21:02:26.374Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "translatedBy": "mymemory",
   "items": [
+    {
+      "title": "Generally Available: Item Level Recovery for Azure VMs with Premium SSDv2 and Ultra Disks in Azure Backup",
+      "titleKo": "일반적으로 사용 가능: Azure 백업의 프리미엄 SSDv2 및 Ultra 디스크가 있는 Azure VM에 대한 항목 수준 복구",
+      "summaryKo": "Azure Backup은 이제 512바이트 및 4KB 논리 섹터 크기의 프리미엄 SSD v2 및 Ultra 디스크를 사용하는 Azure 가상 머신에 대해 ILR (Item-Level Recovery) 을 지원합니다. 이제 프리미엄 SSDv2를 사용하여 Azure VM에서 개별 파일 및 폴더를 복구할 수 있습니다.",
+      "status": "Launched",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=577963",
+      "date": "2026-10-23T19:21:07.000Z"
+    },
     {
       "title": "Generally Available: ABFS Vectored Read for Azure Data Lake Storage",
       "titleKo": "일반적으로 사용 가능: Azure Data Lake 스토리지용 ABFS 벡터 읽기",
@@ -39,15 +48,6 @@
       "category": "Networking",
       "link": "https://azure.microsoft.com/updates?id=576242",
       "date": "2026-10-20T18:55:47.000Z"
-    },
-    {
-      "title": "Generally Available: Service tag match condition for Azure Front Door Premium WAF",
-      "titleKo": "일반적으로 사용 가능: Azure Front Door Premium WAF에 대한 서비스 태그 일치 조건",
-      "summaryKo": "Azure Front Door Premium에서 Azure Web Application Firewall (WAF) 사용자 정의 규칙에 대한 서비스 태그 일치 조건의 일반 가용성을 발표합니다. 서비스 태그는 Azure 서비스에서 사용하는 IP 주소 접두사 그룹을 나타내며 Microsoft는",
-      "status": "Launched",
-      "category": "Networking",
-      "link": "https://azure.microsoft.com/updates?id=577156",
-      "date": "2026-10-20T16:57:35.000Z"
     }
   ]
 }
