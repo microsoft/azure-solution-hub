@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-10-24T21:02:30.993Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Generally Available: Item Level Recovery for Azure VMs with Premium SSDv2 and Ultra Disks in Azure Backup",
+      "titleKo": "일반적으로 사용 가능: Azure 백업의 프리미엄 SSDv2 및 Ultra 디스크가 있는 Azure VM에 대한 항목 수준 복구",
+      "summaryKo": "Azure Backup은 이제 512바이트 및 4KB 논리 섹터 크기의 프리미엄 SSD v2 및 Ultra 디스크를 사용하는 Azure 가상 머신에 대해 ILR (Item-Level Recovery) 을 지원합니다. 이제 프리미엄 SSDv2를 사용하여 Azure VM에서 개별 파일 및 폴더를 복구할 수 있습니다.",
+      "status": "Launched",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=577963",
+      "date": "2026-10-23T19:21:07.000Z"
+    },
+    {
+      "title": "Generally Available: ABFS Vectored Read for Azure Data Lake Storage",
+      "titleKo": "일반적으로 사용 가능: Azure Data Lake 스토리지용 ABFS 벡터 읽기",
+      "summaryKo": "ABFS 벡터 읽기는 호환 분석 엔진이 Azure Data Lake 스토리지의 선택적 읽기에 대한 요청 오버헤드를 줄이는 데 도움이 됩니다. 근처의 파일 범위를 더 적은 스토리지 요청으로 결합하고 비동기식으로 읽기를 실행함으로써 네트워크 왕복을 줄일 수 있습니다.",
+      "status": "Launched",
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=577618",
+      "date": "2026-10-22T18:01:00.000Z"
+    },
+    {
+      "title": "Announcing: Choose Your Own Telephony (CYOT) for Microsoft Entra",
+      "titleKo": "발표: Microsoft Entra용 CYOT (Choose Your Own Telephony)",
+      "summaryKo": "2026년 10월 30일부터 Microsoft Entra ID는 Choose Your Own Telephony Provider 환경을 제공합니다. 이 기능을 통해 조직은 SMS 및 음성 인증을 위해 지원되는 타사 통신 공급자를 사용할 수 있습니다.",
+      "status": "",
+      "category": "Identity",
+      "link": "https://azure.microsoft.com/updates?id=577273",
+      "date": "2026-10-21T17:38:32.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Cosmos DB Safe Key Rotation",
+      "titleKo": "일반 사용 가능: Azure Cosmos DB 안전 키 회전",
+      "summaryKo": "Azure Cosmos DB용 Safe Key Rotation을 이제 일반적으로 사용할 수 있습니다. 각 계정 키가 마지막으로 사용된 시점을 보여주는 타임스탬프 메타데이터를 볼 수 있어 자격 증명을 회전하거나 폐기하기 전에 활성 키를 식별하는 데 도움이 됩니다. 이 가시성은 위험을 줄이는 데 도움이 됩니다 o",
+      "status": "Launched",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=576716",
+      "date": "2026-10-21T17:13:16.000Z"
+    },
+    {
+      "title": "Public Preview: Disable VNet peering route",
+      "titleKo": "공개 미리보기: VNet 피어링 경로 비활성화",
+      "summaryKo": "피어링된 가상 네트워크 간의 트래픽을 더 잘 제어할 수 있는 라우팅 테이블 기능인 VNet 피어링 경로 비활성화 공개 미리보기를 발표합니다. DPR은 라우트 테이블과 연결된 서브넷에서 시스템 생성 피어링 경로를 억제합니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=576242",
+      "date": "2026-10-20T18:55:47.000Z"
+    }
+  ]
+}
