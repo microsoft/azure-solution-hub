@@ -1,8 +1,26 @@
 {
-  "generatedAt": "2026-10-26T21:02:07.060Z",
+  "generatedAt": "2026-10-27T21:01:24.594Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 120,
+  "count": 122,
   "items": [
+    {
+      "title": "Generally Available: Cost management and tagging for Claude models in Microsoft Foundry",
+      "titleKo": "일반적으로 사용 가능: Microsoft Foundry의 Claude 모델에 대한 비용 관리 및 태그 지정",
+      "summaryKo": "이제 Microsoft Foundry는 일반적으로 사용할 수 있는 나머지 Foundry 지출과 함께 Claude 모델을 Azure Cost Management로 가져옵니다. 지금까지 Claude 요금은 배포에 사용된 Foundry 리소스가 아닌 SaaS로 표시되었으며, Claude는",
+      "status": "Launched",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=577260",
+      "date": "2026-10-27T17:19:43.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Front Door profile and route level WAF policies",
+      "titleKo": "일반적으로 사용 가능: Azure Front Door 프로필 및 경로 수준 WAF 정책",
+      "summaryKo": "Azure Front Door Premium에서 WAF (Azure Web Application Firewall) 에 대한 프로필 및 경로 수준 정책의 일반 가용성을 발표합니다. WAF 정책은 더 이상 개별 도메인에 국한되지 않습니다. 이제 e에 광범위한 기준선 보호를 적용할 수 있습니다.",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=578153",
+      "date": "2026-10-27T16:58:04.000Z"
+    },
     {
       "title": "Generally Available: Network Watcher VNet flow logs filtering",
       "titleKo": "일반적으로 사용 가능: Network Watcher VNet 흐름 로그 필터링",
