@@ -1,9 +1,45 @@
 {
-  "generatedAt": "2026-10-27T21:01:24.592Z",
+  "generatedAt": "2026-10-28T21:01:37.017Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "translatedBy": "mymemory",
   "items": [
+    {
+      "title": "Announcing: Migrate Azure Container Apps logging destination from Log Analytics to Azure Monitor",
+      "titleKo": "발표: Azure Container Apps 로깅 대상을 Log Analytics에서 Azure Monitor로 마이그레이션",
+      "summaryKo": "Azure Container Apps의 Log Analytics 로깅 대상이 이제 레거시 로깅 옵션이 되었습니다. 로그 분석 로깅 대상으로 구성된 기존 환경은 계속 정상적으로 작동합니다. 그러나 다음으로의 마이그레이션을 계획하는 것이 좋습니다.",
+      "status": "",
+      "category": "Containers",
+      "link": "https://azure.microsoft.com/updates?id=577689",
+      "date": "2026-10-28T17:52:51.000Z"
+    },
+    {
+      "title": "Public Preview: Cross Tenant Restore with Azure Backup",
+      "titleKo": "공개 미리 보기: Azure 백업을 사용한 교차 테넌트 복원",
+      "summaryKo": "교차 테넌트 복원 (CTR) 은 조직이 Azure VM 백업을 별도의 Azure 테넌트로 복원할 수 있도록 하여 독립적인 복구 경로를 설정하는 데 도움이 됩니다. 커스텀 없이 기존 백업 사본을 사용하는 동안 사이버 복원력을 강화합니다.",
+      "status": "In preview",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=577117",
+      "date": "2026-10-28T17:09:30.000Z"
+    },
+    {
+      "title": "Generally Available: Marketplace private offer enhancements",
+      "titleKo": "일반 이용 가능: 마켓플레이스 비공개 혜택 개선",
+      "summaryKo": "Microsoft Marketplace를 통한 비공개 프로모션은 유연한 청구, 맞춤 계약 기간 등을 포함하여 조직의 요구에 부합하는 가격 및 조건으로 지출 능력을 최적화하는 데 도움이 됩니다. 요건을 충족하는 비공개 프로모션의 경우, 간소화됩니다.",
+      "status": "Launched",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=576547",
+      "date": "2026-10-28T16:23:43.000Z"
+    },
+    {
+      "title": "Generally Available: Higher limit of Azure Blob Storage accounts per region per subscription",
+      "titleKo": "일반적으로 사용 가능: 구독당 지역별 Azure Blob 저장소 계정의 최대 한도",
+      "summaryKo": "더 높은 Azure Storage 계정 리소스 할당량은 이제 일반적으로 사용할 수 있으며, 기본값인 250에서 지역별, 구독별 표준 엔드포인트를 사용하여 최대 1,000개의 스토리지 계정을 지원합니다. 단일 구독으로 더 많은 계정을 관리하여",
+      "status": "Launched",
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=578358",
+      "date": "2026-10-27T21:16:52.000Z"
+    },
     {
       "title": "Generally Available: Cost management and tagging for Claude models in Microsoft Foundry",
       "titleKo": "일반적으로 사용 가능: Microsoft Foundry의 Claude 모델에 대한 비용 관리 및 태그 지정",
@@ -12,42 +48,6 @@
       "category": "AI + machine learning",
       "link": "https://azure.microsoft.com/updates?id=577260",
       "date": "2026-10-27T17:19:43.000Z"
-    },
-    {
-      "title": "Generally Available: Azure Front Door profile and route level WAF policies",
-      "titleKo": "일반적으로 사용 가능: Azure Front Door 프로필 및 경로 수준 WAF 정책",
-      "summaryKo": "Azure Front Door Premium에서 WAF (Azure Web Application Firewall) 에 대한 프로필 및 경로 수준 정책의 일반 가용성을 발표합니다. WAF 정책은 더 이상 개별 도메인에 국한되지 않습니다. 이제 e에 광범위한 기준선 보호를 적용할 수 있습니다.",
-      "status": "Launched",
-      "category": "Networking",
-      "link": "https://azure.microsoft.com/updates?id=578153",
-      "date": "2026-10-27T16:58:04.000Z"
-    },
-    {
-      "title": "Generally Available: Network Watcher VNet flow logs filtering",
-      "titleKo": "일반적으로 사용 가능: Network Watcher VNet 흐름 로그 필터링",
-      "summaryKo": "이제 Azure Network Watcher VNet 흐름 로그 필터링을 일반적으로 사용할 수 있으므로 IP 주소, 포트, 프로토콜, 암호화 상태, 흐름 상태 및 트래픽 지시와 같은 특정 기준에 따라 로깅되는 네트워크 트래픽 흐름을 제어할 수 있습니다.",
-      "status": "Launched",
-      "category": "Management and governance",
-      "link": "https://azure.microsoft.com/updates?id=577782",
-      "date": "2026-10-26T16:02:05.000Z"
-    },
-    {
-      "title": "Generally Available: Item Level Recovery for Azure VMs with Premium SSDv2 and Ultra Disks in Azure Backup",
-      "titleKo": "일반적으로 사용 가능: Azure 백업의 프리미엄 SSDv2 및 Ultra 디스크가 있는 Azure VM에 대한 항목 수준 복구",
-      "summaryKo": "Azure Backup은 이제 512바이트 및 4KB 논리 섹터 크기의 프리미엄 SSD v2 및 Ultra 디스크를 사용하는 Azure 가상 머신에 대해 ILR (Item-Level Recovery) 을 지원합니다. 이제 프리미엄 SSDv2를 사용하여 Azure VM에서 개별 파일 및 폴더를 복구할 수 있습니다.",
-      "status": "Launched",
-      "category": "Management and governance",
-      "link": "https://azure.microsoft.com/updates?id=577963",
-      "date": "2026-10-23T19:21:07.000Z"
-    },
-    {
-      "title": "Generally Available: ABFS Vectored Read for Azure Data Lake Storage",
-      "titleKo": "일반적으로 사용 가능: Azure Data Lake 스토리지용 ABFS 벡터 읽기",
-      "summaryKo": "ABFS 벡터 읽기는 호환 분석 엔진이 Azure Data Lake 스토리지의 선택적 읽기에 대한 요청 오버헤드를 줄이는 데 도움이 됩니다. 근처의 파일 범위를 더 적은 스토리지 요청으로 결합하고 비동기식으로 읽기를 실행함으로써 네트워크 왕복을 줄일 수 있습니다.",
-      "status": "Launched",
-      "category": "Storage",
-      "link": "https://azure.microsoft.com/updates?id=577618",
-      "date": "2026-10-22T18:01:00.000Z"
     }
   ]
 }
