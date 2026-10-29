@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-10-29T21:01:49.155Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Generally Available: HTTP DDoS Ruleset for Azure Front Door Premium WAF",
+      "titleKo": "일반 사용 가능: Azure Front Door Premium WAF용 HTTP DDoS 규칙 집합",
+      "summaryKo": "Azure Front Door Premium에서 WAF (Azure Web Application Firewall) 용 HTTP DDoS 규칙 집합의 일반 가용성을 발표합니다. HTTP 계층 DDoS 공격은 애플리케이션 다운타임의 주요 원인으로 남아 있으며 IP 필터 및 고정 RAT와 같은 정적 제어",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=578681",
+      "date": "2026-10-29T17:09:49.000Z"
+    },
+    {
+      "title": "Generally Available: Azure MCP Server 3.0",
+      "titleKo": "일반적으로 사용 가능: Azure MCP Server 3.0",
+      "summaryKo": "이제 개방형 MCP (Model Context Protocol) 를 통해 AI 에이전트 및 개발자 도구가 Azure와 상호 작용하는 방식을 확장하여 Azure MCP Server 3.0을 일반적으로 사용할 수 있습니다. 이 릴리스에서는 새롭고 확장된 기능인 Infrastructure as code: Azure Terraform을",
+      "status": "Launched",
+      "category": "Developer tools",
+      "link": "https://azure.microsoft.com/updates?id=578662",
+      "date": "2026-10-29T17:04:58.000Z"
+    },
+    {
+      "title": "Announcing: Migrate Azure Container Apps logging destination from Log Analytics to Azure Monitor",
+      "titleKo": "발표: Azure Container Apps 로깅 대상을 Log Analytics에서 Azure Monitor로 마이그레이션",
+      "summaryKo": "Azure Container Apps의 Log Analytics 로깅 대상이 이제 레거시 로깅 옵션이 되었습니다. 로그 분석 로깅 대상으로 구성된 기존 환경은 계속 정상적으로 작동합니다. 그러나 다음으로의 마이그레이션을 계획하는 것이 좋습니다.",
+      "status": "",
+      "category": "Containers",
+      "link": "https://azure.microsoft.com/updates?id=577689",
+      "date": "2026-10-28T17:52:51.000Z"
+    },
+    {
+      "title": "Public Preview: Cross Tenant Restore with Azure Backup",
+      "titleKo": "공개 미리 보기: Azure 백업을 사용한 교차 테넌트 복원",
+      "summaryKo": "교차 테넌트 복원 (CTR) 은 조직이 Azure VM 백업을 별도의 Azure 테넌트로 복원할 수 있도록 하여 독립적인 복구 경로를 설정하는 데 도움이 됩니다. 커스텀 없이 기존 백업 사본을 사용하는 동안 사이버 복원력을 강화합니다.",
+      "status": "In preview",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=577117",
+      "date": "2026-10-28T17:09:30.000Z"
+    },
+    {
+      "title": "Generally Available: Marketplace private offer enhancements",
+      "titleKo": "일반 이용 가능: 마켓플레이스 비공개 혜택 개선",
+      "summaryKo": "Microsoft Marketplace를 통한 비공개 프로모션은 유연한 청구, 맞춤 계약 기간 등을 포함하여 조직의 요구에 부합하는 가격 및 조건으로 지출 능력을 최적화하는 데 도움이 됩니다. 요건을 충족하는 비공개 프로모션의 경우, 간소화됩니다.",
+      "status": "Launched",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=576547",
+      "date": "2026-10-28T16:23:43.000Z"
+    }
+  ]
+}

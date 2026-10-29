@@ -1,9 +1,27 @@
 {
-  "generatedAt": "2026-10-28T21:01:37.017Z",
+  "generatedAt": "2026-10-29T21:01:49.155Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "translatedBy": "mymemory",
   "items": [
+    {
+      "title": "Generally Available: HTTP DDoS Ruleset for Azure Front Door Premium WAF",
+      "titleKo": "일반 사용 가능: Azure Front Door Premium WAF용 HTTP DDoS 규칙 집합",
+      "summaryKo": "Azure Front Door Premium에서 WAF (Azure Web Application Firewall) 용 HTTP DDoS 규칙 집합의 일반 가용성을 발표합니다. HTTP 계층 DDoS 공격은 애플리케이션 다운타임의 주요 원인으로 남아 있으며 IP 필터 및 고정 RAT와 같은 정적 제어",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=578681",
+      "date": "2026-10-29T17:09:49.000Z"
+    },
+    {
+      "title": "Generally Available: Azure MCP Server 3.0",
+      "titleKo": "일반적으로 사용 가능: Azure MCP Server 3.0",
+      "summaryKo": "이제 개방형 MCP (Model Context Protocol) 를 통해 AI 에이전트 및 개발자 도구가 Azure와 상호 작용하는 방식을 확장하여 Azure MCP Server 3.0을 일반적으로 사용할 수 있습니다. 이 릴리스에서는 새롭고 확장된 기능인 Infrastructure as code: Azure Terraform을",
+      "status": "Launched",
+      "category": "Developer tools",
+      "link": "https://azure.microsoft.com/updates?id=578662",
+      "date": "2026-10-29T17:04:58.000Z"
+    },
     {
       "title": "Announcing: Migrate Azure Container Apps logging destination from Log Analytics to Azure Monitor",
       "titleKo": "발표: Azure Container Apps 로깅 대상을 Log Analytics에서 Azure Monitor로 마이그레이션",
@@ -30,24 +48,6 @@
       "category": "Management and governance",
       "link": "https://azure.microsoft.com/updates?id=576547",
       "date": "2026-10-28T16:23:43.000Z"
-    },
-    {
-      "title": "Generally Available: Higher limit of Azure Blob Storage accounts per region per subscription",
-      "titleKo": "일반적으로 사용 가능: 구독당 지역별 Azure Blob 저장소 계정의 최대 한도",
-      "summaryKo": "더 높은 Azure Storage 계정 리소스 할당량은 이제 일반적으로 사용할 수 있으며, 기본값인 250에서 지역별, 구독별 표준 엔드포인트를 사용하여 최대 1,000개의 스토리지 계정을 지원합니다. 단일 구독으로 더 많은 계정을 관리하여",
-      "status": "Launched",
-      "category": "Storage",
-      "link": "https://azure.microsoft.com/updates?id=578358",
-      "date": "2026-10-27T21:16:52.000Z"
-    },
-    {
-      "title": "Generally Available: Cost management and tagging for Claude models in Microsoft Foundry",
-      "titleKo": "일반적으로 사용 가능: Microsoft Foundry의 Claude 모델에 대한 비용 관리 및 태그 지정",
-      "summaryKo": "이제 Microsoft Foundry는 일반적으로 사용할 수 있는 나머지 Foundry 지출과 함께 Claude 모델을 Azure Cost Management로 가져옵니다. 지금까지 Claude 요금은 배포에 사용된 Foundry 리소스가 아닌 SaaS로 표시되었으며, Claude는",
-      "status": "Launched",
-      "category": "AI + machine learning",
-      "link": "https://azure.microsoft.com/updates?id=577260",
-      "date": "2026-10-27T17:19:43.000Z"
     }
   ]
 }

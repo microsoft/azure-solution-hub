@@ -1,8 +1,26 @@
 {
-  "generatedAt": "2026-10-28T21:01:37.020Z",
+  "generatedAt": "2026-10-29T21:01:49.156Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
-  "count": 126,
+  "count": 128,
   "items": [
+    {
+      "title": "Generally Available: HTTP DDoS Ruleset for Azure Front Door Premium WAF",
+      "titleKo": "일반 사용 가능: Azure Front Door Premium WAF용 HTTP DDoS 규칙 집합",
+      "summaryKo": "Azure Front Door Premium에서 WAF (Azure Web Application Firewall) 용 HTTP DDoS 규칙 집합의 일반 가용성을 발표합니다. HTTP 계층 DDoS 공격은 애플리케이션 다운타임의 주요 원인으로 남아 있으며 IP 필터 및 고정 RAT와 같은 정적 제어",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=578681",
+      "date": "2026-10-29T17:09:49.000Z"
+    },
+    {
+      "title": "Generally Available: Azure MCP Server 3.0",
+      "titleKo": "일반적으로 사용 가능: Azure MCP Server 3.0",
+      "summaryKo": "이제 개방형 MCP (Model Context Protocol) 를 통해 AI 에이전트 및 개발자 도구가 Azure와 상호 작용하는 방식을 확장하여 Azure MCP Server 3.0을 일반적으로 사용할 수 있습니다. 이 릴리스에서는 새롭고 확장된 기능인 Infrastructure as code: Azure Terraform을",
+      "status": "Launched",
+      "category": "Developer tools",
+      "link": "https://azure.microsoft.com/updates?id=578662",
+      "date": "2026-10-29T17:04:58.000Z"
+    },
     {
       "title": "Announcing: Migrate Azure Container Apps logging destination from Log Analytics to Azure Monitor",
       "titleKo": "발표: Azure Container Apps 로깅 대상을 Log Analytics에서 Azure Monitor로 마이그레이션",
