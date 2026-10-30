@@ -1,12 +1,30 @@
 {
-  "generatedAt": "2026-10-29T21:01:49.155Z",
+  "generatedAt": "2026-10-30T21:01:20.443Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "translatedBy": "mymemory",
   "items": [
     {
-      "title": "Generally Available: HTTP DDoS Ruleset for Azure Front Door Premium WAF",
-      "titleKo": "일반 사용 가능: Azure Front Door Premium WAF용 HTTP DDoS 규칙 집합",
+      "title": "Public Preview: Support database-level managed identity (including FIC) in Create Database Scoped Credential T-SQL",
+      "titleKo": "공개 미리 보기: 데이터베이스 범위 지정 자격 증명 T-SQL 만들기에서 데이터베이스 수준 관리 ID (FIC 포함) 지원",
+      "summaryKo": "Azure SQL Database의 데이터베이스 수준 관리 ID를 사용하면 각 데이터베이스에 대해 사용자가 할당한 관리 ID를 사용하여 외부 테이블 및 OPENROWSET을 통해 Azure Blob Storage 및 Azure Data Lake Storage Gen2의 파일을 쿼리할 수 있습니다. 인증할 수 있습니다",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=577491",
+      "date": "2026-10-30T17:16:27.000Z"
+    },
+    {
+      "title": "Generally Available: Large OS Disk Encryption for Azure Confidential VM migrations",
+      "titleKo": "일반적으로 사용 가능: Azure 기밀 VM 마이그레이션을 위한 대형 OS 디스크 암호화",
+      "summaryKo": "이제 Azure Confidential VM 마이그레이션 시나리오에서 LOSDE (Large OS Disk Encryption) 를 일반적으로 사용할 수 있습니다. 조직은 OS 디스크를 완전히 보호하여 운영 규모가 큰 워크로드를 기밀 컴퓨팅으로 이동할 수 있습니다.",
+      "status": "Launched",
+      "category": "Feature",
+      "link": "https://azure.microsoft.com/updates?id=578850",
+      "date": "2026-10-29T21:19:52.000Z"
+    },
+    {
+      "title": "Generally Available: HTTP DDoS ruleset for Azure Front Door Premium WAF",
+      "titleKo": "일반적으로 사용 가능: Azure Front Door Premium WAF용 HTTP DDoS 규칙 집합",
       "summaryKo": "Azure Front Door Premium에서 WAF (Azure Web Application Firewall) 용 HTTP DDoS 규칙 집합의 일반 가용성을 발표합니다. HTTP 계층 DDoS 공격은 애플리케이션 다운타임의 주요 원인으로 남아 있으며 IP 필터 및 고정 RAT와 같은 정적 제어",
       "status": "Launched",
       "category": "Networking",
@@ -30,24 +48,6 @@
       "category": "Containers",
       "link": "https://azure.microsoft.com/updates?id=577689",
       "date": "2026-10-28T17:52:51.000Z"
-    },
-    {
-      "title": "Public Preview: Cross Tenant Restore with Azure Backup",
-      "titleKo": "공개 미리 보기: Azure 백업을 사용한 교차 테넌트 복원",
-      "summaryKo": "교차 테넌트 복원 (CTR) 은 조직이 Azure VM 백업을 별도의 Azure 테넌트로 복원할 수 있도록 하여 독립적인 복구 경로를 설정하는 데 도움이 됩니다. 커스텀 없이 기존 백업 사본을 사용하는 동안 사이버 복원력을 강화합니다.",
-      "status": "In preview",
-      "category": "Management and governance",
-      "link": "https://azure.microsoft.com/updates?id=577117",
-      "date": "2026-10-28T17:09:30.000Z"
-    },
-    {
-      "title": "Generally Available: Marketplace private offer enhancements",
-      "titleKo": "일반 이용 가능: 마켓플레이스 비공개 혜택 개선",
-      "summaryKo": "Microsoft Marketplace를 통한 비공개 프로모션은 유연한 청구, 맞춤 계약 기간 등을 포함하여 조직의 요구에 부합하는 가격 및 조건으로 지출 능력을 최적화하는 데 도움이 됩니다. 요건을 충족하는 비공개 프로모션의 경우, 간소화됩니다.",
-      "status": "Launched",
-      "category": "Management and governance",
-      "link": "https://azure.microsoft.com/updates?id=576547",
-      "date": "2026-10-28T16:23:43.000Z"
     }
   ]
 }
