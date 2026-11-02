@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-11-01T21:01:46.550Z",
+  "generatedAt": "2026-11-02T21:02:14.975Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "translatedBy": "mymemory",
   "items": [
     {
-      "title": "Public Preview: Support database-level managed identity (including FIC) in Create Database Scoped Credential T-SQL",
-      "titleKo": "공개 미리 보기: 데이터베이스 범위 지정 자격 증명 T-SQL 만들기에서 데이터베이스 수준 관리 ID (FIC 포함) 지원",
-      "summaryKo": "Azure SQL Database의 데이터베이스 수준 관리 ID를 사용하면 각 데이터베이스에 대해 사용자가 할당한 관리 ID를 사용하여 외부 테이블 및 OPENROWSET을 통해 Azure Blob Storage 및 Azure Data Lake Storage Gen2의 파일을 쿼리할 수 있습니다. 인증할 수 있습니다",
+      "title": "Public Preview: On-prem NAS share discovery and assessment are now available using Azure Migrate",
+      "titleKo": "공개 미리 보기: 이제 Azure Migrate를 사용하여 온프레미스 NAS 공유 검색 및 평가를 사용할 수 있습니다.",
+      "summaryKo": "Azure Migrate now supports discovery and assessment for network-attached storage, allowing customers and partners to plan migrations of Dell PowerScale (OneFS) and NetApp ONTAP storage to Azure. The Azure Migrate appliance connects directly to your NAS cl",
       "status": "In preview",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=577975",
+      "date": "2026-11-02T19:37:11.000Z"
+    },
+    {
+      "title": "Retirement: OT security in Microsoft Defender for IoT",
+      "titleKo": "퇴직: IoT용 Microsoft Defender의 OT 보안",
+      "summaryKo": "이는 Microsoft가 IoT용 Microsoft Defender의 운영 기술 (OT) 보안 구성 요소를 중단할 계획이라는 공식 공지입니다. 이 서비스는 3년의 전환 기간을 거쳐 2029년 10월에 완전히 중단됩니다. 이 변경 사항은",
+      "status": "Retirements",
+      "category": "",
+      "link": "https://azure.microsoft.com/updates?id=576255",
+      "date": "2026-11-02T19:22:28.000Z"
+    },
+    {
+      "title": "Generally Available: Change from virtual network integration to a private endpoint capable network configuration in Azure Database for PostgreSQL flexible server",
+      "titleKo": "일반적으로 사용 가능: PostgreSQL 유연한 서버용 Azure Database에서 가상 네트워크 통합에서 개인 엔드포인트 가능 네트워크 구성으로 변경",
+      "summaryKo": "이제 PostgreSQL Flexible Server 워크로드용 Azure Database에 대한 네트워크 설계의 유연성이 향상되었습니다. 이제 기존 VNet 통합 서버를 위임 서브넷 네트워킹에서 개인 엔드포인트 지원 구성으로 변경하여 SECU를 활성화할 수 있습니다.",
+      "status": "Launched",
       "category": "Databases",
-      "link": "https://azure.microsoft.com/updates?id=577491",
-      "date": "2026-10-30T17:16:27.000Z"
+      "link": "https://azure.microsoft.com/updates?id=574541",
+      "date": "2026-11-02T19:20:33.000Z"
     },
     {
-      "title": "Generally Available: Large OS Disk Encryption for Azure Confidential VM migrations",
-      "titleKo": "일반적으로 사용 가능: Azure 기밀 VM 마이그레이션을 위한 대형 OS 디스크 암호화",
-      "summaryKo": "이제 Azure Confidential VM 마이그레이션 시나리오에서 LOSDE (Large OS Disk Encryption) 를 일반적으로 사용할 수 있습니다. 조직은 OS 디스크를 완전히 보호하여 운영 규모가 큰 워크로드를 기밀 컴퓨팅으로 이동할 수 있습니다.",
+      "title": "Retirement: Azure Fluid Relay",
+      "titleKo": "Retirement: Azure Fluid Relay",
+      "summaryKo": "2027년 2월 2일에 Azure Fluid Relay를 중단합니다. 이 날짜 이후 Azure Fluid Relay는 가용성이 종료되고 서비스에 계속 의존하는 워크로드가 중단될 수 있습니다. Fluid Framework는 오픈 소스로 계속 사용할 수 있습니다.",
+      "status": "Retirements",
+      "category": "Web",
+      "link": "https://azure.microsoft.com/updates?id=570498",
+      "date": "2026-11-02T19:01:41.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Storage Actions adds automatic task updates, execution controls, and case-sensitive matching",
+      "titleKo": "일반적으로 사용 가능: Azure Storage Actions는 자동 작업 업데이트, 실행 제어 및 대/소문자 구분 매칭을 추가합니다.",
+      "summaryKo": "Azure Storage Actions is introducing three enhancements to simplify task management and give you more control over automated data operations across Azure Blob and Data Lake Storage:Automatic propagation of task definition updates: When you update a storag",
       "status": "Launched",
-      "category": "Feature",
-      "link": "https://azure.microsoft.com/updates?id=578850",
-      "date": "2026-10-29T21:19:52.000Z"
-    },
-    {
-      "title": "Generally Available: HTTP DDoS ruleset for Azure Front Door Premium WAF",
-      "titleKo": "일반적으로 사용 가능: Azure Front Door Premium WAF용 HTTP DDoS 규칙 집합",
-      "summaryKo": "Azure Front Door Premium에서 WAF (Azure Web Application Firewall) 용 HTTP DDoS 규칙 집합의 일반 가용성을 발표합니다. HTTP 계층 DDoS 공격은 애플리케이션 다운타임의 주요 원인으로 남아 있으며 IP 필터 및 고정 RAT와 같은 정적 제어",
-      "status": "Launched",
-      "category": "Networking",
-      "link": "https://azure.microsoft.com/updates?id=578681",
-      "date": "2026-10-29T17:09:49.000Z"
-    },
-    {
-      "title": "Generally Available: Azure MCP Server 3.0",
-      "titleKo": "일반적으로 사용 가능: Azure MCP Server 3.0",
-      "summaryKo": "이제 개방형 MCP (Model Context Protocol) 를 통해 AI 에이전트 및 개발자 도구가 Azure와 상호 작용하는 방식을 확장하여 Azure MCP Server 3.0을 일반적으로 사용할 수 있습니다. 이 릴리스에서는 새롭고 확장된 기능인 Infrastructure as code: Azure Terraform을",
-      "status": "Launched",
-      "category": "Developer tools",
-      "link": "https://azure.microsoft.com/updates?id=578662",
-      "date": "2026-10-29T17:04:58.000Z"
-    },
-    {
-      "title": "Announcing: Migrate Azure Container Apps logging destination from Log Analytics to Azure Monitor",
-      "titleKo": "발표: Azure Container Apps 로깅 대상을 Log Analytics에서 Azure Monitor로 마이그레이션",
-      "summaryKo": "Azure Container Apps의 Log Analytics 로깅 대상이 이제 레거시 로깅 옵션이 되었습니다. 로그 분석 로깅 대상으로 구성된 기존 환경은 계속 정상적으로 작동합니다. 그러나 다음으로의 마이그레이션을 계획하는 것이 좋습니다.",
-      "status": "",
-      "category": "Containers",
-      "link": "https://azure.microsoft.com/updates?id=577689",
-      "date": "2026-10-28T17:52:51.000Z"
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=578628",
+      "date": "2026-11-02T18:34:01.000Z"
     }
   ]
 }
