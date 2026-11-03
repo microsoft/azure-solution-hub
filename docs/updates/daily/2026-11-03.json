@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-11-03T21:13:16.575Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Public Preview: Advanced capacity insights are now available in Azure Storage Discovery",
+      "titleKo": "공개 미리 보기: Azure Storage Discovery에서 고급 용량 인사이트를 사용할 수 있습니다.",
+      "summaryKo": "이제 Azure Storage Discovery에서 미리 볼 수 있는 고급 용량 인사이트를 사용할 수 있습니다. 스토리지 검색은 이제 액세스 패턴, 데이터 사용 기간, 스토리지 계층, 객체 크기 분포, 레텐티오와 같은 통찰력을 통해 스토리지 사용에 대한 더 큰 가시성을 제공합니다.",
+      "status": "In preview",
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=578655",
+      "date": "2026-11-03T20:20:29.000Z"
+    },
+    {
+      "title": "Public Preview: Extend immutability for PITR backups for Azure SQL Database and Azure SQL Managed Instance",
+      "titleKo": "공개 미리 보기: Azure SQL 데이터베이스 및 Azure SQL 관리 인스턴스의 PITR 백업에 대한 불변성 확장",
+      "summaryKo": "이 향상된 기능을 사용하면 이미 사용할 수 있는 불변 백업의 기본 7일을 초과하여 구성된 PITR 보존에 대한 보존을 잠글 수 있습니다. 이는 일반적으로 35일이 지난 금융 고객에게 특히 유용합니다.",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=579305",
+      "date": "2026-11-03T18:36:12.000Z"
+    },
+    {
+      "title": "Generally Available: Enhanced Azure Site Recovery support for VMSS Flex",
+      "titleKo": "일반적으로 사용 가능: VMSS Flex에 대한 향상된 Azure 사이트 복구 지원",
+      "summaryKo": "Azure Site Recovery는 이제 유연한 오케스트레이션을 갖춘 가상 시스템 스케일 세트에서 가상 시스템에 대한 향상된 재해 복구 경험을 제공합니다. 이 업데이트는 장애 조치, 재작성 등의 대상 구성 및 엔드 투 엔드 복구 워크플로우를 개선합니다.",
+      "status": "Launched",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=578926",
+      "date": "2026-11-03T18:32:01.000Z"
+    },
+    {
+      "title": "Public Preview: On-prem NAS share discovery and assessment are now available using Azure Migrate",
+      "titleKo": "공개 미리 보기: 이제 Azure Migrate를 사용하여 온프레미스 NAS 공유 검색 및 평가를 사용할 수 있습니다.",
+      "summaryKo": "이제 Azure Migrate는 네트워크 연결 스토리지에 대한 검색 및 평가를 지원하므로 고객과 파트너는 Dell PowerScale (OneFS) 및 NetApp ONTAP 스토리지를 Azure로 마이그레이션할 수 있습니다. Azure Migrate 어플라이언스는 NAS cl에 직접 연결됩니다.",
+      "status": "In preview",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=577975",
+      "date": "2026-11-02T19:37:11.000Z"
+    },
+    {
+      "title": "Retirement: OT security in Microsoft Defender for IoT",
+      "titleKo": "퇴직: IoT용 Microsoft Defender의 OT 보안",
+      "summaryKo": "이는 Microsoft가 IoT용 Microsoft Defender의 운영 기술 (OT) 보안 구성 요소를 중단할 계획이라는 공식 공지입니다. 이 서비스는 3년의 전환 기간을 거쳐 2029년 10월에 완전히 중단됩니다. 이 변경 사항은",
+      "status": "Retirements",
+      "category": "",
+      "link": "https://azure.microsoft.com/updates?id=576255",
+      "date": "2026-11-02T19:22:28.000Z"
+    }
+  ]
+}
