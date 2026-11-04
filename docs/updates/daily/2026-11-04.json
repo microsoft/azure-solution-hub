@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-11-04T21:01:45.218Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Generally Available: Azure Database for PostgreSQL stable REST API version 2026-10-01",
+      "titleKo": "일반적으로 사용 가능: Azure Database for PostgreSQL stable REST API 버전 2026-10-01",
+      "summaryKo": "이제 Azure Database for PostgreSQL Flexible Server REST API 버전 2026-10-01을 일반적으로 사용할 수 있습니다. 이 안정적인 API 릴리스는 유지보수 관리, 불변 백업, 다중 테넌트 암호화 (교차 테넌트 커스텀) 를 위한 확장된 기능을 도입합니다.",
+      "status": "Launched",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=579300",
+      "date": "2026-11-04T18:42:12.000Z"
+    },
+    {
+      "title": "Generally Available: Route maps for Azure Route Server",
+      "titleKo": "일반적으로 사용 가능: Azure Route Server에 대한 라우팅 맵",
+      "summaryKo": "Azure Route Server에 대한 경로 맵은 이제 Azure 퍼블릭 클라우드에서 일반적으로 사용할 수 있습니다. 라우트 맵은 하이브리드 연결에서 인바운드 및 아웃바운드 라우팅을 세밀하게 제어합니다. 고객은 Azure Route Se를 오가는 경로를 관리할 수 있습니다.",
+      "status": "",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=578966",
+      "date": "2026-11-04T18:39:41.000Z"
+    },
+    {
+      "title": "Public Preview: Azure Firewall IPv6 now supports application rules",
+      "titleKo": "공개 미리 보기: Azure 방화벽 IPv6는 이제 응용 프로그램 규칙을 지원합니다",
+      "summaryKo": "Azure 방화벽은 이제 IPv6 공개 미리 보기에서 응용 프로그램 규칙을 지원하여 IPv6 HTTP 및 HTTPS 트래픽에 대한 레이어 7 필터링을 활성화합니다. 이 향상된 기능은 애플리케이션 레벨 제어를 IPv6 및 듀얼 스택 배포로 확장하여 고객이 일관성을 유지할 수 있도록 지원합니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=579507",
+      "date": "2026-11-04T18:09:43.000Z"
+    },
+    {
+      "title": "Public Preview: Multi-disk crash-consistent VM restore points for Premium SSD v2 and Ultra Disks on VMs with SCSI disk controller",
+      "titleKo": "공개 미리 보기: SCSI 디스크 컨트롤러가 있는 VM의 프리미엄 SSD v2 및 Ultra 디스크에 대한 다중 디스크 충돌 정합성 보장 VM 복원 지점",
+      "summaryKo": "프리미엄 SSD v2 및 Ultra 데이터 디스크가 있는 Azure 가상 시스템에 대한 다중 디스크 충돌 정합 복원 지점을 이제 SCSI 디스크 컨트롤러가 있는 VM의 공개 미리 보기에서 사용할 수 있습니다. 이 기능을 사용하여 에이전트가 없는 충돌 정합성 보장 복원 지점을 캡처할 수 있습니다.",
+      "status": "In preview",
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=579162",
+      "date": "2026-11-04T17:13:51.000Z"
+    },
+    {
+      "title": "Public Preview: JWT validation for Application Gateway for Containers",
+      "titleKo": "공개 미리 보기: 컨테이너용 애플리케이션 게이트웨이에 대한 JWT 유효성 검사",
+      "summaryKo": "컨테이너용 애플리케이션 게이트웨이는 이제 AuthPolicy 사용자 정의 리소스를 통해 중앙 집중식 JSON 웹 토큰 유효성 검사를 지원합니다. 팀은 신뢰할 수 있는 HT에서 가져온 서명 키를 사용하여 토큰 서명, 발행자, 수명 및 구성된 대상을 확인할 수 있습니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=576382",
+      "date": "2026-11-03T21:17:08.000Z"
+    }
+  ]
+}
