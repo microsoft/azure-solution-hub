@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-11-11T21:09:42.246Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Public Preview: Rate limit grouping for Azure Front Door Premium WAF",
+      "titleKo": "퍼블릭 프리뷰: Azure Front Door Premium WAF의 속도 제한 그룹화",
+      "summaryKo": "Azure Front Door Premium의 Azure 웹 애플리케이션 방화벽(WAF)에 대한 속도 제한 그룹화의 공개 프리뷰를 발표합니다. 기본적으로 속도 제한 규칙은 각 클라이언트 IP 주소에 대해 요청을 별도로 계산합니다. 분산 공격은 공격을 분산시켜 이를 우회합니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=580155",
+      "date": "2026-11-11T18:18:27.000Z"
+    },
+    {
+      "title": "Public Preview: Distributed accelerator for cloud storage on AKS",
+      "titleKo": "퍼블릭 프리뷰: AKS의 클라우드 스토리지를 위한 분산 가속기",
+      "summaryKo": "클라우드 스토리지용 분산 가속기(DACS)가 이제 Azure Kubernetes Service(AKS)에서 실행되는 AI 워크로드에 대한 공개 미리 보기 단계에 있습니다. DACS는 AKS 클러스터 내에서 실행되고 노드 전반에 걸쳐 로컬 NVMe 디스크를 사용하여 다음을 유지하는 분산형 읽기 전용 캐시입니다.",
+      "status": "In preview",
+      "category": "Containers",
+      "link": "https://azure.microsoft.com/updates?id=578454",
+      "date": "2026-11-10T20:08:32.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Functions support for .NET 11",
+      "titleKo": "일반 제공: .NET 11에 대한 Azure Functions 지원",
+      "summaryKo": "이제 .NET 11에 대한 Azure Functions 지원이 정식으로 제공됩니다. 이제 격리된 작업자 모델을 사용하여 .NET 11을 타겟팅하는 Azure Functions 앱을 빌드하는 동시에 Azure Functions 프로그래밍 모델 및 호스트 통합을 계속 사용할 수 있습니다. 서버리스 앱",
+      "status": "Launched",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=578773",
+      "date": "2026-11-10T20:07:45.000Z"
+    },
+    {
+      "title": "Public Preview: Azure Front Door adds native gRPC support",
+      "titleKo": "퍼블릭 프리뷰: Azure Front Door에 네이티브 gRPC 지원 추가",
+      "summaryKo": "Azure Front Door의 gRPC 지원 공개 프리뷰를 발표합니다. Azure Front Door Standard 및 Premium을 통해 gRPC 애플리케이션을 구축하고 제공합니다. 현재 미리 보기 버전인 gRPC 지원을 통해 특정 서비스 및 메서드로 호출을 라우팅하고 트래픽을 분산할 수 있습니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=579383",
+      "date": "2026-11-10T18:55:53.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Front Door edge actions",
+      "titleKo": "일반 제공: Azure Front Door 엣지 작업",
+      "summaryKo": "Azure Front Door 엣지 액션(엣지에서 서버리스 컴퓨팅)의 일반 가용성을 발표합니다. 엣지 액션을 사용하면 고객은 Azure Front Door 클라이언트 요청/응답 처리 중에 가벼운 JavaScript 함수를 실행하여 실시간 d를 수행할 수 있습니다.",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=579310",
+      "date": "2026-11-10T18:55:09.000Z"
+    }
+  ]
+}
