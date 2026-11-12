@@ -1,9 +1,27 @@
 {
-  "generatedAt": "2026-11-11T21:09:42.246Z",
+  "generatedAt": "2026-11-12T21:01:40.154Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "translatedBy": "mymemory",
   "items": [
+    {
+      "title": "Public Preview: Auto scaling of ingestion limits in Azure Monitor workspace",
+      "titleKo": "퍼블릭 프리뷰: Azure Monitor 작업 영역에서 수집 한도 자동 크기 조정",
+      "summaryKo": "자동 크기 조정은 Azure Monitor Workspace(AMW)에 작업 영역별 기능을 도입하여 관찰된 사용 패턴에 따라 수집 한도를 자동으로 조정합니다. 이 기능을 활성화하면 시스템이 수집 한도(쿼터 상한)를 동적으로 조정하여 정상적인 상태를 유지합니다.",
+      "status": "In preview",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=578207",
+      "date": "2026-11-12T18:23:52.000Z"
+    },
+    {
+      "title": "Public Preview: SQL performance monitoring for Azure SQL Managed Instance",
+      "titleKo": "퍼블릭 프리뷰: Azure SQL Managed Instance에 대한 SQL 성능 모니터링",
+      "summaryKo": "이제 Azure SQL Managed Instance에 대한 Microsoft 관리 성능 모니터링의 공개 미리보기를 이용하실 수 있습니다. 비즈니스 크리티컬 SQL Managed Instance 워크로드를 모니터링하는 고객은 종종 사용자 지정 스크립트와 연결이 끊긴 모니터링 도구에 의존합니다. 이를 위해",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=574158",
+      "date": "2026-11-12T16:59:40.000Z"
+    },
     {
       "title": "Public Preview: Rate limit grouping for Azure Front Door Premium WAF",
       "titleKo": "퍼블릭 프리뷰: Azure Front Door Premium WAF의 속도 제한 그룹화",
@@ -25,29 +43,11 @@
     {
       "title": "Generally Available: Azure Functions support for .NET 11",
       "titleKo": "일반 제공: .NET 11에 대한 Azure Functions 지원",
-      "summaryKo": "이제 .NET 11에 대한 Azure Functions 지원이 정식으로 제공됩니다. 이제 격리된 작업자 모델을 사용하여 .NET 11을 타겟팅하는 Azure Functions 앱을 빌드하는 동시에 Azure Functions 프로그래밍 모델 및 호스트 통합을 계속 사용할 수 있습니다. 서버리스 앱",
+      "summaryKo": ".NET 11에 대한 Azure Functions 지원이 이제 일반에 공개되었습니다. 이제 격리된 작업자 모델을 사용하여 .NET 11을 타겟팅하는 Azure Functions 앱을 빌드하는 동시에 Azure Functions 프로그래밍 모델 및 호스트 통합을 계속 사용할 수 있습니다. 서버리스 앱",
       "status": "Launched",
       "category": "Compute",
       "link": "https://azure.microsoft.com/updates?id=578773",
       "date": "2026-11-10T20:07:45.000Z"
-    },
-    {
-      "title": "Public Preview: Azure Front Door adds native gRPC support",
-      "titleKo": "퍼블릭 프리뷰: Azure Front Door에 네이티브 gRPC 지원 추가",
-      "summaryKo": "Azure Front Door의 gRPC 지원 공개 프리뷰를 발표합니다. Azure Front Door Standard 및 Premium을 통해 gRPC 애플리케이션을 구축하고 제공합니다. 현재 미리 보기 버전인 gRPC 지원을 통해 특정 서비스 및 메서드로 호출을 라우팅하고 트래픽을 분산할 수 있습니다.",
-      "status": "In preview",
-      "category": "Networking",
-      "link": "https://azure.microsoft.com/updates?id=579383",
-      "date": "2026-11-10T18:55:53.000Z"
-    },
-    {
-      "title": "Generally Available: Azure Front Door edge actions",
-      "titleKo": "일반 제공: Azure Front Door 엣지 작업",
-      "summaryKo": "Azure Front Door 엣지 액션(엣지에서 서버리스 컴퓨팅)의 일반 가용성을 발표합니다. 엣지 액션을 사용하면 고객은 Azure Front Door 클라이언트 요청/응답 처리 중에 가벼운 JavaScript 함수를 실행하여 실시간 d를 수행할 수 있습니다.",
-      "status": "Launched",
-      "category": "Networking",
-      "link": "https://azure.microsoft.com/updates?id=579310",
-      "date": "2026-11-10T18:55:09.000Z"
     }
   ]
 }
