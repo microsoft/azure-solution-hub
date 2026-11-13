@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-11-13T21:01:27.996Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Retirement: Azure Data Share will be retired on November 12, 2029",
+      "titleKo": "서비스 종료: Azure Data Share는 2029년 11월 12일에 서비스가 종료됩니다.",
+      "summaryKo": "Azure Data Share는 2029년 11월 12일에 서비스가 종료됩니다. 해당 날짜 이전에 데이터 공유 워크로드를 Microsoft Fabric으로 전환하세요. Microsoft Fabric은 외부 데이터 공유, 테넌트 간 위임된 바로 가기 및 IQ 공유 또는 적절한 데이터 소스별 공유 기능을 제공합니다.",
+      "status": "Retirements",
+      "category": "Analytics",
+      "link": "https://azure.microsoft.com/updates?id=578818",
+      "date": "2026-11-13T19:54:45.000Z"
+    },
+    {
+      "title": "Public Preview: JWT validation with Azure Front Door Auth Policy",
+      "titleKo": "퍼블릭 프리뷰: Azure Front Door 인증 정책을 통한 JWT 유효성 검사",
+      "summaryKo": "Azure Front Door 인증 정책을 통한 JSON 웹 토큰(JWT) 유효성 검사가 이제 Azure Front Door Premium에서 공개 프리뷰로 제공됩니다. 요청이 API 또는 웹 애플리케이션에 도달하기 전에 엣지에서 Microsoft Entra ID가 발급한 Bearer 토큰을 검증하여 중앙 집중화를 지원합니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=577673",
+      "date": "2026-11-12T22:36:37.000Z"
+    },
+    {
+      "title": "Generally Available: Azure Front Door mutual TLS authentication",
+      "titleKo": "일반 제공: Azure Front Door 상호 TLS 인증",
+      "summaryKo": "클라이언트 인증서 인증이라고도 하는 상호 TLS(mTLS)가 이제 Azure Front Door Premium에서 일반적으로 제공됩니다. X.509 클라이언트 인증서를 사용하여 기업 간, 사물 인터넷, 금융 분야의 민감한 애플리케이션 및 API를 보호하세요.",
+      "status": "Launched",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=577678",
+      "date": "2026-11-12T22:27:35.000Z"
+    },
+    {
+      "title": "Public Preview: Auto scaling of ingestion limits in Azure Monitor workspace",
+      "titleKo": "퍼블릭 프리뷰: Azure Monitor 작업 영역에서 수집 한도 자동 크기 조정",
+      "summaryKo": "자동 크기 조정은 Azure Monitor Workspace(AMW)에 작업 영역별 기능을 도입하여 관찰된 사용 패턴에 따라 수집 한도를 자동으로 조정합니다. 활성화되면 시스템이 수집 한도(할당량 상한)를 동적으로 조정하여 원활한 작동을 유지합니다.",
+      "status": "In preview",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=578207",
+      "date": "2026-11-12T18:23:52.000Z"
+    },
+    {
+      "title": "Public Preview: SQL performance monitoring for Azure SQL Managed Instance",
+      "titleKo": "퍼블릭 프리뷰: Azure SQL Managed Instance에 대한 SQL 성능 모니터링",
+      "summaryKo": "Azure SQL Managed Instance에 대한 Microsoft 관리 성능 모니터링의 공개 미리 보기가 이제 제공됩니다. 비즈니스 크리티컬 SQL Managed Instance 워크로드를 모니터링하는 고객은 종종 사용자 지정 스크립트와 연결이 끊긴 모니터링 도구에 의존합니다. 이를 위해",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=574158",
+      "date": "2026-11-12T16:59:40.000Z"
+    }
+  ]
+}
