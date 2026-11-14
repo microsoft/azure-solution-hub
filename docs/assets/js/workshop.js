@@ -146,13 +146,15 @@
 
   function renderNav() {
     const items = navItems();
+    const overviewIcon =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>';
     navEl.innerHTML =
       '<div class="ws-nav-title">실습 단계</div>' +
       items
         .map(
           (it, i) =>
             `<button class="ws-step${it.key === current ? ' active' : ''}${it.parent ? ' ws-substep' : ''}" data-key="${esc(it.key)}"${it.key === current ? ' aria-current="step"' : ''}>
-               <span class="ws-step-no">${it.key === 'overview' ? '📋' : i + (model.overview ? 0 : 1)}</span>
+               <span class="ws-step-no">${it.key === 'overview' ? overviewIcon : i + (model.overview ? 0 : 1)}</span>
                <span class="ws-step-label">${esc(it.label)}${it.duration ? `<small>${it.duration}분</small>` : ''}</span>
              </button>`
         )
