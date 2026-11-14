@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T21:01:27.996Z",
+  "generatedAt": "2026-11-14T21:01:36.237Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "translatedBy": "mymemory",
@@ -16,7 +16,7 @@
     {
       "title": "Public Preview: JWT validation with Azure Front Door Auth Policy",
       "titleKo": "퍼블릭 프리뷰: Azure Front Door 인증 정책을 통한 JWT 유효성 검사",
-      "summaryKo": "Azure Front Door 인증 정책을 통한 JSON 웹 토큰(JWT) 유효성 검사가 이제 Azure Front Door Premium에서 공개 프리뷰로 제공됩니다. 요청이 API 또는 웹 애플리케이션에 도달하기 전에 엣지에서 Microsoft Entra ID가 발급한 Bearer 토큰을 검증하여 중앙 집중화를 지원합니다.",
+      "summaryKo": "Azure Front Door 인증 정책을 통한 JSON 웹 토큰(JWT) 유효성 검사가 이제 Azure Front Door Premium에서 공개 프리뷰로 제공됩니다. 요청이 API 또는 웹 애플리케이션에 도달하기 전에 엣지에서 Microsoft Entra ID가 발급한 베어러 토큰을 검증하여 중앙 집중화를 지원합니다.",
       "status": "In preview",
       "category": "Networking",
       "link": "https://azure.microsoft.com/updates?id=577673",
@@ -34,7 +34,7 @@
     {
       "title": "Public Preview: Auto scaling of ingestion limits in Azure Monitor workspace",
       "titleKo": "퍼블릭 프리뷰: Azure Monitor 작업 영역에서 수집 한도 자동 크기 조정",
-      "summaryKo": "자동 크기 조정은 Azure Monitor Workspace(AMW)에 작업 영역별 기능을 도입하여 관찰된 사용 패턴에 따라 수집 한도를 자동으로 조정합니다. 활성화되면 시스템이 수집 한도(할당량 상한)를 동적으로 조정하여 원활한 작동을 유지합니다.",
+      "summaryKo": "자동 크기 조정은 Azure Monitor Workspace(AMW)에 작업 영역별 기능을 도입하여 관찰된 사용 패턴에 따라 수집 한도를 자동으로 조정합니다. 이 기능을 활성화하면 시스템이 수집 한도(쿼터 상한)를 동적으로 조정하여 정상적인 상태를 유지합니다.",
       "status": "In preview",
       "category": "Compute",
       "link": "https://azure.microsoft.com/updates?id=578207",
