@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-11-18T21:01:37.486Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Public Preview: AI bot ruleset for Azure Front Door Premium WAF",
+      "titleKo": "퍼블릭 프리뷰: Azure Front Door Premium WAF용 AI 봇 규칙 세트",
+      "summaryKo": "Azure Front Door Premium의 Azure 웹 애플리케이션 방화벽(WAF)용 AI 봇 규칙 세트의 공개 프리뷰를 발표합니다. AI 크롤러와 에이전트는 다양한 이유로 사이트를 방문하며, 일부는 허용하고 일부는 허용하지 않으실 수 있습니다. Robots.txt는 ~인 경우에만 작동합니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=581604",
+      "date": "2026-11-18T18:27:29.000Z"
+    },
+    {
+      "title": "Announcing: The new Azure Databricks on Azure Government is now in Beta",
+      "titleKo": "공지: Azure Government의 새로운 Azure Databricks가 이제 베타 버전으로 제공됩니다.",
+      "summaryKo": "이제 Microsoft Azure Government에서 새로운 Azure Databricks 환경을 베타 버전으로 이용하실 수 있습니다. 이 환경은 글로벌 Azure의 최신 데이터 및 AI 플랫폼을 미국 공공 부문 기관 및 그 파트너에게 퍼스트 파티 Azure 서비스로 제공합니다. 베타 버전은",
+      "status": "",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=581645",
+      "date": "2026-11-18T18:01:03.000Z"
+    },
+    {
+      "title": "Generally Available: Cross-subscription backup for Azure Virtual Machines in Azure Backup",
+      "titleKo": "일반 가용성: Azure Backup의 Azure 가상 머신을 위한 교차 구독 백업",
+      "summaryKo": "Azure Backup은 이제 Azure 가상 머신에 대한 교차 구독 백업을 지원하므로 고객은 동일한 테넌트 내의 다른 Azure 구독에 있는 복구 서비스 Vault를 사용하여 VM을 보호할 수 있습니다. 이 기능을 통해 조직은",
+      "status": "Launched",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=581048",
+      "date": "2026-11-18T18:00:04.000Z"
+    },
+    {
+      "title": "Public Preview: AI-powered application and database modernization with Modernize CLI",
+      "titleKo": "퍼블릭 프리뷰: Modernize CLI를 통한 AI 기반 애플리케이션 및 데이터베이스 현대화",
+      "summaryKo": "Modernize CLI는 애플리케이션 및 데이터베이스 현대화를 하나의 연결된 에이전트 기반 여정으로 통합합니다. 애플리케이션 아키텍처, 종속성, 클라우드 준비 상태를 평가하는 동시에 애플리케이션이 의존하는 데이터베이스를 파악하고 특수 기능을 호출합니다.",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=579943",
+      "date": "2026-11-18T17:58:45.000Z"
+    },
+    {
+      "title": "Public Preview: Immutable snapshots for Azure Disk Storage",
+      "titleKo": "퍼블릭 프리뷰: Azure 디스크 스토리지용 불변 스냅샷",
+      "summaryKo": "Azure 디스크 스토리지용 불변 스냅샷이 이제 공개 프리뷰로 제공됩니다. 불변 스냅샷은 Azure Backup 불변 Vault를 보완합니다. 저장소를 사용하여 비용 효율적인 장기 보존을 수행하고, 불변 스냅샷을 사용하여 빠른 처리가 필요한 단기 백업을 수행하세요.",
+      "status": "In preview",
+      "category": "Storage",
+      "link": "https://azure.microsoft.com/updates?id=581503",
+      "date": "2026-11-18T00:00:09.000Z"
+    }
+  ]
+}
