@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-11-19T21:01:35.031Z",
+  "generatedAt": "2026-11-20T21:01:36.403Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "translatedBy": "mymemory",
   "items": [
     {
-      "title": "Public Preview: Database Agent for Azure Database for PostgreSQL",
-      "titleKo": "퍼블릭 프리뷰: Azure Database for PostgreSQL용 데이터베이스 에이전트",
-      "summaryKo": "Database Agent는 Azure Database for PostgreSQL에서 데이터베이스 상태 및 성능 문제를 보다 신속하게 감지하고, 파악하고, 대응할 수 있도록 지원합니다. 데이터베이스 상태를 사전 예방적으로 모니터링하여 문제를 식별하고, 데이터베이스 지표, 구성,",
-      "status": "In preview",
-      "category": "Databases",
-      "link": "https://azure.microsoft.com/updates?id=579579",
-      "date": "2026-11-19T17:25:28.000Z"
-    },
-    {
-      "title": "Public Preview: AI bot ruleset for Azure Front Door Premium WAF",
-      "titleKo": "퍼블릭 프리뷰: Azure Front Door Premium WAF용 AI 봇 규칙 세트",
-      "summaryKo": "Azure Front Door Premium의 Azure 웹 애플리케이션 방화벽(WAF)용 AI 봇 규칙 세트의 공개 프리뷰를 발표합니다. AI 크롤러와 에이전트는 다양한 이유로 사이트를 방문하며, 일부는 허용하고 다른 일부는 허용하지 않으실 수 있습니다. Robots.txt는 ~인 경우에만 작동합니다.",
+      "title": "Public Preview: Azure Firewall for Containers",
+      "titleKo": "퍼블릭 프리뷰: 컨테이너용 Azure Firewall",
+      "summaryKo": "Azure Firewall for Containers는 Azure Firewall 보호 기능을 컨테이너화된 워크로드로 확장하여 컨테이너 환경의 네트워크 트래픽을 보호하는 중앙 집중식 접근 방식을 제공합니다. 고객은 컨테이너 네트워크의 일부로 Azure Firewall 기능을 사용할 수 있습니다.",
       "status": "In preview",
       "category": "Networking",
-      "link": "https://azure.microsoft.com/updates?id=581604",
-      "date": "2026-11-18T18:27:29.000Z"
+      "link": "https://azure.microsoft.com/updates?id=581963",
+      "date": "2026-11-20T20:05:17.000Z"
     },
     {
-      "title": "Announcing: The new Azure Databricks on Azure Government is now in Beta",
-      "titleKo": "공지: Azure Government의 새로운 Azure Databricks가 이제 베타 버전으로 제공됩니다.",
-      "summaryKo": "이제 Microsoft Azure Government에서 새로운 Azure Databricks 환경을 베타 버전으로 이용하실 수 있습니다. 이 환경은 글로벌 Azure의 현대적인 데이터 및 AI 플랫폼을 미국 공공 부문 기관 및 그 파트너에게 퍼스트 파티 Azure 서비스로 제공합니다. 베타 버전은",
+      "title": "Announcing: Multiparty private offers in Microsoft Marketplace expands to Malaysia and Saudi Arabia",
+      "titleKo": "공지: Microsoft Marketplace의 다자간 비공개 오퍼가 말레이시아와 사우디아라비아로 확대됩니다.",
+      "summaryKo": "다자간 비공개 오퍼를 통해 Microsoft 파트너는 마켓플레이스를 통해 고객에게 서드 파티 클라우드 및 AI 솔루션을 제공할 수 있습니다. 소프트웨어 기업은 기존 고객 관계를 보유한 파트너사와 협력하여 새로운 시장으로 진출할 수 있습니다.",
       "status": "",
-      "category": "AI + machine learning",
-      "link": "https://azure.microsoft.com/updates?id=581645",
-      "date": "2026-11-18T18:01:03.000Z"
+      "category": "Microsoft Ignite",
+      "link": "https://azure.microsoft.com/updates?id=580700",
+      "date": "2026-11-20T00:00:14.000Z"
     },
     {
-      "title": "Generally Available: Cross-subscription backup for Azure Virtual Machines in Azure Backup",
-      "titleKo": "일반 제공: Azure Backup의 Azure 가상 머신을 위한 교차 구독 백업",
-      "summaryKo": "Azure Backup은 이제 Azure 가상 머신에 대한 교차 구독 백업을 지원하므로 고객은 동일한 테넌트 내의 다른 Azure 구독에 있는 복구 서비스 Vault를 사용하여 VM을 보호할 수 있습니다. 이 기능을 통해 조직은",
+      "title": "Generally Available: Soft delete in Azure Compute Gallery",
+      "titleKo": "일반 제공: Azure Compute Gallery에서 소프트 삭제",
+      "summaryKo": "이제 Azure Compute Gallery에서 소프트 삭제가 일반적으로 제공되므로 실수로 삭제된 이미지 버전을 복구할 수 있습니다. 보존 기간을 7~365일로 설정할 수 있습니다. 보존 기간 동안에도 소프트 삭제된 이미지(API 버전",
       "status": "Launched",
-      "category": "Management and governance",
-      "link": "https://azure.microsoft.com/updates?id=581048",
-      "date": "2026-11-18T18:00:04.000Z"
+      "category": "Features",
+      "link": "https://azure.microsoft.com/updates?id=581907",
+      "date": "2026-11-19T23:47:55.000Z"
     },
     {
-      "title": "Public Preview: AI-powered application and database modernization with Modernize CLI",
-      "titleKo": "퍼블릭 프리뷰: Modernize CLI를 사용한 AI 기반 애플리케이션 및 데이터베이스 현대화",
-      "summaryKo": "Modernize CLI는 애플리케이션 및 데이터베이스 현대화를 하나의 연결된 에이전트 기반 여정으로 통합합니다. 애플리케이션 아키텍처, 종속성, 클라우드 준비 상태를 평가하는 동시에 애플리케이션이 의존하는 데이터베이스를 파악하고 특수 기능을 호출합니다.",
+      "title": "Public Preview: PostgreSQL 19 on Azure Database for PostgreSQL",
+      "titleKo": "퍼블릭 프리뷰: PostgreSQL용 Azure Database의 PostgreSQL 19",
+      "summaryKo": "이제 동아시아 지역의 Azure Database for PostgreSQL – Flexible Server에서 PostgreSQL 19를 공개 프리뷰로 체험해 보실 수 있습니다. 이 미리 보기를 통해 Azure 포털과 Azure CLI를 통해 새로운 PostgreSQL 19 서버를 프로비저닝할 수 있으므로 주요 버전을 테스트할 수 있습니다.",
       "status": "In preview",
       "category": "Databases",
-      "link": "https://azure.microsoft.com/updates?id=579943",
-      "date": "2026-11-18T17:58:45.000Z"
+      "link": "https://azure.microsoft.com/updates?id=574587",
+      "date": "2026-11-19T23:25:49.000Z"
+    },
+    {
+      "title": "Public Preview: Zone resilience for Azure VMs",
+      "titleKo": "퍼블릭 프리뷰: Azure VM의 영역 복원력",
+      "summaryKo": "현재 공개 프리뷰 중인 Azure VM의 영역 복원력 을 사용하면 기존 VM 리소스와 구성을 유지하면서 동일한 리전의 다른 가용성 영역에 적격한 영역 VM을 복구할 수 있습니다. ZRS 관리형 디스크는 영역 간에 데이터를 동기식으로 복제합니다.",
+      "status": "In preview",
+      "category": "Features",
+      "link": "https://azure.microsoft.com/updates?id=581254",
+      "date": "2026-11-19T20:34:19.000Z"
     }
   ]
 }

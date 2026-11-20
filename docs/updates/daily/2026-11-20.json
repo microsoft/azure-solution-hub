@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-11-20T21:01:36.403Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Public Preview: Azure Firewall for Containers",
+      "titleKo": "퍼블릭 프리뷰: 컨테이너용 Azure Firewall",
+      "summaryKo": "Azure Firewall for Containers는 Azure Firewall 보호 기능을 컨테이너화된 워크로드로 확장하여 컨테이너 환경의 네트워크 트래픽을 보호하는 중앙 집중식 접근 방식을 제공합니다. 고객은 컨테이너 네트워크의 일부로 Azure Firewall 기능을 사용할 수 있습니다.",
+      "status": "In preview",
+      "category": "Networking",
+      "link": "https://azure.microsoft.com/updates?id=581963",
+      "date": "2026-11-20T20:05:17.000Z"
+    },
+    {
+      "title": "Announcing: Multiparty private offers in Microsoft Marketplace expands to Malaysia and Saudi Arabia",
+      "titleKo": "공지: Microsoft Marketplace의 다자간 비공개 오퍼가 말레이시아와 사우디아라비아로 확대됩니다.",
+      "summaryKo": "다자간 비공개 오퍼를 통해 Microsoft 파트너는 마켓플레이스를 통해 고객에게 서드 파티 클라우드 및 AI 솔루션을 제공할 수 있습니다. 소프트웨어 기업은 기존 고객 관계를 보유한 파트너사와 협력하여 새로운 시장으로 진출할 수 있습니다.",
+      "status": "",
+      "category": "Microsoft Ignite",
+      "link": "https://azure.microsoft.com/updates?id=580700",
+      "date": "2026-11-20T00:00:14.000Z"
+    },
+    {
+      "title": "Generally Available: Soft delete in Azure Compute Gallery",
+      "titleKo": "일반 제공: Azure Compute Gallery에서 소프트 삭제",
+      "summaryKo": "이제 Azure Compute Gallery에서 소프트 삭제가 일반적으로 제공되므로 실수로 삭제된 이미지 버전을 복구할 수 있습니다. 보존 기간을 7~365일로 설정할 수 있습니다. 보존 기간 동안에도 소프트 삭제된 이미지(API 버전",
+      "status": "Launched",
+      "category": "Features",
+      "link": "https://azure.microsoft.com/updates?id=581907",
+      "date": "2026-11-19T23:47:55.000Z"
+    },
+    {
+      "title": "Public Preview: PostgreSQL 19 on Azure Database for PostgreSQL",
+      "titleKo": "퍼블릭 프리뷰: PostgreSQL용 Azure Database의 PostgreSQL 19",
+      "summaryKo": "이제 동아시아 지역의 Azure Database for PostgreSQL – Flexible Server에서 PostgreSQL 19를 공개 프리뷰로 체험해 보실 수 있습니다. 이 미리 보기를 통해 Azure 포털과 Azure CLI를 통해 새로운 PostgreSQL 19 서버를 프로비저닝할 수 있으므로 주요 버전을 테스트할 수 있습니다.",
+      "status": "In preview",
+      "category": "Databases",
+      "link": "https://azure.microsoft.com/updates?id=574587",
+      "date": "2026-11-19T23:25:49.000Z"
+    },
+    {
+      "title": "Public Preview: Zone resilience for Azure VMs",
+      "titleKo": "퍼블릭 프리뷰: Azure VM의 영역 복원력",
+      "summaryKo": "현재 공개 프리뷰 중인 Azure VM의 영역 복원력 을 사용하면 기존 VM 리소스와 구성을 유지하면서 동일한 리전의 다른 가용성 영역에 적격한 영역 VM을 복구할 수 있습니다. ZRS 관리형 디스크는 영역 간에 데이터를 동기식으로 복제합니다.",
+      "status": "In preview",
+      "category": "Features",
+      "link": "https://azure.microsoft.com/updates?id=581254",
+      "date": "2026-11-19T20:34:19.000Z"
+    }
+  ]
+}
