@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-11-20T21:01:36.403Z",
+  "generatedAt": "2026-11-21T21:01:33.557Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "translatedBy": "mymemory",
   "items": [
     {
-      "title": "Public Preview: Azure Firewall for Containers",
-      "titleKo": "퍼블릭 프리뷰: 컨테이너용 Azure Firewall",
-      "summaryKo": "Azure Firewall for Containers는 Azure Firewall 보호 기능을 컨테이너화된 워크로드로 확장하여 컨테이너 환경의 네트워크 트래픽을 보호하는 중앙 집중식 접근 방식을 제공합니다. 고객은 컨테이너 네트워크의 일부로 Azure Firewall 기능을 사용할 수 있습니다.",
-      "status": "In preview",
-      "category": "Networking",
-      "link": "https://azure.microsoft.com/updates?id=581963",
-      "date": "2026-11-20T20:05:17.000Z"
-    },
-    {
-      "title": "Announcing: Multiparty private offers in Microsoft Marketplace expands to Malaysia and Saudi Arabia",
-      "titleKo": "공지: Microsoft Marketplace의 다자간 비공개 오퍼가 말레이시아와 사우디아라비아로 확대됩니다.",
-      "summaryKo": "다자간 비공개 오퍼를 통해 Microsoft 파트너는 마켓플레이스를 통해 고객에게 서드 파티 클라우드 및 AI 솔루션을 제공할 수 있습니다. 소프트웨어 기업은 기존 고객 관계를 보유한 파트너사와 협력하여 새로운 시장으로 진출할 수 있습니다.",
-      "status": "",
-      "category": "Microsoft Ignite",
-      "link": "https://azure.microsoft.com/updates?id=580700",
-      "date": "2026-11-20T00:00:14.000Z"
-    },
-    {
-      "title": "Generally Available: Soft delete in Azure Compute Gallery",
-      "titleKo": "일반 제공: Azure Compute Gallery에서 소프트 삭제",
-      "summaryKo": "이제 Azure Compute Gallery에서 소프트 삭제가 일반적으로 제공되므로 실수로 삭제된 이미지 버전을 복구할 수 있습니다. 보존 기간을 7~365일로 설정할 수 있습니다. 보존 기간 동안에도 소프트 삭제된 이미지(API 버전",
+      "title": "Generally Available: Governance policy guidance in Foundry Canvas and VS Code",
+      "titleKo": "일반 제공: Foundry Canvas 및 VS Code의 거버넌스 정책 지침",
+      "summaryKo": "이제 Foundry Canvas와 Visual Studio Code용 Foundry Toolkit에서 Microsoft Foundry 거버넌스 지침을 확인할 수 있습니다. 개발자가 에이전트를 구축할 때 두 경험 모두 에이전트 유형, 모델, 툴박스 및 가드레일에 대한 관련 정책을 경고와 함께 표시합니다.",
       "status": "Launched",
-      "category": "Features",
-      "link": "https://azure.microsoft.com/updates?id=581907",
-      "date": "2026-11-19T23:47:55.000Z"
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=581463",
+      "date": "2026-11-21T00:45:13.000Z"
     },
     {
-      "title": "Public Preview: PostgreSQL 19 on Azure Database for PostgreSQL",
-      "titleKo": "퍼블릭 프리뷰: PostgreSQL용 Azure Database의 PostgreSQL 19",
-      "summaryKo": "이제 동아시아 지역의 Azure Database for PostgreSQL – Flexible Server에서 PostgreSQL 19를 공개 프리뷰로 체험해 보실 수 있습니다. 이 미리 보기를 통해 Azure 포털과 Azure CLI를 통해 새로운 PostgreSQL 19 서버를 프로비저닝할 수 있으므로 주요 버전을 테스트할 수 있습니다.",
+      "title": "Public Preview: Microsoft Copilot harness support in Foundry Toolkit for VS Code",
+      "titleKo": "퍼블릭 프리뷰: VS Code용 Foundry Toolkit에서 Microsoft Copilot Harness 지원",
+      "summaryKo": "Visual Studio Code용 Microsoft Foundry Toolkit의 Agent Builder는 공개 프리뷰에서 Microsoft Copilot 하니스를 사용하는 프롬프트 에이전트를 지원합니다. 개발자는 도구와 스킬을 구성하고, 로컬 YAML 정의를 편집하고, Foundry에 변경 사항을 배포하고, d를 실행할 수 있습니다.",
       "status": "In preview",
-      "category": "Databases",
-      "link": "https://azure.microsoft.com/updates?id=574587",
-      "date": "2026-11-19T23:25:49.000Z"
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=581468",
+      "date": "2026-11-21T00:43:13.000Z"
     },
     {
-      "title": "Public Preview: Zone resilience for Azure VMs",
-      "titleKo": "퍼블릭 프리뷰: Azure VM의 영역 복원력",
-      "summaryKo": "현재 공개 프리뷰 중인 Azure VM의 영역 복원력 을 사용하면 기존 VM 리소스와 구성을 유지하면서 동일한 리전의 다른 가용성 영역에 적격한 영역 VM을 복구할 수 있습니다. ZRS 관리형 디스크는 영역 간에 데이터를 동기식으로 복제합니다.",
+      "title": "Retirement: Support for Azure Functions OpenAI Extension ends on April 20, 2027",
+      "titleKo": "단종: Azure Functions OpenAI 확장 프로그램에 대한 지원이 2027년 4월 20일에 종료됩니다.",
+      "summaryKo": "Azure Functions OpenAI 확장 프로그램에 대한 지원은 2027년 4월 20일에 종료됩니다. 해당 날짜까지 시나리오에 따라 OpenAI, Microsoft Foundry 또는 Azure AI Search SDK로 직접 마이그레이션하세요. 적합한 시나리오 SDK로 마이그레이션할 때까지 .NET 앱",
+      "status": "Retirements",
+      "category": "Compute",
+      "link": "https://azure.microsoft.com/updates?id=579952",
+      "date": "2026-11-20T23:16:31.000Z"
+    },
+    {
+      "title": "Public Preview: Programmed Training in Microsoft Foundry",
+      "titleKo": "퍼블릭 프리뷰: Microsoft Foundry의 프로그래밍된 교육",
+      "summaryKo": "오픈 가중치 모델을 통해 자체 사후 훈련 루프를 구축하기 위한 API인 프로그래밍된 훈련은 Microsoft Foundry의 공개 미리 보기에서 이용할 수 있습니다. 액세스는 미리 보기 가입 양식을 통해 요청 시 제공됩니다. 관리형 훈련 작업은 다음의 경우에 적합합니다.",
       "status": "In preview",
-      "category": "Features",
-      "link": "https://azure.microsoft.com/updates?id=581254",
-      "date": "2026-11-19T20:34:19.000Z"
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=581713",
+      "date": "2026-11-20T22:58:28.000Z"
+    },
+    {
+      "title": "Public Preview: Multi-turn evaluation in Microsoft Foundry",
+      "titleKo": "퍼블릭 프리뷰: Microsoft Foundry의 멀티턴 평가",
+      "summaryKo": "이제 Microsoft Foundry에서 멀티턴 평가를 공개 미리 보기로 이용하실 수 있습니다. 개별 응답뿐만 아니라 전체 상담원 대화를 품질 표준에 비추어 평가할 수 있습니다. 응답이 그 자체로는 올바르게 보일 수 있지만, 여전히 다음과 같은 대화의 일부일 수 있습니다.",
+      "status": "In preview",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=581746",
+      "date": "2026-11-20T22:56:51.000Z"
     }
   ]
 }
