@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-11-25T21:01:47.854Z",
+  "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+  "translated": true,
+  "translatedBy": "mymemory",
+  "items": [
+    {
+      "title": "Generally Available: Azure Site Recovery support for zonal disaster recovery for Ultra disks",
+      "titleKo": "일반 가용성: Ultra 디스크의 영역별 재해 복구를 위한 Azure Site Recovery 지원",
+      "summaryKo": "Azure Site Recovery가 이제 Azure Ultra 디스크에 대한 Zone-to-Zone 재해 복구(Zonal DR)를 지원합니다. 고객은 가용성 영역 전반에 걸쳐 성능 집약적인 가상 머신을 복제하고 다른 가용성 영역으로 복구함으로써 영역별 장애로부터 보호할 수 있습니다.",
+      "status": "Launched",
+      "category": "Management and governance",
+      "link": "https://azure.microsoft.com/updates?id=582171",
+      "date": "2026-11-24T17:48:22.000Z"
+    },
+    {
+      "title": "Public Preview: Optimize agents from insights in Foundry Agent Service",
+      "titleKo": "퍼블릭 프리뷰: Foundry Agent Service의 인사이트를 통해 상담원 최적화",
+      "summaryKo": "인사이트를 통한 최적화는 Foundry Agent Service의 공개 프리뷰 단계에 있습니다. Foundry 포털에서 프롬프트 에이전트 추적의 적격 인사이트부터 시작하여 에이전트 지침 및 함수 호출 도구 설명에 대한 후보 변경 사항을 생성하고 평가합니다.",
+      "status": "In preview",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=581483",
+      "date": "2026-11-24T16:52:07.000Z"
+    },
+    {
+      "title": "Public Preview: Govern MCP tools with your own gateway in Microsoft Foundry Agent Service",
+      "titleKo": "퍼블릭 프리뷰: Microsoft Foundry Agent Service에서 자체 게이트웨이로 MCP 도구 관리",
+      "summaryKo": "퍼블릭 프리뷰에서 Microsoft Foundry Agent Service를 사용하면 조직에서 관리하는 기존 AI Gateway 또는 Azure API Management 엔드포인트를 통해 MCP 도구 트래픽을 라우팅할 수 있습니다. 먼저 게이트웨이에서 MCP 경로를 구성한 다음 게이트웨이 라우팅된 엔드포인트를 입력합니다.",
+      "status": "In preview",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=581498",
+      "date": "2026-11-24T16:50:47.000Z"
+    },
+    {
+      "title": "Generally Available: Use Azure Storage permissions in Azure AI Search and Foundry IQ",
+      "titleKo": "일반 제공: Azure AI Search 및 Foundry IQ에서 Azure Storage 권한 사용",
+      "summaryKo": "Microsoft Foundry의 Azure AI Search 및 Foundry IQ는 지원되는 Azure Storage 권한을 사용하여 검색 결과에 대한 액세스를 제어할 수 있습니다. 구성이 완료되면 검색 애플리케이션과 AI 에이전트는 각 사용자의 액세스 권한에 따라 콘텐츠를 반환합니다. 이를 통해 생성할 필요가 줄어듭니다.",
+      "status": "Launched",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=581303",
+      "date": "2026-11-24T16:49:39.000Z"
+    },
+    {
+      "title": "Public Preview: Native A2A passthrough for hosted agents in Foundry Agent Service",
+      "titleKo": "퍼블릭 프리뷰: Foundry Agent Service의 호스팅된 에이전트를 위한 네이티브 A2A 패스스루",
+      "summaryKo": "프로토콜 변환 계층 없이 기존 Agent2Agent(A2A) 에이전트를 Agent Service로 가져오세요. 이전에는 Agent Service가 수신되는 A2A 요청을 Responses 프로토콜로 변환했습니다. A2A 패스스루를 사용하면 Agent Service가 네이티브 A2A 요청을 직접 전달합니다.",
+      "status": "In preview",
+      "category": "AI + machine learning",
+      "link": "https://azure.microsoft.com/updates?id=581313",
+      "date": "2026-11-24T16:48:25.000Z"
+    }
+  ]
+}
