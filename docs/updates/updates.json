@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-26T21:01:27.847Z",
+  "generatedAt": "2026-11-27T21:01:43.544Z",
   "source": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
   "translated": true,
   "translatedBy": "mymemory",
   "items": [
     {
       "title": "Public Preview: ECMP Nexthop",
-      "titleKo": "퍼블릭 프리뷰: ECMP Nexthop",
+      "titleKo": "퍼블릭 프리뷰: ECMP 넥스트홉",
       "summaryKo": "Azure Virtual Network용 Equal-Cost Multi-Path(ECMP) 라우팅이 이제 공개 프리뷰로 제공되어 고객이 단일 사용자 정의 라우트(UDR)를 사용하여 여러 네트워크 어플라이언스에 트래픽을 분산할 수 있습니다. 고객은 2~16개의 다음 홉을 구성할 수 있습니다.",
       "status": "In preview",
       "category": "Networking",
@@ -16,7 +16,7 @@
     {
       "title": "Retirement: Support for Java 8, 11 and 17 in Azure Functions ends on September 1, 2027",
       "titleKo": "지원 종료: Azure Functions에서 Java 8, 11 및 17에 대한 지원이 2027년 9월 1일에 종료됩니다.",
-      "summaryKo": "Azure Functions에서 Java 8, 11 및 17에 대한 지원이 2027년 9월 1일에 종료됩니다. Azure Functions에서 호스팅되는 앱은 계속 실행되지만 보안 업데이트가 더 이상 제공되지 않으며, Java 8에 대한 고객 서비스도 더 이상 제공되지 않습니다.",
+      "summaryKo": "Azure Functions에서 Java 8, 11 및 17에 대한 지원이 2027년 9월 1일에 종료됩니다. Azure Functions에서 호스팅되는 앱은 계속 실행되지만 보안 업데이트가 더 이상 제공되지 않으며 Java 8에 대한 고객 서비스도 더 이상 제공되지 않습니다.",
       "status": "Retirements",
       "category": "Compute",
       "link": "https://azure.microsoft.com/updates?id=568586",
@@ -25,7 +25,7 @@
     {
       "title": "Generally Available: Azure Site Recovery support for zonal disaster recovery for Ultra disks",
       "titleKo": "일반 제공: Ultra 디스크의 영역별 재해 복구를 위한 Azure Site Recovery 지원",
-      "summaryKo": "Azure Site Recovery는 이제 Azure Ultra 디스크에 대한 영역 간 재해 복구(Zonal DR)를 지원합니다. 고객은 가용성 영역 전반에 걸쳐 성능 집약적인 가상 머신을 복제하고 다른 가용성 영역으로 복구하여 영역별 장애로부터 보호할 수 있습니다.",
+      "summaryKo": "Azure Site Recovery는 이제 Azure Ultra 디스크에 대한 영역 간 재해 복구(Zonal DR)를 지원합니다. 고객은 가용성 영역 전반에 걸쳐 성능 집약적인 가상 머신을 복제하고 다른 가용성 영역으로 복구하여 영역별 중단으로부터 보호할 수 있습니다.",
       "status": "Launched",
       "category": "Management and governance",
       "link": "https://azure.microsoft.com/updates?id=582171",
@@ -34,7 +34,7 @@
     {
       "title": "Public Preview: Optimize agents from insights in Foundry Agent Service",
       "titleKo": "퍼블릭 프리뷰: Foundry Agent Service의 인사이트를 통해 상담원 최적화",
-      "summaryKo": "인사이트를 통한 최적화는 Foundry Agent Service의 공개 프리뷰에 있습니다. Foundry 포털에서 프롬프트 에이전트 추적의 적격 인사이트부터 시작하여 에이전트의 지침 및 함수 호출 도구 설명에 대한 후보 변경 사항을 생성하고 평가합니다.",
+      "summaryKo": "인사이트를 통한 최적화는 Foundry Agent Service의 공개 프리뷰에 포함되어 있습니다. Foundry 포털에서 프롬프트 에이전트 추적의 적격 인사이트부터 시작하여 에이전트의 지침 및 함수 호출 도구 설명에 대한 후보 변경 사항을 생성하고 평가합니다.",
       "status": "In preview",
       "category": "AI + machine learning",
       "link": "https://azure.microsoft.com/updates?id=581483",
